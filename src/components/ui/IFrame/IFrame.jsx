@@ -1,11 +1,16 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './IFrame.scss'
 1
 export default function IFrame({src, ...props}) {
     const [fullScreen, setFullScreen] = useState(false);
+    const [className, setClassName] = useState(undefined);
+
+    useEffect(() => {
+        setClassName(fullScreen ? 'iframeContainer fullScreen' : 'iframeContainer');
+    }, [fullScreen]);
 
     return (
-        <div className='container'>
+        <span className={className}>
             <header className={!fullScreen ? 'small' : undefined}>
                 <button
                     type='button'
@@ -24,6 +29,6 @@ export default function IFrame({src, ...props}) {
                     This browser does&apos;t support iframes.
                 </iframe>
             </div>
-        </div>
+        </span>
     )
 }

@@ -1,27 +1,23 @@
 @import '../../../scss/base.scss';
 
 header {
-    background-color: $color-dark;
     @include borderTopRadius;
+    @include colors($color-dark, $color-secondary);
 
     span {
         float: right;
         font-size: $font-sm;
         padding: 7px 10px;
-        @include borderTopRadius;
-        @include colors($color-dark, $color-secondary);
-    }
-}
 
-.small {
-    display: inline-block;
-    width: 365px;
+        @include borderTopRadius;
+    }
 }
 
 iframe {
     border: none;
     min-width: 365px;
-    height: 500px;
+    height: 600px;
+
     @include borderBottomRadius;
     @include colors($color-dark, $color-secondary);
 }
@@ -29,6 +25,23 @@ iframe {
 .fullScreen {
     position: relative;
     width: 100%;
-    height: 65vh;
     overflow: hidden;
+}
+
+.small {
+    display: inline-block;
+    width: 365px;
+}
+
+.iframeContainer {
+    display: inline-block;
+    border: 1px solid $color-secondary;
+
+    @include borderTopRadius;
+    @include borderBottomRadius;
+        
+    .fullScreen {
+        display: block;
+        min-height: 65vh;
+    }
 }
