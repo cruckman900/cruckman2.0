@@ -4,8 +4,8 @@ import './IFrame.scss'
 export default function IFrame({src, ...props}) {
     const [isDisplayNone, setDisplayNone] = useState(false)
     return (
-        <>
-            {!isDisplayNone && <span>
+        <div {...props}>
+            {!isDisplayNone && <span className='iframeContainer'>
                 <header>
                     <button
                         type='button'
@@ -23,6 +23,6 @@ export default function IFrame({src, ...props}) {
                 </div>
             </span>
             }
-        </>
+        </div>
     )
 }

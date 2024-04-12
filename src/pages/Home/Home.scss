@@ -1,0 +1,15 @@
+@import '../../scss/base.scss';
+
+.homeFlexbox {
+    display: flex;
+    flex-direction: row;
+  
+    &-left {
+        padding-right: 0rem;
+    }
+  
+    &-right {
+        padding-left: 1px;
+        width: 365px;
+    }
+}

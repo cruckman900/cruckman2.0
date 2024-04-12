@@ -5,7 +5,7 @@
     margin: 1rem;
     min-height: 90vh;
 
-    @include colors($nocolor, $color-tertiary);
+    @include colors($no-color, $color-tertiary);
     @include borderTopRadius;
     @include borderBottomRadius;
     @include noScroll;
