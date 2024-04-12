@@ -16,32 +16,19 @@ header {
 iframe {
     border: none;
     min-width: 365px;
-    height: 600px;
-
+    height: 75vh;
+   
     @include borderBottomRadius;
     @include colors($color-dark, $color-secondary);
 }
 
-.fullScreen {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-}
-
-.small {
-    display: inline-block;
-    width: 365px;
-}
-
 .iframeContainer {
+    background-color: $color-black;
+
     display: inline-block;
     border: 1px solid $color-secondary;
+    width: 365px;
 
     @include borderTopRadius;
     @include borderBottomRadius;
-        
-    .fullScreen {
-        display: block;
-        min-height: 65vh;
-    }
 }

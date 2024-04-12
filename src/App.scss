@@ -2,3 +2,17 @@
   max-width: 1280px;
   padding: 0 1rem;
 }
+
+.homeFlexbox {
+  display: flex;
+  flex-direction: row;
+
+  &-left {
+    padding-right: 1rem;
+  }
+
+  &-right {
+    padding: 0rem;
+    min-width: 365px;
+  }
+}
