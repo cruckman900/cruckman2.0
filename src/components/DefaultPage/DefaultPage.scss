@@ -1,0 +1,28 @@
+@import '../../scss/base.scss';
+
+.defaultPage {
+    border: 1px solid $color-primary;
+    // background: linear-gradient(rgba($color-black, .8), rgba($color-black, .6)) center no-repeat;
+    margin: 1rem;
+    min-height: 90vh;
+
+    @include colors($nocolor, $color-tertiary);
+    @include borderTopRadius;
+    @include borderBottomRadius;
+    @include noScroll;
+}
+
+.dpHeader {
+    font-size: $font-md;
+    padding: 1rem;
+
+    @include colors($color-primary, $color-secondary);
+}
+
+.dpChildren {
+    padding: 1rem;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}

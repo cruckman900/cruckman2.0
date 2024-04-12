@@ -1,0 +1,35 @@
+$color-black: #000000;
+$color-dark: #252525;
+
+$color-primary: #006300;
+$color-secondary: #ffee00;
+$color-tertiary: #fff;
+
+$color-main-bg: linear-gradient(180deg, $color-black, $color-primary 80%, $color-black);
+$nocolor: transparent;
+
+$font-lg: 18pt;
+$font-md: 14pt;
+$font-sm: 10pt;
+
+$borderRadius: 8px;
+
+@mixin noScroll {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@mixin borderTopRadius {
+    border-top-left-radius: $borderRadius;
+    border-top-right-radius: $borderRadius;
+}
+
+@mixin borderBottomRadius {
+    border-bottom-left-radius: $borderRadius;
+    border-bottom-right-radius: $borderRadius;
+}
+
+@mixin colors($bgColor, $color) {
+    background-color: $bgColor;
+    color: $color;
+}

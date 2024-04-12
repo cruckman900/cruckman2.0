@@ -1,19 +1,24 @@
+@import './scss/base.scss';
+@import './scss/shared.scss';
+
 :root {
+  display: flex;
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+  justify-content: center;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background: linear-gradient(180deg, #000000, #000063 80%, #000000);
+  background: $color-main-bg;
   background-attachment: fixed;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  @include noScroll;
 }
 
 body {

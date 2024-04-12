@@ -1,0 +1,34 @@
+@import '../../../scss/base.scss';
+
+header {
+    background-color: $color-dark;
+    @include borderTopRadius;
+
+    span {
+        float: right;
+        font-size: $font-sm;
+        padding: 7px 10px;
+        @include borderTopRadius;
+        @include colors($color-dark, $color-secondary);
+    }
+}
+
+.small {
+    display: inline-block;
+    width: 365px;
+}
+
+iframe {
+    border: none;
+    min-width: 365px;
+    height: 500px;
+    @include borderBottomRadius;
+    @include colors($color-dark, $color-secondary);
+}
+
+.fullScreen {
+    position: relative;
+    width: 100%;
+    height: 65vh;
+    overflow: hidden;
+}
