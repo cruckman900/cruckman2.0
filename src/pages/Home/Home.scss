@@ -5,11 +5,10 @@
     flex-direction: row;
   
     &-left {
-        padding-right: 0rem;
+        padding-left: 1rem;
     }
   
     &-right {
-        padding-left: 1px;
         width: 365px;
     }
 }
