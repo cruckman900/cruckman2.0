@@ -3,6 +3,7 @@ import Header from '../Header/Header';
 import image1 from '../../assets/images/SpookyCorridor_1920x1080.png';
 import image2 from '../../assets/images/BD_Stretch.png';
 import image3 from '../../assets/images/City2.png';
+import image4 from '../../assets/images/code.png';
 import './DefaultPage.scss';
 
 export default function DefaultPage({icon, title, children}) {
@@ -14,8 +15,8 @@ export default function DefaultPage({icon, title, children}) {
     const [style, setStyle] = useState();
 
     useEffect(() => {
-        const images = [image1, image2, image3];
-        setBackgroundImage(images[genRandomInt(2)]);
+        const images = [image1, image2, image3, image4];
+        setBackgroundImage(images[genRandomInt(3)]);
     }, []);
 
     useEffect(() => {

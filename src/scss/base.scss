@@ -1,6 +1,11 @@
 $font-noto: 'Noto Sans', sans-serif;
 $font-titillium: 'Titillium Web', sans-serif;
 
+$font-xl: 24pt;
+$font-lg: 18pt;
+$font-md: 14pt;
+$font-sm: 10pt;
+
 $color-black: #000000;
 $color-dark: #252525;
 $no-color: transparent;
@@ -10,11 +15,6 @@ $color-secondary: #ffee00;
 $color-tertiary: #fff;
 
 $color-main-bg: linear-gradient(180deg, $color-black, $color-primary 80%, $color-black);
-
-$font-xl: 24pt;
-$font-lg: 18pt;
-$font-md: 14pt;
-$font-sm: 10pt;
 
 $borderRadius: 8px;
 
@@ -35,5 +35,12 @@ $borderRadius: 8px;
 
 @mixin colors($bgColor, $color) {
     background-color: $bgColor;
+    color: $color;
+}
+
+@mixin fonts($fontFamily, $fontSize, $fontWeight, $color) {
+    font-family: $fontFamily;
+    font-size: $fontSize;
+    font-weight: $fontWeight;
     color: $color;
 }

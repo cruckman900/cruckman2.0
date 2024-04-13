@@ -11,19 +11,16 @@
 }
 
 .dpHeader {
-    font-family: $font-titillium;
-    font-size: $font-lg;
-    font-weight: 600;
     padding: .5rem 1rem;
 
     @include borderTopRadius;
     @include colors($color-primary, $color-secondary);
+    @include fonts($font-titillium, $font-lg, 600, $color-secondary);
 }
 
 .dpChildren {
-    font-family: $font-noto;
-    font-size: $font-md;
     padding: 1rem;
+    @include fonts($font-noto, $font-md, 400, $color-tertiary);
 }
 
 ::-webkit-scrollbar {
