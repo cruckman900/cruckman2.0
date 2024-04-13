@@ -8,15 +8,14 @@ export default function Home() {
             <section className='homeFlexbox'>
 
                 <div className='homeFlexbox-left'>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore voluptas itaque rerum vitae voluptatum temporibus laboriosam facilis nisi asperiores? Iste non minus exercitationem minima? Odit autem voluptate rem molestias dignissimos voluptatibus porro et consequuntur vero doloribus est tenetur voluptates, repudiandae totam ipsum voluptatum qui facilis. Provident officia aliquam repudiandae ipsa?</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore voluptas itaque rerum vitae voluptatum temporibus laboriosam facilis nisi asperiores? Iste non minus exercitationem minima? Odit autem voluptate rem molestias dignissimos voluptatibus porro et consequuntur vero doloribus est tenetur voluptates, repudiandae totam ipsum voluptatum qui facilis. Provident officia aliquam repudiandae ipsa?</p>
-                    
+                    <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae itaque architecto dolorum mollitia similique dolore sint explicabo illum ea facere et, quam provident ex consequuntur dolor laboriosam reprehenderit neque, pariatur in sequi tempore minima. Voluptas provident quos distinctio eaque laboriosam praesentium consectetur minima fugiat. Quam consequatur veritatis assumenda ad accusantium.</div>
+                    <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae itaque architecto dolorum mollitia similique dolore sint explicabo illum ea facere et, quam provident ex consequuntur dolor laboriosam reprehenderit neque, pariatur in sequi tempore minima. Voluptas provident quos distinctio eaque laboriosam praesentium consectetur minima fugiat. Quam consequatur veritatis assumenda ad accusantium.</div>
                     <menu>
                     <li>Software Development</li>
                     </menu>
                 </div>
 
-                <IFrame className='homeFlexbox-right' src="https://chatterboxsm.com"></IFrame>
+                <IFrame src="https://chatterboxsm.com"></IFrame>
             
             </section>
         </DefaultPage>

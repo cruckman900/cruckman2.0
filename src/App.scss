@@ -1,4 +1,14 @@
+@import './scss/base.scss';
+
 #root {
   max-width: 1280px;
   padding: 0 1rem;
+}
+
+.titillium {
+  font-family: $font-titillium;
+  font-size: $font-xl;
+  font-weight: 600;
+  color: $color-primary;
+  padding: 10px 1rem 0 1rem;
 }

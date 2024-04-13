@@ -1,3 +1,6 @@
+$font-noto: 'Noto Sans', sans-serif;
+$font-titillium: 'Titillium Web', sans-serif;
+
 $color-black: #000000;
 $color-dark: #252525;
 $no-color: transparent;
@@ -8,6 +11,7 @@ $color-tertiary: #fff;
 
 $color-main-bg: linear-gradient(180deg, $color-black, $color-primary 80%, $color-black);
 
+$font-xl: 24pt;
 $font-lg: 18pt;
 $font-md: 14pt;
 $font-sm: 10pt;

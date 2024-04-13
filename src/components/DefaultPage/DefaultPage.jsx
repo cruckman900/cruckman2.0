@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import Header from '../Header/Header';
 import image1 from '../../assets/images/SpookyCorridor_1920x1080.png';
 import image2 from '../../assets/images/BD_Stretch.png';
 import image3 from '../../assets/images/City2.png';
@@ -26,7 +27,7 @@ export default function DefaultPage({icon, title, children}) {
 
     return (
         <div className='defaultPage' style={style}>
-            <header className='dpHeader'>{icon}{title}</header>
+            <Header className='dpHeader'>{icon}{title}</Header>
             <div className='dpChildren'>{children}</div>
         </div>
     );

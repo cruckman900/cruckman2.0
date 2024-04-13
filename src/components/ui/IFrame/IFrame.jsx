@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { useState } from 'react';
+import Button from '../Button/Button';
 import './IFrame.scss'
 1
 export default function IFrame({src, ...props}) {
@@ -7,12 +8,13 @@ export default function IFrame({src, ...props}) {
         <div {...props}>
             {!isDisplayNone && <span className='iframeContainer'>
                 <header>
-                    <button
+                    <Button
                         type='button'
+                        className='btnClose'
                         onClick={() => setDisplayNone(!isDisplayNone)}
                     >
                         {!isDisplayNone ? 'Close' : 'Open'}
-                    </button>
+                    </Button>
                     <span>{src}</span>
                 </header>
 

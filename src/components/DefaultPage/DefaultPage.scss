@@ -2,8 +2,7 @@
 
 .defaultPage {
     border: 1px solid $color-primary;
-    margin: 1rem;
-    min-height: 90vh;
+    min-height: 92vh;
 
     @include colors($no-color, $color-tertiary);
     @include borderTopRadius;
@@ -12,13 +11,17 @@
 }
 
 .dpHeader {
+    font-family: $font-titillium;
     font-size: $font-md;
-    padding: 1rem;
+    font-weight: 600;
+    padding: .5rem 1rem;
 
     @include colors($color-primary, $color-secondary);
 }
 
 .dpChildren {
+    font-family: $font-noto;
+    font-size: $font-sm;
     padding: 1rem;
 }
 

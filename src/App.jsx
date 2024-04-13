@@ -6,7 +6,7 @@ import './App.scss'
 function App() {
   return (
     <>
-      <Header>Christopher Ruckman</Header>
+      <Header><span className='titillium'>Christopher Ruckman</span></Header>
       <Home />
     </>
   )

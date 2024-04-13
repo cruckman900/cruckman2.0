@@ -16,7 +16,7 @@ header {
 iframe {
     border: none;
     min-width: 365px;
-    height: 75vh;
+    height: 78vh;
    
     @include borderBottomRadius;
     @include colors($color-dark, $color-secondary);
@@ -31,4 +31,11 @@ iframe {
 
     @include borderTopRadius;
     @include borderBottomRadius;
+}
+
+.btnClose {
+    font-family: $font-titillium;
+    font-size: $font-md;
+    font-weight: 600;
+    color: $color-primary;
 }
