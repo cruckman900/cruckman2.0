@@ -12,16 +12,17 @@
 
 .dpHeader {
     font-family: $font-titillium;
-    font-size: $font-md;
+    font-size: $font-lg;
     font-weight: 600;
     padding: .5rem 1rem;
 
+    @include borderTopRadius;
     @include colors($color-primary, $color-secondary);
 }
 
 .dpChildren {
     font-family: $font-noto;
-    font-size: $font-sm;
+    font-size: $font-md;
     padding: 1rem;
 }
 
