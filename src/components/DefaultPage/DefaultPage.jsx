@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import Header from '../Header/Header';
-import image1 from '../../assets/images/SpookyCorridor_1920x1080.png';
-import image2 from '../../assets/images/BD_Stretch.png';
-import image3 from '../../assets/images/City2.png';
+import image1 from '../../assets/images/SpookyCorridor_1920x1080.gif';
+import image2 from '../../assets/images/BD_Stretch.gif';
+import image3 from '../../assets/images/City2.gif';
 import image4 from '../../assets/images/code.png';
 import './DefaultPage.scss';
 
