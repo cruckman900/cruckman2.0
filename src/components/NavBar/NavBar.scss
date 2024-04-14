@@ -5,16 +5,17 @@
     float: right;
     position: relative;
     top: 4px;
-    z-index: 200;
-
+    
     &-navigation {
         display: flex;
 
         &-left {
+            z-index: 200;
             width: 50vw;
             height: 100vh;
             background: linear-gradient(180deg, $color-black, $color-primary 20%, $color-black);
             position: fixed;
+            top: 3rem;
             left: -50vw;
             transition: left .4s cubic-bezier(1, 0, 0, 1);
 
@@ -43,10 +44,12 @@
         }
 
         &-right {
+            z-index: 200;
             width: 50vw;
             height: 100vh;
             background: linear-gradient(180deg, $color-black, $color-dark 20%, $color-black);
             position: fixed;
+            top: 3rem;
             right: -50vw;
             align-items: center;
             transition: right .4s cubic-bezier(1, 0, 0, 1);

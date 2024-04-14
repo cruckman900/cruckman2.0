@@ -16,7 +16,7 @@ header {
 iframe {
     border: none;
     min-width: 365px;
-    height: calc(100vh - 17rem);
+    // height: calc(100vh - 17rem);
     @include borderBottomRadius;
     @include colors($color-dark, $color-secondary);
 }

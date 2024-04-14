@@ -36,7 +36,7 @@ export default function DefaultPage({ icon, title, children }) {
 
                 <div className='dpChildren'>{children}</div>
 
-                <IFrame src="https://chatterboxsm.com" width='365px'></IFrame>
+                <IFrame className='chatterbox' src="https://chatterboxsm.com" width='365px' height='768px'></IFrame>
             
             </section>
         </div>

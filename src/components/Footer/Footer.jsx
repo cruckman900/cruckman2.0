@@ -12,7 +12,7 @@ export default function Footer() {
                 <a href="https://twitter.com/LinearDescent" target="_blank"><i className='fa-brands fa-twitter'></i></a>
             </div>
             <div>
-                <i>&copy;{new Date().getFullYear()} Christopher Ruckman. All rights reserved.</i> 
+                <i>&copy;{new Date().getFullYear()} cruckman. all rights reserved.</i> 
             </div>
         </footer>
     );

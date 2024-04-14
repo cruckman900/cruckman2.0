@@ -22,8 +22,10 @@ $color-main-bg: linear-gradient(180deg, $color-black, $color-primary 80%, $color
 $borderRadius: 8px;
 
 @mixin noScroll {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
 @mixin borderTopRadius {

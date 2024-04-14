@@ -14,7 +14,7 @@ export const HOMEPAGE_SHORTS = {
     gamedev: {
         topic: 'gamedev',
         icon: 'fa-solid fa-gamepad',
-        title:'Game Design/Development',
+        title:'Game Design / Development',
         description: 'my sudden interest in developing games using various softwares',
         summary: `
                 I built an interactive interface using flash and flashbuilder around 2010 at my second
@@ -38,7 +38,7 @@ export const HOMEPAGE_SHORTS = {
     art3d: {
         topic: 'art3d',
         icon: 'fa-solid fa-cubes',
-        title:'3D Graphics and Effects',
+        title:'3D Graphics / Effects',
         description: 'my interests and creations in all things 3D, including nodes',
         summary: `
                 this is my true passion. I have always been intrigued by 3D graphics and animation. I started

@@ -62,3 +62,70 @@ a {
 i {
     padding-right: 1rem;
 }
+
+.homeFlexbox {
+    @include flexbox(row);
+  
+    &-left {
+        padding-right: 1rem;
+
+        &-div {
+            margin-bottom: 1rem;
+        }
+
+        &-link {
+            text-align: center;
+        }
+    }
+}
+
+.homeSection {
+    justify-content: left;
+    color: $color-secondary;
+
+    &-container {
+        @include flexbox(row);
+
+        &-Menu {
+            list-style: none;
+            color: blue;
+        
+            &-button {
+                &-active {
+                    @include colors($color-secondary, $color-dark);
+                    border-color: $color-dark;
+                }
+            }
+        }
+    
+        &-content {
+            padding-left: 1rem;
+            width: 100%;
+
+            i {
+                color: $color-light;
+            }
+
+            &-description {
+                font-size: $font-md;
+                text-transform: uppercase;
+                color: $color-light;
+            }
+
+            &-summary {
+                font-size: $font-sm;
+                text-transform: lowercase;
+                color: $color-lighter;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:767px) and (orientation:portrait) {
+    #chatterbox-text,
+    .chatterbox,
+    .homeSection,
+    .homeSection-container-content-summary {
+        display: none;
+    }
+}

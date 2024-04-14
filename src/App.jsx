@@ -10,7 +10,7 @@ function App() {
   return (
     <>
       <Header className='main-header' icon='fa-brands fa-d-and-d'>
-          <span className='titillium'>Christopher Ruckman</span>
+          <span className='titillium'>Chris Ruckman</span>
           <NavBar />
       </Header>
       <Home />
