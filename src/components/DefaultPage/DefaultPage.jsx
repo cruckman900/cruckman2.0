@@ -1,9 +1,12 @@
 import { useState, useEffect } from 'react';
 import Header from '../Header/Header';
+import IFrame from '../ui/IFrame/IFrame';
+
 import image1 from '../../assets/images/SpookyCorridor_1920x1080.jpg';
 import image2 from '../../assets/images/BD_Stretch.jpg';
 import image3 from '../../assets/images/City2.jpg';
 import image4 from '../../assets/images/code.jpg';
+
 import './DefaultPage.scss';
 
 export default function DefaultPage({ icon, title, children }) {
@@ -29,7 +32,13 @@ export default function DefaultPage({ icon, title, children }) {
     return (
         <div className='defaultPage' style={style}>
             <Header icon={icon} className='dpHeader'>{title}</Header>
-            <div className='dpChildren'>{children}</div>
+            <section className='homeFlexbox'>
+
+                <div className='dpChildren'>{children}</div>
+
+                <IFrame src="https://chatterboxsm.com"></IFrame>
+            
+            </section>
         </div>
     );
 }

@@ -1,0 +1,23 @@
+@import '../../scss/shared.scss';
+
+.modelViewer {
+    height: 40vh;
+    width: 40vh;
+    background-color: $color-light;
+
+    @include borderTopRadius;
+    @include borderBottomRadius;
+    border: 1px solid $color-secondary;
+
+    &-commands {
+        &-command {
+            display: inline-block;
+            width: 80px;
+            text-transform: uppercase;
+            color: $color-secondary;
+        }
+        &-action {
+            color: $color-lighter;
+        }
+    }
+}

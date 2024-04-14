@@ -1,4 +1,4 @@
-@import '../../../scss/base.scss';
+@import '../../../scss/shared.scss';
 
 header {
     @include borderTopRadius;
@@ -21,11 +21,18 @@ iframe {
     @include colors($color-dark, $color-secondary);
 }
 
+.iframeWrapper {
+    @include borderTopRadius;
+    @include borderBottomRadius;
+    border: 1px solid $color-secondary;
+    margin-top: 1rem;
+}
+
 .iframeContainer {
     background-color: $color-black;
 
     display: inline-block;
-    border: 1px solid $color-secondary;
+    padding-top: 5px;
     width: 365px;
 
     @include borderTopRadius;
@@ -36,5 +43,21 @@ iframe {
     font-family: $font-titillium;
     font-size: $font-md;
     font-weight: 600;
+    width: 2rem;
+    background-color: transparent;
     color: $color-primary;
+    border: none;
+    text-align: center;
+
+    &-red {
+        color: $color-red;
+
+        &:hover {
+            color: $color-secondary;
+        }
+    }
+
+    &:hover, &:active {
+        background-color: transparent;
+    }
 }
