@@ -26,6 +26,7 @@ iframe {
     @include borderBottomRadius;
     border: 1px solid $color-secondary;
     margin-top: 1rem;
+    margin-right: 1rem;
 }
 
 .iframeContainer {

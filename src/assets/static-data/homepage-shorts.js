@@ -3,7 +3,7 @@ export const HOMEPAGE_SHORTS = {
         topic: 'softwaredev',
         icon: 'fa-solid fa-code',
         title:'Software Development',
-        description: 'a brief history of my journey as a software engineer and some personal projects',
+        description: 'a brief history of my journey as a software engineer and personal projects',
         summary: `
                 graduated from West Virginia Northern Community College in 2005. began working in the
                 field immediately after. went to Wheeling (Jesuit) University and graduated in 2008
@@ -18,7 +18,7 @@ export const HOMEPAGE_SHORTS = {
         description: 'my sudden interest in developing games using various softwares',
         summary: `
                 I built an interactive interface using flash and flashbuilder around 2010 at my second
-                position in the computer-related field. around 2020, I started taking online courses for
+                development position. around 2020, I started taking online courses for
                 game development using Unity and now, Unreal Engine. It's the most fun I've had
                 developing software so far, other than making this site.
             `
