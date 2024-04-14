@@ -11,7 +11,7 @@ export default function Footer() {
                 <a href="#" target=""><i className='fa-brands fa-twitter'></i></a>
             </div>
             <div>
-                <i>&copy;{new Date().getFullYear()} Christopher Ruckman</i> 
+                <i>&copy;{new Date().getFullYear()} Christopher Ruckman. All rights reserved.</i> 
             </div>
         </footer>
     );
