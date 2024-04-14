@@ -18,15 +18,15 @@ export default function Home() {
             <div className='homeFlexbox-left'>
                 <div className='homeFlexbox-left-div'>
                     I am currently developing this new site because the old one is pretty messy. I am hoping to have it more presentable soon.
-                    My old site content is here if you want to take a look: 
-                    <div className='homeFlexbox-left-link'><a href='https://old.cruckman.com' target='_blank'>old cruckman.com website</a></div>
+                    {/* My old site content is here if you want to take a look: 
+                    <div className='homeFlexbox-left-link'><a href='https://old.cruckman.com' target='_blank'>old cruckman.com website</a></div> */}
                 </div>
                 <div className='homeFlexbox-left-div'>
                     <span className='homeFlexbox-left-link'><a href='https://chatterboxsm.com' target='_blank'>chatterboxsm</a></span> (the panel
                     to the right) is another one of my creations. It&apos;s not fully functional yet, but just like everything else I work on in my
-                    spare time, it is not abandoned; it&apos;s just waiting its turn in the rotation.
+                    spare time, it is not abandoned; it&apos;s just waiting for its turn in the rotation.
                 </div>
-                <Section title='On my site' className='homeSection'>
+                <Section title='What&apos;s on my site?' className='homeSection'>
                     <div className='homeSection-container'>
                         <menu className='homeSection-container-Menu'>
                             <TabButton

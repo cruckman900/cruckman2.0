@@ -58,11 +58,13 @@
             }
 
             &-description {
+                font-size: $font-md;
                 text-transform: uppercase;
                 color: $color-lighter;
             }
 
             &-summary {
+                font-size: $font-sm;
                 text-transform: lowercase;
                 color: $color-tertiary;
             }

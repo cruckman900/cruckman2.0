@@ -2,7 +2,7 @@ import Header from './components/Header/Header';
 import NavBar from './components/NavBar/NavBar';
 import Footer from './components/Footer/Footer';
 import Home from './pages/Home/Home';
-import ThreeDGallery from './pages/ThreeDGallery/ThreeDGallery';
+// import ThreeDGallery from './pages/ThreeDGallery/ThreeDGallery';
 
 import './App.scss'
 
@@ -14,7 +14,7 @@ function App() {
           <NavBar />
       </Header>
       <Home />
-      <ThreeDGallery />
+      {/* <ThreeDGallery /> */}
       <Footer />
     </>
   );

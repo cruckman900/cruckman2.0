@@ -7,7 +7,7 @@ import image4 from '../../assets/images/code.jpg';
 export default function NavBar() {
     return (
         <nav className="navbar">
-        <input type="checkbox" id="check" className="checkbox" style={{display: 'none'}} />
+        <input type="checkbox" id="check" className="checkbox" hidden />
         <div className="hamburger-menu">
             <label htmlFor="check" className="menu">
                 <div className="menu-line menu-line-1"></div>
