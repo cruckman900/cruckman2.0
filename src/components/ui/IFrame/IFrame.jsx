@@ -17,7 +17,7 @@ export default function IFrame({src, ...props}) {
     }, [isDisplayNone]);
 
     return (
-        <div {...props} className={ iframeWrapperClass }>
+        <div className={ iframeWrapperClass }>
             <header style={style}>
                 <Button
                     type='button'

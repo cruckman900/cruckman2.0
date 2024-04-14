@@ -16,7 +16,7 @@ header {
 iframe {
     border: none;
     min-width: 365px;
-    height: 75vh;
+    height: calc(100vh - 17rem);
     @include borderBottomRadius;
     @include colors($color-dark, $color-secondary);
 }
@@ -34,7 +34,6 @@ iframe {
 
     display: inline-block;
     padding-top: 5px;
-    width: 365px;
 
     @include borderTopRadius;
     @include borderBottomRadius;
