@@ -27,8 +27,9 @@ export default function Home() {
                         <div className='homeFlexbox-left-link'><a href='https://old.cruckman.com' target='_blank'>old cruckman.com website</a></div>
                     </div>
                     <div>
-                        <span className='homeFlexbox-left-link'><a href='https://chatterboxsm.com' target='_blank'>chatterboxsm</a></span> is another one of my creations. It&apos;s not fully functional yet, but just like everything else I work on in my
-                        spare time, it is not abandoned; it&apos;s waiting its turn in the rotation.
+                        <span className='homeFlexbox-left-link'><a href='https://chatterboxsm.com' target='_blank'>chatterboxsm</a></span> is 
+                        another one of my creations. It&apos;s not fully functional yet, but just like everything else I work on in my
+                        spare time, it is not abandoned; it&apos;s just waiting its turn in the rotation.
                     </div>
                     <Section title='On my site' className='homeSection'>
                         <div className='homeSection-container'>

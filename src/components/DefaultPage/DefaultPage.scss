@@ -2,7 +2,7 @@
 
 .defaultPage {
     border: 1px solid $color-primary;
-    min-height: 92vh;
+    min-height: 90vh;
 
     @include colors($no-color, $color-tertiary);
     @include borderTopRadius;
