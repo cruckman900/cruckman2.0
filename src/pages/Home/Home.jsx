@@ -91,7 +91,9 @@ export default function Home() {
                             </TabButton>
                         </menu>
 
-                        {!selectedTopic ? <p className='homeSection-container-content'>Select a topic just to see what awaits inside. I&apos;ve been waiting for you!</p> : (
+                        {!selectedTopic ? <p className='homeSection-container-content'>
+                                Select a topic just to see what awaits inside. I have been waiting for you to come visit.
+                            </p> : (
                             <div className='homeSection-container-content'>
                                 <h3>
                                     <i className={HOMEPAGE_SHORTS[selectedTopic].icon}></i>

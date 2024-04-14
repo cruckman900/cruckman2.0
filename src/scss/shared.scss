@@ -4,6 +4,28 @@
     letter-spacing: 1px;
 }
 
+.hamburger-menu {
+    width: 40px;
+    height: 40px;
+
+    .menu {
+        @extend %fullSpace;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        cursor: pointer;
+        transition: .4s;
+
+        &-line {
+            width: 100%;
+            height: 4px;
+            background-color: $color-primary;
+            transform-origin: right;
+            transition: all .4s .4s;
+        }
+    }
+}
+
 button {
     margin: 10px;
     width: 115px;
@@ -29,7 +51,6 @@ a {
     color: $color-primary;
     text-decoration: none;
     text-transform: uppercase;
-    font-style: italic;
     font-weight: 400;
 
     &:hover {

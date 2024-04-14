@@ -6,6 +6,9 @@
 }
 
 .main-header {
+    display: flex;
+    flex-direction: column;
+
     i {
       color: $color-primary;
       font-size: $font-xl;

@@ -1,0 +1,105 @@
+@import '../../scss/shared.scss';
+
+.navbar {
+    display: block;
+    float: right;
+    position: relative;
+    top: 4px;
+    z-index: 200;
+
+    &-navigation {
+        display: flex;
+
+        &-left {
+            width: 50vw;
+            height: 100vh;
+            background: linear-gradient(180deg, $color-black, $color-primary 20%, $color-black);
+            position: fixed;
+            left: -50vw;
+            transition: left .4s cubic-bezier(1, 0, 0, 1);
+
+            .left-img {
+                width: 50%;
+                position: absolute;
+                box-shadow: 25px 50px 25px rgba($color-black, .6);
+                opacity: .8;
+                border-radius: 10px;
+            }     
+            
+            .left-img-1 {
+                top: 15%;
+                left: 15%;
+            }
+            
+            .left-img-2 {
+                top: 35%;
+                left: 25%;
+            }
+            
+            .left-img-3 {
+                top: 55%;
+                left: 35%;
+            }
+        }
+
+        &-right {
+            width: 50vw;
+            height: 100vh;
+            background: linear-gradient(180deg, $color-black, $color-dark 20%, $color-black);
+            position: fixed;
+            right: -50vw;
+            align-items: center;
+            transition: right .4s cubic-bezier(1, 0, 0, 1);
+
+            @include flexbox(row, center);
+        }
+
+        .nav-list {
+            &-item {
+                list-style: none;
+            }
+
+            &-link {
+                display: block;
+                margin: 1rem;
+                width: 100%;
+                text-align: center;
+                font-family: $font-titillium;
+                font-size: $font-xl;
+
+                @include borderTopRadius;
+                @include borderBottomRadius;
+
+                transition: all .4s;
+
+                &:hover {
+                    background-color: $color-dark;
+                }
+            }
+        }
+    }
+}
+
+.checkbox:checked ~ .navbar-navigation .navbar-navigation-left {
+    left: 0;
+}
+
+.checkbox:checked ~ .navbar-navigation .navbar-navigation-right {
+    right: 0;
+}
+
+.checkbox:checked ~ .hamburger-menu .menu {
+    transform: rotateZ(90deg);
+}
+
+.checkbox:checked ~ .hamburger-menu .menu-line-1 {
+    transform: rotateZ(-40deg);
+}
+
+.checkbox:checked ~ .hamburger-menu .menu-line-2 {
+    opacity: 0;
+}
+
+.checkbox:checked ~ .hamburger-menu .menu-line-3 {
+    transform: rotateZ(40deg);
+}
