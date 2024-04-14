@@ -7,7 +7,7 @@ header {
     span {
         float: right;
         font-size: $font-sm;
-        padding: 20px 10px;
+        margin: 20px 10px;
 
         @include borderTopRadius;
     }
