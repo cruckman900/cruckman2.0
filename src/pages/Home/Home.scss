@@ -1,10 +1,38 @@
 @import '../../scss/base.scss';
 
 .homeFlexbox {
-    display: flex;
-    flex-direction: row;
-  
-    &-left {
-        padding-right: 1rem;
+    @include flexbox(row);
+}
+
+.homeSection {
+    justify-content: left;
+    color: $color-secondary;
+
+    &-container {
+        @include flexbox(row);
+
+        &-Menu {
+            @include flexbox(column);
+            list-style: none;
+            color: blue;
+        
+            &-button {
+                margin: 10px;
+            }
+        }
+    
+        &-content {
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+
+            i {
+                color: $color-light;
+            }
+
+            p {
+                color: $color-lighter;
+            }
+        }
     }
 }

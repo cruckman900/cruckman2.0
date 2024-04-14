@@ -1,10 +1,9 @@
-import './Header.scss';
-
-export default function Header({children, ...props}) {
+export default function Header({icon, children, ...props}) {
     return (
         <>
             <div className='main-header' {...props}>
-                <span>{children}</span>
+                <i className={icon}></i>
+                <span className='main-header-title'>{children}</span>
             </div>
         </>
     );

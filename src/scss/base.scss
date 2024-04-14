@@ -8,6 +8,8 @@ $font-sm: 10pt;
 
 $color-black: #000000;
 $color-dark: #252525;
+$color-light: #757575;
+$color-lighter: #999999;
 $no-color: transparent;
 
 $color-primary: #006300;
@@ -43,4 +45,14 @@ $borderRadius: 8px;
     font-size: $fontSize;
     font-weight: $fontWeight;
     color: $color;
+}
+
+@mixin flexbox($flexDirection: row, $justifyContent: space-between) {
+    display: flex;
+    flex-direction: $flexDirection;
+    justify-content: $justifyContent;
+}
+
+i {
+    padding-right: 1rem;
 }

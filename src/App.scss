@@ -6,10 +6,6 @@
 }
 
 .titillium {
-  font-family: $font-titillium;
-  font-size: $font-xl;
-  font-weight: 600;
-  color: $color-primary;
   padding: 10px 1rem 0 1rem;
   @include fonts($font-titillium, $font-xl, 600, $color-primary);
 }

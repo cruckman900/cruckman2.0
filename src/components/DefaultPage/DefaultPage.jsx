@@ -28,7 +28,7 @@ export default function DefaultPage({icon, title, children}) {
 
     return (
         <div className='defaultPage' style={style}>
-            <Header className='dpHeader'>{icon}{title}</Header>
+            <Header icon={icon} className='dpHeader'>{title}</Header>
             <div className='dpChildren'>{children}</div>
         </div>
     );
