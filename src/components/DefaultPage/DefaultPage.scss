@@ -60,13 +60,13 @@
             &-description {
                 font-size: $font-md;
                 text-transform: uppercase;
-                color: $color-lighter;
+                color: $color-light;
             }
 
             &-summary {
                 font-size: $font-sm;
                 text-transform: lowercase;
-                color: $color-tertiary;
+                color: $color-lighter;
             }
         }
     }
