@@ -1,7 +1,15 @@
-@import '../../scss/base.scss';
+@import '../../scss/shared.scss';
 
 .homeFlexbox {
     @include flexbox(row);
+
+    &-left {
+        padding-right: 1rem;
+
+        &-link {
+            text-align: center;
+        }
+    }
 }
 
 .homeSection {
@@ -17,14 +25,16 @@
             color: blue;
         
             &-button {
-                margin: 10px;
+                &-active {
+                    @include colors($color-secondary, $color-dark);
+                    border-color: $color-dark;
+                }
             }
         }
     
         &-content {
+            padding: 2rem;
             width: 100%;
-            justify-content: center;
-            align-items: center;
 
             i {
                 color: $color-light;

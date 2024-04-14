@@ -12,7 +12,7 @@ $color-light: #757575;
 $color-lighter: #999999;
 $no-color: transparent;
 
-$color-primary: #006300;
+$color-primary: #008000;
 $color-secondary: #ffee00;
 $color-tertiary: #fff;
 
@@ -51,8 +51,4 @@ $borderRadius: 8px;
     display: flex;
     flex-direction: $flexDirection;
     justify-content: $justifyContent;
-}
-
-i {
-    padding-right: 1rem;
 }

@@ -6,7 +6,7 @@ import image3 from '../../assets/images/City2.png';
 import image4 from '../../assets/images/code.png';
 import './DefaultPage.scss';
 
-export default function DefaultPage({icon, title, children}) {
+export default function DefaultPage({ icon, title, children }) {
     function genRandomInt(max) {
         return Math.floor(Math.random() * (max + 1));
     }
