@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
 import Header from '../Header/Header';
-import image1 from '../../assets/images/SpookyCorridor_1920x1080.gif';
-import image2 from '../../assets/images/BD_Stretch.gif';
-import image3 from '../../assets/images/City2.gif';
-import image4 from '../../assets/images/code.png';
+import image1 from '../../assets/images/SpookyCorridor_1920x1080.jpg';
+import image2 from '../../assets/images/BD_Stretch.jpg';
+import image3 from '../../assets/images/City2.jpg';
+import image4 from '../../assets/images/code.jpg';
 import './DefaultPage.scss';
 
 export default function DefaultPage({ icon, title, children }) {
