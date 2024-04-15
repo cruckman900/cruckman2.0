@@ -58,6 +58,16 @@
         }
 
         .nav-list {
+            position: relative;
+            top: -2rem;
+                
+            @media only screen and (max-height:600px) {
+                position: relative;
+                top: -4rem;
+                left: -1rem;
+                height: 60%;
+            }
+
             &-item {
                 list-style: none;
             }
@@ -65,11 +75,20 @@
             &-link {
                 display: block;
                 margin: 1rem;
-                width: 100%;
+                width: 85%;
                 text-align: center;
                 font-family: $font-titillium;
                 font-size: $font-xl;
-
+                
+                @media only screen and (max-width:767px) {
+                    font-size: $font-sm;
+                    width: 50%;
+                }
+                
+                @media only screen and (max-height:600px) {
+                    font-size: $font-sm;
+                }
+    
                 @include borderTopRadius;
                 @include borderBottomRadius;
 

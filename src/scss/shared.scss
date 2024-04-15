@@ -7,6 +7,11 @@
 .hamburger-menu {
     width: 40px;
     height: 40px;
+                
+    @media only screen and (max-width:767px) {
+        width: 30px;
+        height: 30px;
+    }
 
     .menu {
         @extend %fullSpace;
@@ -86,11 +91,13 @@ i {
 
     &-container {
         @include flexbox(row);
+        position: relative;
+        left: -2rem;
 
         &-Menu {
             list-style: none;
             color: blue;
-        
+            
             &-button {
                 &-active {
                     @include colors($color-secondary, $color-dark);
@@ -103,6 +110,12 @@ i {
             padding-left: 1rem;
             width: 100%;
 
+            @media only screen and (max-width:767px) {
+                position: relative;
+                left: -1rem;
+                font-size: $font-sm;
+            }
+
             i {
                 color: $color-light;
             }
@@ -111,12 +124,23 @@ i {
                 font-size: $font-md;
                 text-transform: uppercase;
                 color: $color-light;
+                
+                @media only screen and (max-width:767px) {
+                    font-size: $font-sm;
+                }
             }
 
             &-summary {
-                font-size: $font-sm;
+                font-size: $font-md;
                 text-transform: lowercase;
                 color: $color-lighter;
+                
+                @media only screen and (max-width:767px) {
+                    position: relative;
+                    left: 1rem;
+                    padding-right: 1rem;
+                    font-size: $font-sm;
+                }
             }
         }
     }
