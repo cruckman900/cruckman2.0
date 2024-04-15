@@ -80,6 +80,7 @@ i {
 }
 
 .homeSection {
+    display: inline;
     justify-content: left;
     color: $color-secondary;
 
@@ -121,11 +122,25 @@ i {
     }
 }
 
-@media only screen and (max-width:767px) and (orientation:portrait) {
+.large-output {
+    display: inline;
+}
+
+.small-output {
+    display: none;
+}
+
+@media only screen and (max-width:767px) {
     #chatterbox-text,
-    .chatterbox,
-    .homeSection,
-    .homeSection-container-content-summary {
+    .chatterbox {
         display: none;
+    }
+
+    .large-output {
+        display: none;
+    }
+
+    .small-output {
+        display: inline;
     }
 }

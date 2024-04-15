@@ -9,7 +9,7 @@ export const HOMEPAGE_SHORTS = {
                 field immediately after. went to Wheeling (Jesuit) University and graduated in 2008
                 with a Bachelor's in Computer Science. struggled all the way to present to find and
                 keep jobs in the field.
-            `
+            `,
     },
     gamedev: {
         topic: 'gamedev',
@@ -21,7 +21,7 @@ export const HOMEPAGE_SHORTS = {
                 development position. around 2020, I started taking online courses for
                 game development using Unity and now, Unreal Engine. It's the most fun I've had
                 developing software so far, other than making this site.
-            `
+            `,
     },
     art2d: {
         topic: 'art2d',
@@ -33,7 +33,7 @@ export const HOMEPAGE_SHORTS = {
                 of that stuff is long gone, sitting in a dump somewhere on one of my old machines. I will
                 try to get some stuff up here eventually. I am having a lot more fun doing 3D stuff at the
                 moment.
-            `
+            `,
     },
     art3d: {
         topic: 'art3d',
@@ -45,7 +45,7 @@ export const HOMEPAGE_SHORTS = {
                 dabbling in this space around 1998. I never did anything truly impressing until the beginning of
                 April 2024. I am taking a bunch of online courses from Udemy on solid and organic modeling... also
                 learning nodes.
-            `
+            `,
     },
     music: {
         topic: 'music',
@@ -57,7 +57,7 @@ export const HOMEPAGE_SHORTS = {
                 I've been playing ever since - badly. I started taking lessons at CA House Music in 2023, and
                 have made some good progress. You'll get to hear some on this site. I'm trying to learn
                 a bit of folk.
-            `
+            `,
     },
     literature: {
         topic: 'literature',
@@ -69,6 +69,6 @@ export const HOMEPAGE_SHORTS = {
                 and loss. I probably cranked out 15 poems while I was there. I have 2 binders full now. I
                 don't write poetry much anymore, but I do like to write short stories and game concepts.
                 I'll share some.
-            `
-    }
+            `,
+    },
 };

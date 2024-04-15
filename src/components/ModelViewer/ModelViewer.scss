@@ -1,8 +1,8 @@
 @import '../../scss/shared.scss';
 
 .modelViewer {
-    height: 40vh;
-    width: 40vh;
+    height: 35vh;
+    width: 35vh;
     background-color: $color-light;
 
     @include borderTopRadius;
@@ -13,10 +13,12 @@
         &-command {
             display: inline-block;
             width: 80px;
+            font-size: $font-sm;
             text-transform: uppercase;
             color: $color-secondary;
         }
         &-action {
+            font-size: $font-sm;
             color: $color-lighter;
         }
     }
