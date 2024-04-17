@@ -2,6 +2,7 @@ import { useState } from 'react';
 
 import DefaultPage from '../../components/DefaultPage/DefaultPage';
 import Section from '../../components/ui/Section/Section';
+import Links from '../../components/ui/Links/Links';
 import TabButton from '../../components/ui/TabButton/TabButton';
 
 import { HOMEPAGE_SHORTS } from '../../assets/static-data/homepage-shorts';
@@ -30,81 +31,83 @@ export default function Home() {
                 <Section title='What&apos;s on my site?' className='homeSection'>
                     <div className='large-output'>
                         <div className='homeSection-container'>
-                            <menu className='homeSection-container-Menu'>
-                                <TabButton
-                                    type='button'
-                                    className={selectedTopic === 'softwaredev'
-                                        ? 'homeSection-container-Menu-button-active'
-                                        : 'homeSection-container-Menu-button'}
-                                    size='200px'
-                                    onClick={() => handleClick('softwaredev')}
-                                >
-                                    Software Development
-                                </TabButton>
-                                <TabButton
-                                    type='button'
-                                    className={selectedTopic === 'gamedev'
-                                        ? 'homeSection-container-Menu-button-active'
-                                        : 'homeSection-container-Menu-button'}
-                                    size='200px'
-                                    onClick={() => handleClick('gamedev')}
-                                >
-                                    Game Design/Development
-                                </TabButton>
-                                <TabButton
-                                    type='button'
-                                    className={selectedTopic === 'art2d'
-                                        ? 'homeSection-container-Menu-button-active'
-                                        : 'homeSection-container-Menu-button'}
-                                    size='200px'
-                                    onClick={() => handleClick('art2d')}
-                                >
-                                    2D Artwork
-                                </TabButton>
-                                <TabButton
-                                    type='button'
-                                    className={selectedTopic === 'art3d'
-                                        ? 'homeSection-container-Menu-button-active'
-                                        : 'homeSection-container-Menu-button'}
-                                    size='200px'
-                                    onClick={() => handleClick('art3d')}
-                                >
-                                    3D Graphics and Effects
-                                </TabButton>
-                                <TabButton
-                                    type='button'
-                                    className={selectedTopic === 'music'
-                                        ? 'homeSection-container-Menu-button-active'
-                                        : 'homeSection-container-Menu-button'}
-                                    size='200px'
-                                    onClick={() => handleClick('music')}
-                                >
-                                    Music
-                                </TabButton>
-                                <TabButton
-                                    type='button'
-                                    className={selectedTopic === 'literature'
-                                        ? 'homeSection-container-Menu-button-active'
-                                        : 'homeSection-container-Menu-button'}
-                                    size='200px'
-                                    onClick={() => handleClick('literature')}
-                                >
-                                    Literature
-                                </TabButton>
-                            </menu>
-
-                            {!selectedTopic ? <p className='homeSection-container-content'>
-                                Select a topic just to see what awaits inside. I have been waiting for you to come visit.
-                            </p> : (
-                                <div key={HOMEPAGE_SHORTS[selectedTopic].title} className='homeSection-container-content'>
-                                    <h3>
-                                        <i className={HOMEPAGE_SHORTS[selectedTopic].icon}></i>
-                                        <span>{HOMEPAGE_SHORTS[selectedTopic].title}</span>
-                                    </h3>
-                                    <p className='homeSection-container-content-description'>{HOMEPAGE_SHORTS[selectedTopic].description}</p>
-                                    <p className='homeSection-container-content-summary'>{HOMEPAGE_SHORTS[selectedTopic].summary}</p>
-                                </div>
-                            )}
+                            <Links linksContainer="menu" linksContainerClass="homeSection-container-Menu" links={
+                                <>
+                                    <TabButton
+                                        type='button'
+                                        className={selectedTopic === 'softwaredev'
+                                            ? 'homeSection-container-Menu-button-active'
+                                            : 'homeSection-container-Menu-button'}
+                                        size='200px'
+                                        onClick={() => handleClick('softwaredev')}
+                                    >
+                                        Software Development
+                                    </TabButton>
+                                    <TabButton
+                                        type='button'
+                                        className={selectedTopic === 'gamedev'
+                                            ? 'homeSection-container-Menu-button-active'
+                                            : 'homeSection-container-Menu-button'}
+                                        size='200px'
+                                        onClick={() => handleClick('gamedev')}
+                                    >
+                                        Game Design/Development
+                                    </TabButton>
+                                    <TabButton
+                                        type='button'
+                                        className={selectedTopic === 'art2d'
+                                            ? 'homeSection-container-Menu-button-active'
+                                            : 'homeSection-container-Menu-button'}
+                                        size='200px'
+                                        onClick={() => handleClick('art2d')}
+                                    >
+                                        2D Artwork
+                                    </TabButton>
+                                    <TabButton
+                                        type='button'
+                                        className={selectedTopic === 'art3d'
+                                            ? 'homeSection-container-Menu-button-active'
+                                            : 'homeSection-container-Menu-button'}
+                                        size='200px'
+                                        onClick={() => handleClick('art3d')}
+                                    >
+                                        3D Graphics and Effects
+                                    </TabButton>
+                                    <TabButton
+                                        type='button'
+                                        className={selectedTopic === 'music'
+                                            ? 'homeSection-container-Menu-button-active'
+                                            : 'homeSection-container-Menu-button'}
+                                        size='200px'
+                                        onClick={() => handleClick('music')}
+                                    >
+                                        Music
+                                    </TabButton>
+                                    <TabButton
+                                        type='button'
+                                        className={selectedTopic === 'literature'
+                                            ? 'homeSection-container-Menu-button-active'
+                                            : 'homeSection-container-Menu-button'}
+                                        size='200px'
+                                        onClick={() => handleClick('literature')}
+                                    >
+                                        Literature
+                                    </TabButton>
+                                </>
+                            }>
+                                {!selectedTopic ? <p className='homeSection-container-content'>
+                                    Select a topic just to see what awaits inside. I have been waiting for you to come visit.
+                                </p> : (
+                                    <div key={HOMEPAGE_SHORTS[selectedTopic].title} className='homeSection-container-content'>
+                                        <h3>
+                                            <i className={HOMEPAGE_SHORTS[selectedTopic].icon}></i>
+                                            <span>{HOMEPAGE_SHORTS[selectedTopic].title}</span>
+                                        </h3>
+                                        <p className='homeSection-container-content-description'>{HOMEPAGE_SHORTS[selectedTopic].description}</p>
+                                        <p className='homeSection-container-content-summary'>{HOMEPAGE_SHORTS[selectedTopic].summary}</p>
+                                    </div>
+                                )}
+                            </Links>
                         </div>
                     </div>
                     <div className='small-output'>

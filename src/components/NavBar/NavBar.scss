@@ -17,7 +17,7 @@
             position: fixed;
             top: 3rem;
             left: -50vw;
-            transition: left .4s cubic-bezier(1, 0, 0, 1);
+            transition: left .8s cubic-bezier(1, 0, 0, 1);
 
             .left-img {
                 width: 50%;
@@ -52,7 +52,7 @@
             top: 3rem;
             right: -50vw;
             align-items: center;
-            transition: right .4s cubic-bezier(1, 0, 0, 1);
+            transition: right .8s cubic-bezier(1, 0, 0, 1);
 
             @include flexbox(row, center);
         }
@@ -63,7 +63,7 @@
                 
             @media only screen and (max-height:600px) {
                 position: relative;
-                top: -4rem;
+                top: -5rem;
                 left: -1rem;
                 height: 60%;
             }
