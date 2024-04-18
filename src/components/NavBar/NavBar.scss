@@ -7,8 +7,6 @@
     top: 4px;
     
     &-navigation {
-        display: flex;
-
         &-left {
             z-index: 200;
             width: 50vw;
@@ -25,21 +23,40 @@
                 box-shadow: 25px 50px 25px rgba($color-black, .6);
                 opacity: .8;
                 border-radius: 10px;
+
+                @media only screen and (max-width:767px) {
+                    box-shadow: 15px 25px 25px rgba($color-black, .6);
+                }
             }     
             
             .left-img-1 {
                 top: 15%;
                 left: 15%;
+                
+                @media only screen and (max-width:767px) {
+                    top: 35%;
+                    left: 15%;
+                }
             }
             
             .left-img-2 {
                 top: 35%;
                 left: 25%;
+                
+                @media only screen and (max-width:767px) {
+                    top: 40%;
+                    left: 25%;
+                }
             }
             
             .left-img-3 {
                 top: 55%;
                 left: 35%;
+                
+                @media only screen and (max-width:767px) {
+                    top: 45%;
+                    left: 35%;
+                }
             }
         }
 
@@ -60,29 +77,26 @@
         .nav-list {
             position: relative;
             top: -2rem;
-                
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
             @media only screen and (max-height:600px) {
                 position: relative;
                 top: -5rem;
-                left: -1rem;
                 height: 60%;
-            }
-
-            &-item {
-                list-style: none;
             }
 
             &-link {
                 display: block;
-                margin: 1rem;
-                width: 85%;
+                margin: 1rem 0;
+                padding: 0 1rem;
                 text-align: center;
                 font-family: $font-titillium;
                 font-size: $font-xl;
                 
                 @media only screen and (max-width:767px) {
                     font-size: $font-sm;
-                    width: 50%;
                 }
                 
                 @media only screen and (max-height:600px) {
@@ -95,7 +109,7 @@
                 transition: all .4s;
 
                 &:hover {
-                    background-color: $color-dark;
+                    background-color: $color-primary;
                 }
             }
         }
