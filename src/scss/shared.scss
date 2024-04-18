@@ -86,16 +86,16 @@ i {
 
 .homeSection {
     display: inline;
-    justify-content: left;
     color: $color-secondary;
+    margin: 0 1rem;
 
     &-container {
         @include flexbox(row);
-        position: relative;
-        left: -2rem;
 
         &-Menu {
             list-style: none;
+            padding: 0;
+
             color: blue;
             
             &-button {
@@ -107,12 +107,10 @@ i {
         }
     
         &-content {
-            padding-left: 1rem;
             width: 100%;
+            margin: 1rem;
 
             @media only screen and (max-width:767px) {
-                position: relative;
-                left: -1rem;
                 font-size: $font-sm;
             }
 
