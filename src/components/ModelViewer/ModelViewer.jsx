@@ -30,7 +30,6 @@ export default function ModelViewer({ url }) {
             <Canvas
                 className='modelViewer-canvas'
                 camera={{fov: 75, near: 0.1, far: 1000, position: [0, 0, 5]}}
-                concurrent
             >
                 <directionalLight position={[10, 10, 10]} intensity={5} />
                 <directionalLight position={[-10, -10, -10]} intensity={5} />

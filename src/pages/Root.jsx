@@ -8,8 +8,8 @@ import { Outlet } from 'react-router-dom';
 function RootLayout() {
     return <>
         <Header className='main-header' icon='fa-solid fa-dragon'>
-            <NavLink to="/" alt="Home">
-                <span className='titillium'>Chris Ruckman</span>
+            <NavLink className='brand-link titillium' to="/" alt="Home">
+                Chris Ruckman
             </NavLink>
             <NavBar />
         </Header>

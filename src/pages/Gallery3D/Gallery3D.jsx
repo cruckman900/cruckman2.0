@@ -20,10 +20,9 @@ export default function Gallery3D() {
                         tricks, gather some addons, and start creating stuff! I will be modifying the 3D viewport below (hopefully) at some point to be a little
                         more than a simple tool. I will make it so that you can navigate scenes as if you&apos;re inside a game. Two things currently
                         that I am noticing: if I load one model and then load a new model, the camera doesn&apos;t reset, and, for some reason, I
-                        cannot reload the bow once I load another model.
+                        cannot reload the bow once I load another model - so, I&apos;ve removed that button.
                     </div>
                     <ModelViewer url={modelURL} />
-                    <button onClick={() => handleClick('bow2.glb')}>Fantasy Bow</button>
                     <button onClick={() => handleClick('BD_Stretch_Robot.glb')}>Stretch Robot</button>
                 </div>
             </div>

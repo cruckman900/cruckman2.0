@@ -4,6 +4,10 @@
     letter-spacing: 1px;
 }
 
+.brand-link:hover {
+    color: $color-secondary;
+}
+
 .flexbox-column-center {
     @include flexbox(column);
 
