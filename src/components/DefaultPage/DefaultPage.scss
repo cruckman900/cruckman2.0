@@ -15,7 +15,7 @@
 
     @include borderTopRadius;
     @include colors($color-primary, $color-secondary);
-    @include fonts($font-titillium, $font-lg, 600, $color-secondary);
+    @include fonts($font-titillium, $font-lg, 600, $color-darker);
 }
 
 .dpChildren {
