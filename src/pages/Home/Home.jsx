@@ -6,6 +6,7 @@ import Links from '../../components/ui/Links/Links';
 import TabButton from '../../components/ui/TabButton/TabButton';
 
 import { HOMEPAGE_SHORTS } from '../../assets/static-data/homepage-shorts';
+import './Home.scss';
 
 export default function Home() {
     const [selectedTopic, setSelectedTopic] = useState();
@@ -95,7 +96,7 @@ export default function Home() {
                                     </TabButton>
                                 </>
                             }>
-                                {!selectedTopic ? <p className='homeSection-container-content'>
+                                {!selectedTopic ? <p className='homeSection-container-select'>
                                     Select a topic just to see what awaits inside. I have been waiting for you to come visit.
                                 </p> : (
                                     <div key={HOMEPAGE_SHORTS[selectedTopic].title} className='homeSection-container-content'>

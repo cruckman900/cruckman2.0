@@ -1,0 +1,76 @@
+@import '../../scss/shared.scss';
+
+.homeSection {
+    display: inline;
+    color: $color-secondary;
+    margin: 0 1rem;
+
+    &-container {
+        @include flexbox(row);
+
+        &-select {
+            position: relative;
+            top: 2rem;
+            left: 2rem;
+            width: 100%;
+            font-weight: 600;
+        }
+
+        &-Menu {
+            list-style: none;
+            padding: 0;
+
+            color: blue;
+            
+            &-button {
+                &-active {
+                    @include colors($color-secondary, $color-dark);
+                    border-color: $color-dark;
+                }
+            }
+        }
+    
+        &-content {
+            background-color: rgba($color-darker, .6);
+            padding: 0 1rem;
+            @include borderTopRadius;
+            @include borderBottomRadius;
+            width: 100%;
+            margin-left: 1rem;
+
+            @media only screen and (max-width:767px) {
+                background-color: transparent;
+                font-size: $font-sm;
+                margin-left: 0;
+            }
+
+            i {
+                color: $color-light;
+            }
+
+            &-description {
+                font-size: $font-md;
+                text-transform: uppercase;
+                text-align: justify;
+                color: $color-light;
+                
+                @media only screen and (max-width:767px) {
+                    margin-right: 1rem;
+                    font-size: $font-sm;
+                }
+            }
+
+            &-summary {
+                font-size: $font-md;
+                text-transform: lowercase;
+                text-align: justify;
+                color: $color-lighter;
+                
+                @media only screen and (max-width:767px) {
+                    margin-right: 1rem;
+                    font-size: $font-sm;
+                }
+            }
+        }
+    }
+}
