@@ -108,10 +108,11 @@ i {
     
         &-content {
             width: 100%;
-            margin: 1rem;
+            margin-left: 1rem;
 
             @media only screen and (max-width:767px) {
                 font-size: $font-sm;
+                margin-left: 0;
             }
 
             i {
@@ -121,9 +122,11 @@ i {
             &-description {
                 font-size: $font-md;
                 text-transform: uppercase;
+                text-align: justify;
                 color: $color-light;
                 
                 @media only screen and (max-width:767px) {
+                    margin-left: 1rem;
                     font-size: $font-sm;
                 }
             }
@@ -131,12 +134,11 @@ i {
             &-summary {
                 font-size: $font-md;
                 text-transform: lowercase;
+                text-align: justify;
                 color: $color-lighter;
                 
                 @media only screen and (max-width:767px) {
-                    position: relative;
-                    left: 1rem;
-                    padding-right: 1rem;
+                    margin-left: 1rem;
                     font-size: $font-sm;
                 }
             }
