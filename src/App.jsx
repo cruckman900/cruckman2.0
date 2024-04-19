@@ -9,7 +9,7 @@ import './App.scss'
 function App() {
   return (
     <>
-      <Header className='main-header' icon='fa-brands fa-d-and-d'>
+      <Header className='main-header' icon='fa-solid fa-dragon'>
           <span className='titillium'>Chris Ruckman</span>
           <NavBar />
       </Header>
