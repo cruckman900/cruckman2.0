@@ -5,12 +5,16 @@
     color: $color-secondary;
     margin: 0 1rem;
 
+    @media only screen and (max-width:767px) {
+        font-size: $font-sm;
+    }
+
     &-container {
         @include flexbox(row);
 
         &-select {
             position: relative;
-            top: 2rem;
+            // top: 1rem;
             left: 2rem;
             width: 100%;
             font-weight: 600;
@@ -19,8 +23,7 @@
         &-Menu {
             list-style: none;
             padding: 0;
-
-            color: blue;
+            margin: 0;
             
             &-button {
                 &-active {
