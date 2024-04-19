@@ -22,8 +22,10 @@ export default function ModelViewer({ url }) {
 
     return (
         <div className='modelViewer'
-            onMouseOver={() => handleMouseEvent(false)} onMouseOut={() => handleMouseEvent(true)}
-            onTouchStart={() => handleMouseEvent(false)} onTouchEnd={() => handleMouseEvent(true)}
+            onMouseOver={() => handleMouseEvent(false)}
+            onMouseOut={() => handleMouseEvent(true)}
+            onTouchStart={() => handleMouseEvent(false)}
+            onTouchEnd={() => handleMouseEvent(true)}
         >
             <Canvas
                 className='modelViewer-canvas'
@@ -59,6 +61,10 @@ export default function ModelViewer({ url }) {
                             <div className='modelViewer-commands-heading'>
                                 <span className='modelViewer-commands-heading'>Touch</span>
                             </div>
+                        </div>
+                        <div className='modelViewer-commands'>
+                            <span className='modelViewer-commands-command'>&nbsp;</span>
+                            <span className='modelViewer-commands-action'>tap to remove instructions</span>
                         </div>
                         <div className='modelViewer-commands'>
                             <span className='modelViewer-commands-command'>pan:</span>
