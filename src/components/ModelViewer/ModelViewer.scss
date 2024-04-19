@@ -9,16 +9,40 @@
     @include borderBottomRadius;
     border: 1px solid $color-secondary;
 
+    &-canvas {
+        @include borderTopRadius;
+        @include borderBottomRadius;
+    }
+
+    &-overlay {
+        position: relative;
+        top: calc(-35vh - 2px);
+        width: -35vh;
+        background-color: rgba($color-darker, .6);
+        @include borderTopRadius;
+    }
+
     &-commands {
+        line-height: .7rem;
+        padding: 2px;
+
+        &-heading {
+            margin-top: 2px;
+            font-size: $font-sm;
+            text-transform: uppercase;
+            color: $color-primary;
+            line-height: 1rem;
+        }
+
         &-command {
             display: inline-block;
-            width: 80px;
-            font-size: $font-sm;
+            width: 60px;
+            font-size: $font-xsm;
             text-transform: uppercase;
             color: $color-secondary;
         }
         &-action {
-            font-size: $font-sm;
+            font-size: $font-xsm;
             color: $color-lighter;
         }
     }
