@@ -8,6 +8,9 @@ import image2 from '../../assets/images/BD_Stretch.jpg';
 import image4 from '../../assets/images/code.jpg';
 
 export default function NavBar() {
+    function handleClick() {
+        document.getElementById('check').checked = false;
+    }
     return (
         <nav className="navbar">
             <input type="checkbox" id="check" className="checkbox" hidden />
@@ -32,7 +35,7 @@ export default function NavBar() {
                             <li className="nav-list-item">
                                 <NavLink
                                     className={({isActive}) => isActive ? 'nav-list-link-active' : 'nav-list-link'}
-                                    to="/" alt="Home"
+                                    to="/" alt="Home" onClick={handleClick}
                                 >
                                     Home
                                 </NavLink>
@@ -40,7 +43,7 @@ export default function NavBar() {
                             <li className="nav-list-item">
                                 <NavLink
                                     className={({isActive}) => isActive ? 'nav-list-link-active' : 'nav-list-link'}
-                                    to="/SoftwareDevelopment" alt="Software Development"
+                                    to="/SoftwareDevelopment" alt="Software Development" onClick={handleClick}
                                 >
                                     Software Development
                                 </NavLink>
@@ -48,7 +51,7 @@ export default function NavBar() {
                             <li className="nav-list-item">
                                 <NavLink
                                     className={({isActive}) => isActive ? 'nav-list-link-active' : 'nav-list-link'}
-                                    to="/GameDesignDevelopment" alt="Game Design / Development"
+                                    to="/GameDesignDevelopment" alt="Game Design / Development" onClick={handleClick}
                                 >
                                     Game Design / Development
                                 </NavLink>
@@ -56,7 +59,7 @@ export default function NavBar() {
                             <li className="nav-list-item">
                                 <NavLink
                                     className={({isActive}) => isActive ? 'nav-list-link-active' : 'nav-list-link'}
-                                    to="/Gallery2D" alt="2D Artwork"
+                                    to="/Gallery2D" alt="2D Artwork" onClick={handleClick}
                                 >
                                     2D Artwork
                                 </NavLink>
@@ -64,7 +67,7 @@ export default function NavBar() {
                             <li className="nav-list-item">
                                 <NavLink
                                     className={({isActive}) => isActive ? 'nav-list-link-active' : 'nav-list-link'}
-                                    to="/Gallery3D" alt="3D Graphics / Effects"
+                                    to="/Gallery3D" alt="3D Graphics / Effects" onClick={handleClick}
                                 >
                                     3D Graphics / Effects
                                 </NavLink>
@@ -72,7 +75,7 @@ export default function NavBar() {
                             <li className="nav-list-item">
                                 <NavLink
                                     className={({isActive}) => isActive ? 'nav-list-link-active' : 'nav-list-link'}
-                                    to="/Music" alt="Music"
+                                    to="/Music" alt="Music" onClick={handleClick}
                                 >
                                     Music
                                 </NavLink>
@@ -80,7 +83,7 @@ export default function NavBar() {
                             <li className="nav-list-item">
                                 <NavLink
                                     className={({isActive}) => isActive ? 'nav-list-link-active' : 'nav-list-link'}
-                                    to="/Literature" alt="Literature"
+                                    to="/Literature" alt="Literature" onClick={handleClick}
                                 >
                                     Literature
                                 </NavLink>
@@ -88,7 +91,7 @@ export default function NavBar() {
                             <li className="nav-list-item">
                                 <NavLink
                                     className={({isActive}) => isActive ? 'nav-list-link-active' : 'nav-list-link'}
-                                    to="/Resume" alt="Resume"
+                                    to="/Resume" alt="Resume" onClick={handleClick}
                                 >
                                     Resum&eacute;
                                 </NavLink>
@@ -96,7 +99,7 @@ export default function NavBar() {
                             <li className="nav-list-item">
                                 <NavLink
                                     className={({isActive}) => isActive ? 'nav-list-link-active' : 'nav-list-link'}
-                                    to="/About" alt="About"
+                                    to="/About" alt="About" onClick={handleClick}
                                 >
                                     About
                                 </NavLink>
