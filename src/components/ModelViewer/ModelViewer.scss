@@ -15,16 +15,22 @@
     }
 
     &-overlay {
+        display: flex;
+        flex-direction: column;
         position: relative;
         top: calc(-35vh - 2px);
+        height: 35vh;
         width: -35vh;
         background-color: rgba($color-darker, .6);
+        padding: 1rem;
         @include borderTopRadius;
+        @include borderBottomRadius;
     }
 
     &-commands {
+        // position: relative;
+        // top: 5vh;
         line-height: .7rem;
-        padding: 2px;
 
         &-heading {
             margin-top: 2px;

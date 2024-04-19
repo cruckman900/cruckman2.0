@@ -16,17 +16,18 @@ function Model({ url }) {
 export default function ModelViewer({ url }) {
     const [showInstructions, setShowInstructions] = useState(true);
 
-    function handleMouseEvent() {
-        setShowInstructions(!showInstructions);
+    function handleMouseEvent(value) {
+        setShowInstructions(value);
     }
 
     return (
-        <div className='modelViewer'>
+        <div className='modelViewer'
+            onMouseOver={() => handleMouseEvent(false)} onMouseOut={() => handleMouseEvent(true)}
+            onTouchStart={() => handleMouseEvent(false)} onTouchEnd={() => handleMouseEvent(true)}
+        >
             <Canvas
                 className='modelViewer-canvas'
                 camera={{fov: 75, near: 0.1, far: 1000, position: [0, 0, 5]}}
-                onMouseOver={handleMouseEvent} onMouseOut={handleMouseEvent}
-                onTouchStart={handleMouseEvent} onTouchEnd={handleMouseEvent}
             >
                 <directionalLight position={[10, 10, 10]} intensity={5} />
                 <directionalLight position={[-10, -10, -10]} intensity={5} />
@@ -38,8 +39,10 @@ export default function ModelViewer({ url }) {
             {
                 showInstructions &&
                     <div className="modelViewer-overlay">
-                        <div className='modelViewer-commands-heading'>
-                            <span className='modelViewer-commands-heading'>Keyboard / Mouse</span>
+                        <div className='modelViewer-commands'>
+                            <div className='modelViewer-commands-heading'>
+                                <span className='modelViewer-commands-heading'>Keyboard / Mouse</span>
+                            </div>
                         </div>
                         <div className='modelViewer-commands'>
                             <span className='modelViewer-commands-command'>pan:</span>
@@ -52,8 +55,10 @@ export default function ModelViewer({ url }) {
                             <span className='modelViewer-commands-command'>zoom:</span>
                             <span className='modelViewer-commands-action'>middle mouse button/scroll wheel</span>
                         </div>
-                        <div className='modelViewer-commands-heading'>
-                            <span className='modelViewer-commands-heading'>Touch</span>
+                        <div className='modelViewer-commands'>
+                            <div className='modelViewer-commands-heading'>
+                                <span className='modelViewer-commands-heading'>Touch</span>
+                            </div>
                         </div>
                         <div className='modelViewer-commands'>
                             <span className='modelViewer-commands-command'>pan:</span>
