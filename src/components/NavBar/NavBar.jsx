@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom';
 import './NavBar.scss';
 
 import Links from '../ui/Links/Links';
@@ -29,31 +30,76 @@ export default function NavBar() {
                     <Links linksContainer="ul" linksContainerClass="nav-list" links={
                         <>
                             <li className="nav-list-item">
-                                <a href="#" className="nav-list-link">Home</a>
+                                <NavLink
+                                    className={({isActive}) => isActive ? 'nav-list-link-active' : 'nav-list-link'}
+                                    to="/" alt="Home"
+                                >
+                                    Home
+                                </NavLink>
                             </li>
                             <li className="nav-list-item">
-                                <a href="#" className="nav-list-link">Software Development</a>
+                                <NavLink
+                                    className={({isActive}) => isActive ? 'nav-list-link-active' : 'nav-list-link'}
+                                    to="/SoftwareDevelopment" alt="Software Development"
+                                >
+                                    Software Development
+                                </NavLink>
                             </li>
                             <li className="nav-list-item">
-                                <a href="#" className="nav-list-link">Game Design / Development</a>
+                                <NavLink
+                                    className={({isActive}) => isActive ? 'nav-list-link-active' : 'nav-list-link'}
+                                    to="/GameDesignDevelopment" alt="Game Design / Development"
+                                >
+                                    Game Design / Development
+                                </NavLink>
                             </li>
                             <li className="nav-list-item">
-                                <a href="#" className="nav-list-link">2D Artwork</a>
+                                <NavLink
+                                    className={({isActive}) => isActive ? 'nav-list-link-active' : 'nav-list-link'}
+                                    to="/Gallery2D" alt="2D Artwork"
+                                >
+                                    2D Artwork
+                                </NavLink>
                             </li>
                             <li className="nav-list-item">
-                                <a href="#" className="nav-list-link">3D Graphics / Effects</a>
+                                <NavLink
+                                    className={({isActive}) => isActive ? 'nav-list-link-active' : 'nav-list-link'}
+                                    to="/Gallery3D" alt="3D Graphics / Effects"
+                                >
+                                    3D Graphics / Effects
+                                </NavLink>
                             </li>
                             <li className="nav-list-item">
-                                <a href="#" className="nav-list-link">Music</a>
+                                <NavLink
+                                    className={({isActive}) => isActive ? 'nav-list-link-active' : 'nav-list-link'}
+                                    to="/Music" alt="Music"
+                                >
+                                    Music
+                                </NavLink>
                             </li>
                             <li className="nav-list-item">
-                                <a href="#" className="nav-list-link">Literature</a>
+                                <NavLink
+                                    className={({isActive}) => isActive ? 'nav-list-link-active' : 'nav-list-link'}
+                                    to="/Literature" alt="Literature"
+                                >
+                                    Literature
+                                </NavLink>
                             </li>
                             <li className="nav-list-item">
-                                <a href="#" className="nav-list-link">Resume</a>
+                                <NavLink
+                                    className={({isActive}) => isActive ? 'nav-list-link-active' : 'nav-list-link'}
+                                    to="/Resume" alt="Resume"
+                                >
+                                    Resum&eacute;
+                                </NavLink>
                             </li>
                             <li className="nav-list-item">
-                                <a href="#" className="nav-list-link">About</a>
+                                <NavLink
+                                    className={({isActive}) => isActive ? 'nav-list-link-active' : 'nav-list-link'}
+                                    to="/About" alt="About"
+                                >
+                                    About
+                                </NavLink>
                             </li>
                         </>
                     } />

@@ -87,7 +87,7 @@
                 height: 60%;
             }
 
-            &-link {
+            &-link, &-link-active {
                 display: block;
                 margin: 1rem 0;
                 padding: 0 1rem;
@@ -110,6 +110,11 @@
 
                 &:hover {
                     background-color: $color-primary;
+                }
+
+                &-active {
+                    @include colors($color-secondary, $color-dark);
+                    border-color: $color-dark;
                 }
             }
         }
