@@ -51,6 +51,7 @@ iframe {
 
     &-red {
         color: $color-red;
+        transition: all .4s;
 
         &:hover {
             color: $color-secondary;

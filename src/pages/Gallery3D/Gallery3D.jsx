@@ -2,7 +2,7 @@ import DefaultPage from '../../components/DefaultPage/DefaultPage';
 // import Section from '../../components/ui/Section/Section';
 import ModelViewer from '../../components/ModelViewer/ModelViewer';
 
-export default function ThreeDGallery() {
+export default function Gallery3D() {
     return (
         <DefaultPage icon={'fa-solid fa-cubes'} title='3D Graphics and Effects'>
             <div>
