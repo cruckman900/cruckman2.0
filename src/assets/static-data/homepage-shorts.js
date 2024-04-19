@@ -7,8 +7,8 @@ export const HOMEPAGE_SHORTS = {
         summary: `
                 graduated from West Virginia Northern Community College in 2005. began working in the
                 field immediately after. went to Wheeling (Jesuit) University and graduated in 2008
-                with a Bachelor's in Computer Science. struggled all the way to present to find and
-                keep jobs in the field.
+                with a Bachelor's in Computer Science. for the most part, have been full-stack, but 
+                have a little Android background as well.
             `,
     },
     gamedev: {
@@ -44,7 +44,7 @@ export const HOMEPAGE_SHORTS = {
                 this is my true passion. I have always been intrigued by 3D graphics and animation. I started
                 dabbling in this space around 1998. I never did anything truly impressing until the beginning of
                 April 2024. I am taking a bunch of online courses from Udemy on solid and organic modeling... also
-                learning nodes.
+                learning about nodes.
             `,
     },
     music: {

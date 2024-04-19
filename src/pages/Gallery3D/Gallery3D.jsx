@@ -1,14 +1,30 @@
+import { useState } from 'react';
+
 import DefaultPage from '../../components/DefaultPage/DefaultPage';
-// import Section from '../../components/ui/Section/Section';
 import ModelViewer from '../../components/ModelViewer/ModelViewer';
 
 export default function Gallery3D() {
+    const [modelURL, setModelURL] = useState('bow2.glb')
+
+    function handleClick(url) {
+        setModelURL(url);
+    }
+
     return (
         <DefaultPage icon={'fa-solid fa-cubes'} title='3D Graphics and Effects'>
             <div>
                 <div className='homeFlexbox-left'>
-                    <div className='homeFlexbox-left-div'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis cupiditate eveniet explicabo id architecto delectus voluptate ullam temporibus mollitia dolores cumque et quo corporis numquam, incidunt veritatis quisquam laudantium error, recusandae accusamus! Quaerat officiis a eveniet modi molestiae, dicta ducimus molestias, iste illo saepe nam! Itaque tempore nemo iste numquam?</div>
-                    <ModelViewer url='BD_Stretch_Robot.glb' />
+                    <div className='homeFlexbox-left-div'>
+                        I have been playing with Blender almost as long as it has been around, but I never really knew what I was doing with it.
+                        I recently decided to get a few courses and delve deep into understanding how it all works: get some knowledge, tips and
+                        tricks, gather some addons, and start creating stuff! I will be modifying the 3D viewport below (hopefully) at some point to be a little
+                        more than a simple tool. I will make it so that you can navigate scenes as if you&apos;re inside a game. Two things currently
+                        that I am noticing: if I load one model and then load a new model, the camera doesn&apos;t reset, and, for some reason, I
+                        cannot reload the bow once I load another model.
+                    </div>
+                    <ModelViewer url={modelURL} />
+                    <button onClick={() => handleClick('bow2.glb')}>Fantasy Bow</button>
+                    <button onClick={() => handleClick('BD_Stretch_Robot.glb')}>Stretch Robot</button>
                 </div>
             </div>
         </DefaultPage>

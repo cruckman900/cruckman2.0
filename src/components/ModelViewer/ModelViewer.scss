@@ -4,6 +4,7 @@
     height: 35vh;
     width: 35vh;
     background-color: $color-light;
+    @include noSelect;
 
     @include borderTopRadius;
     @include borderBottomRadius;

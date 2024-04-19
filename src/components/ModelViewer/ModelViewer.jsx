@@ -30,6 +30,7 @@ export default function ModelViewer({ url }) {
             <Canvas
                 className='modelViewer-canvas'
                 camera={{fov: 75, near: 0.1, far: 1000, position: [0, 0, 5]}}
+                concurrent
             >
                 <directionalLight position={[10, 10, 10]} intensity={5} />
                 <directionalLight position={[-10, -10, -10]} intensity={5} />
@@ -55,7 +56,7 @@ export default function ModelViewer({ url }) {
                             <span className='modelViewer-commands-action'>left mouse button</span></div>
                         <div className='modelViewer-commands'>
                             <span className='modelViewer-commands-command'>zoom:</span>
-                            <span className='modelViewer-commands-action'>middle mouse button/scroll wheel</span>
+                            <span className='modelViewer-commands-action'>middle mouse button/scroll</span>
                         </div>
                         <div className='modelViewer-commands'>
                             <div className='modelViewer-commands-heading'>
