@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 import { withRouter } from 'react-router-dom';
 import ReactGA from 'react-ga';
 
