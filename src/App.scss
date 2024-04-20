@@ -9,6 +9,7 @@
 .main-header {
     display: flex;
     flex-direction: column;
+    padding-top: .2rem;
 
     i {
       color: $color-primary;

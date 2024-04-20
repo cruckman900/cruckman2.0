@@ -1,7 +1,6 @@
 /* eslint-disable react/jsx-no-undef */
 /* eslint-disable react/no-unknown-property */
-import { useState } from 'react';
-import { Suspense } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 import { GLTFLoader } from 'three/examples/jsm/Addons.js';
 import { Canvas, useLoader } from '@react-three/fiber';
 import { OrbitControls, Html } from '@react-three/drei';
@@ -14,13 +13,27 @@ function Model({ url }) {
 }
 
 export default function ModelViewer({ url }) {
+    const [showInstructionsToggle, setShowInstructionsToggle] = useState(true);
     const [showInstructions, setShowInstructions] = useState(true);
 
     function handleMouseEvent(value) {
-        setShowInstructions(value);
+        if (showInstructionsToggle) {
+            setShowInstructions(value);
+        }
     }
 
+    function handleInstructionsClick() {
+        setShowInstructionsToggle(!showInstructionsToggle);
+    }
+
+    useEffect(() => {
+        if (!showInstructionsToggle) {
+            setShowInstructions(false);
+        }
+    }, [showInstructionsToggle])
+
     return (
+        <>
         <div className='modelViewer'
             onMouseOver={() => handleMouseEvent(false)}
             onMouseOut={() => handleMouseEvent(true)}
@@ -80,5 +93,7 @@ export default function ModelViewer({ url }) {
                     </div>
             }
         </div>
+        <div className='toggle' onClick={handleInstructionsClick}>Click to {showInstructionsToggle ? 'hide' : 'show'} Instructions</div>
+        </>
     );
 }

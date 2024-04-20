@@ -1,5 +1,13 @@
 @import '../../scss/shared.scss';
 
+.toggle {
+    position: sticky;
+    z-index: 5;
+    margin-left: 1rem;
+    font-size: $font-sm;
+    cursor: pointer;
+}
+
 .modelViewer {
     height: 35vh;
     width: 35vh;

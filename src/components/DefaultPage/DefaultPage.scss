@@ -11,7 +11,9 @@
 }
 
 .dpHeader {
-    padding: .5rem 1rem;
+    position: sticky;
+    top: 0;
+    padding: 0 1rem;
 
     @include borderTopRadius;
     @include colors($color-primary, $color-secondary);
