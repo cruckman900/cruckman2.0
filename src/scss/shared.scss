@@ -14,6 +14,55 @@
     }
 }
 
+.kicks {
+    display: none;
+
+    &-left img, &-right img {
+        display: none;
+    }
+
+    @media only screen and (min-width:calc(1680px + 4rem)) {
+        display: inline;
+
+        &-left {
+            img {
+                display: inline;
+                position: absolute;
+                bottom: 12vh;
+                z-index: 15;
+                left: 2rem;
+            }
+        }
+    
+        &-right{
+            img {
+                display: inline;
+                position: absolute;
+                bottom: 12vh;
+                z-index: 15;
+                right: 2rem;
+            }
+        }
+    
+        &-image {
+            width: 200px;
+            animation: fade 15s infinite;
+        }
+    }
+}
+
+@keyframes fade {
+    0% {
+        opacity: .1;
+    }
+    50% {
+        opacity: .9;
+    }
+    100% {
+        opacity: .1;
+    }
+}
+
 .placeholder {
     @include flexbox(column);
     width: calc(100vw - 8rem);
