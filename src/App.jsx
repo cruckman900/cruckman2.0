@@ -5,7 +5,7 @@ import RootLayout from './pages/Root';
 
 import './App.scss'
 
-import ErrorPage from './pages/Error';
+import DisplayMessage from './pages/DisplayMessage';
 
 const Home = lazy(() => import('./pages/Home/Home'));
 const SoftwareDevelopment = lazy(() => import('./pages/SoftwareDevelopment/SoftwareDevelopment'));
@@ -17,47 +17,98 @@ const Literature = lazy(() => import('./pages/Literature/Literature'));
 const ResumeDoc = lazy(() => import('./pages/Resume/Resume'));
 const About = lazy(() => import('./pages/About/About'));
 
+function displayMessage(icon, title, heading, message) {
+  return (
+    <DisplayMessage icon={icon} title={title} heading={heading} message={message} />
+  );
+}
+
 const router = createBrowserRouter([
   { 
     path: '/',
     element: <RootLayout />,
-    errorElement: <ErrorPage />,
+    errorElement: displayMessage('fa-solid fa-bug', 'Error', 'An error occured', 'Could not find this page'),
     children: [
       {
         path: '/',
-        element: <Suspense fallback={<p>Loading...</p>}><Home /></Suspense>
+        element: 
+          <Suspense
+            fallback={displayMessage('fa-solid fa-cloud-bolt', 'Status', 'Loading', 'Your content should be here shortly.')}
+          >
+            <Home />
+          </Suspense>
       },
       {
         path: '/SoftwareDevelopment',
-        element: <Suspense fallback={<p>Loading...</p>}><SoftwareDevelopment /></Suspense>
+        element: 
+          <Suspense
+            fallback={displayMessage('fa-solid fa-cloud-bolt', 'Status', 'Loading', 'Your content should be here shortly.')}
+          >
+            <SoftwareDevelopment />
+          </Suspense>
       },
       {
         path: '/GameDesignDevelopment',
-        element: <Suspense fallback={<p>Loading...</p>}><GameDesignDevelopment /></Suspense>
+        element: 
+          <Suspense
+            fallback={displayMessage('fa-solid fa-cloud-bolt', 'Status', 'Loading', 'Your content should be here shortly.')}
+          >
+            <GameDesignDevelopment />
+          </Suspense>
       },
       { 
         path: '/Gallery2D', 
-        element: <Suspense fallback={<p>Loading...</p>}><Gallery2D /></Suspense>
+        element: 
+          <Suspense
+            fallback={displayMessage('fa-solid fa-cloud-bolt', 'Status', 'Loading', 'Your content should be here shortly.')}
+          >
+            <Gallery2D />
+          </Suspense>
       },
       { 
         path: '/Gallery3D', 
-        element: <Suspense fallback={<p>Loading...</p>}><Gallery3D /></Suspense>
+        element: 
+          <Suspense
+            fallback={displayMessage('fa-solid fa-cloud-bolt', 'Status', 'Loading', 'Your content should be here shortly.')}
+          >
+            <Gallery3D />
+          </Suspense>
       },
       { 
         path: '/Music', 
-        element: <Suspense fallback={<p>Loading...</p>}><Music /></Suspense>
+        element: 
+          <Suspense
+            fallback={displayMessage('fa-solid fa-cloud-bolt', 'Status', 'Loading', 'Your content should be here shortly.')}
+          >
+            <Music />
+          </Suspense>
       },
       { 
         path: '/Literature', 
-        element: <Suspense fallback={<p>Loading...</p>}><Literature /></Suspense>
+        element: 
+          <Suspense
+            fallback={displayMessage('fa-solid fa-cloud-bolt', 'Status', 'Loading', 'Your content should be here shortly.')}
+          >
+            <Literature />
+          </Suspense>
       },
       { 
         path: '/Resume', 
-        element: <Suspense fallback={<p>Loading...</p>}><ResumeDoc /></Suspense>
+        element: 
+          <Suspense
+            fallback={displayMessage('fa-solid fa-cloud-bolt', 'Status', 'Loading', 'Your content should be here shortly.')}
+          >
+            <ResumeDoc />
+          </Suspense>
       },
       { 
         path: '/About', 
-        element: <Suspense fallback={<p>Loading...</p>}><About /></Suspense>
+        element: 
+          <Suspense
+            fallback={displayMessage('fa-solid fa-cloud-bolt', 'Status', 'Loading', 'Your content should be here shortly.')}
+          >
+            <About />
+          </Suspense>
       },
     ],
   },

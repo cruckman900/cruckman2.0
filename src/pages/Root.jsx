@@ -9,7 +9,7 @@ function RootLayout() {
     return <>
         <Header className='main-header' icon='fa-solid fa-dragon'>
             <NavLink className='brand-link titillium' to="/" alt="Home">
-                Chris Ruckman
+                Chris<span className='large-output'>topher</span> Ruckman
             </NavLink>
             <NavBar />
         </Header>

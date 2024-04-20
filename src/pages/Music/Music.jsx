@@ -4,7 +4,7 @@ import './Music.scss';
 export default function Music() {
     return <>
         <DefaultPage className="home" icon='fa-solid fa-guitar' title='Music'>
-            <main className="flexbox-column-center">
+            <main className="placeholder">
                 Coming soon!
             </main>
         </DefaultPage>
