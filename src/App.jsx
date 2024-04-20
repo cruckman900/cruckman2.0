@@ -1,4 +1,6 @@
-import { lazy, Suspense } from 'react';
+import { useEffect, lazy, Suspense } from 'react';
+import GoogleAnalytics from "../../components/GoogleAnalytics/GoogleAnalytics";
+
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import RootLayout from './pages/Root';
@@ -6,6 +8,7 @@ import RootLayout from './pages/Root';
 import './App.scss'
 
 import DisplayMessage from './pages/DisplayMessage';
+import RouteChangeTracker from './components/GoogleAnalytics/RouteChangeTracker';
 
 const Home = lazy(() => import('./pages/Home/Home'));
 const SoftwareDevelopment = lazy(() => import('./pages/SoftwareDevelopment/SoftwareDevelopment'));
@@ -115,6 +118,11 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
+  useEffect(() => {
+    GoogleAnalytics();
+  }, []);
+
+  <RouteChangeTracker />
   return <RouterProvider router={router} />
 }
 

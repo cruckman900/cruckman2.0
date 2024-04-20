@@ -22,7 +22,9 @@ export default function Home() {
                     I am currently developing this new site because the old one is pretty messy. I am hoping to have it more presentable soon. 
                     Some elements of the site may be hidden on mobile devices.
                     My old site content is here if you want to take a look: 
-                    <div className='homeFlexbox-left-link'><a href='https://old.cruckman.com' target='_blank'>old cruckman.com website</a></div>
+                    <div className='homeFlexbox-left-link'>
+                        <a href='https://old.cruckman.com' target='_blank'>old cruckman.com website</a>
+                    </div>
                 </div>
                 <div id='chatterbox-text' className='homeFlexbox-left-div'>
                     <span className='homeFlexbox-left-link'><a href='https://chatterboxsm.com' target='_blank'>chatterboxsm</a></span> (the button / panel
