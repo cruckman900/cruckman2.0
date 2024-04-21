@@ -4,15 +4,15 @@
     position: sticky;
     z-index: 5;
     margin-left: 1rem;
-    font-size: $font-sm;
+    font-size: map-get($font-size, sm);
     cursor: pointer;
 }
 
 .modelViewer {
     height: 35vh;
     width: 35vh;
-    background-color: $color-light;
-    border: 1px solid $color-secondary;
+    background-color: map-get($colors, light);
+    border: 1px solid map-get($colors, secondary);
 
     @include noSelect;
     @include borderTopRadius;
@@ -31,7 +31,7 @@
         height: calc(35vh - 2rem);
         width: -35vh;
         padding: 1rem;
-        background-color: rgba($color-darker, .6);
+        background-color: rgba(map-get($colors, darker), .6);
         
         @include borderTopRadius;
         @include borderBottomRadius;
@@ -42,22 +42,25 @@
 
         &-heading {
             margin-top: 2px;
-            font-size: $font-sm;
+            font-size: map-get($font-size, sm);
             text-transform: uppercase;
-            color: $color-primary;
+            color: map-get($colors, primary);
             line-height: 1rem;
+        }
+
+        &-command, &-action {
+            font-size: map-get($font-size, xs);
         }
 
         &-command {
             display: inline-block;
             width: 60px;
-            font-size: $font-xs;
             text-transform: uppercase;
-            color: $color-secondary;
+            color: map-get($colors, secondary);
         }
         &-action {
-            font-size: $font-xs;
-            color: $color-lighter;
+            color: map-get($colors, lighter);
+            text-transform: lowercase;
         }
     }
 }

@@ -16,6 +16,22 @@ $color-main-bg: linear-gradient(
     width: calc(100vw - 8rem);
 }
 
+.homeFlexbox {
+    @include flexbox(row);
+  
+    &-left {
+        padding-right: 1rem;
+
+        &-div {
+            margin-bottom: 1rem;
+        }
+
+        &-link {
+            text-align: center;
+        }
+    }
+}
+
 button {
     margin: 10px;
     width: 115px;
