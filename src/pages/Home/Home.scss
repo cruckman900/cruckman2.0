@@ -1,5 +1,21 @@
 @import '../../scss/shared.scss';
 
+.homeFlexbox {
+    @include flexbox(row);
+  
+    &-left {
+        padding-right: 1rem;
+
+        &-div {
+            margin-bottom: 1rem;
+        }
+
+        &-link {
+            text-align: center;
+        }
+    }
+}
+
 .homeSection {
     display: inline;
     color: $color-secondary;

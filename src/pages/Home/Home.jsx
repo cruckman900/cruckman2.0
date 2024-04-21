@@ -5,14 +5,15 @@ import Section from '../../components/ui/Section/Section';
 import Links from '../../components/ui/Links/Links';
 import TabButton from '../../components/ui/TabButton/TabButton';
 
-import { HOMEPAGE_SHORTS } from '../../assets/static-data/homepage-shorts';
+import { CONTENT_SHORTS } from '../../assets/static-data/content-shorts';
 import './Home.scss';
 
 export default function Home() {
-    const [selectedTopic, setSelectedTopic] = useState();
+    const [selectedIndex, setSelectedIndex] = useState(null);
 
-    function handleClick(topic) {
-        setSelectedTopic(topic);
+    function handleClick(index) {
+        console.log(index);
+        setSelectedIndex(index);
     }
 
     return (
@@ -36,132 +37,55 @@ export default function Home() {
                         <div className='homeSection-container'>
                             <Links linksContainer="menu" linksContainerClass="homeSection-container-Menu" links={
                                 <>
-                                    <TabButton
-                                        type='button'
-                                        className={selectedTopic === 'softwaredev'
-                                            ? 'homeSection-container-Menu-button-active'
-                                            : 'homeSection-container-Menu-button'}
-                                        size='200px'
-                                        onClick={() => handleClick('softwaredev')}
-                                    >
-                                        Software Development
-                                    </TabButton>
-                                    <TabButton
-                                        type='button'
-                                        className={selectedTopic === 'gamedev'
-                                            ? 'homeSection-container-Menu-button-active'
-                                            : 'homeSection-container-Menu-button'}
-                                        size='200px'
-                                        onClick={() => handleClick('gamedev')}
-                                    >
-                                        Game Design/Development
-                                    </TabButton>
-                                    <TabButton
-                                        type='button'
-                                        className={selectedTopic === 'art2d'
-                                            ? 'homeSection-container-Menu-button-active'
-                                            : 'homeSection-container-Menu-button'}
-                                        size='200px'
-                                        onClick={() => handleClick('art2d')}
-                                    >
-                                        2D Artwork
-                                    </TabButton>
-                                    <TabButton
-                                        type='button'
-                                        className={selectedTopic === 'art3d'
-                                            ? 'homeSection-container-Menu-button-active'
-                                            : 'homeSection-container-Menu-button'}
-                                        size='200px'
-                                        onClick={() => handleClick('art3d')}
-                                    >
-                                        3D Graphics and Effects
-                                    </TabButton>
-                                    <TabButton
-                                        type='button'
-                                        className={selectedTopic === 'music'
-                                            ? 'homeSection-container-Menu-button-active'
-                                            : 'homeSection-container-Menu-button'}
-                                        size='200px'
-                                        onClick={() => handleClick('music')}
-                                    >
-                                        Music
-                                    </TabButton>
-                                    <TabButton
-                                        type='button'
-                                        className={selectedTopic === 'literature'
-                                            ? 'homeSection-container-Menu-button-active'
-                                            : 'homeSection-container-Menu-button'}
-                                        size='200px'
-                                        onClick={() => handleClick('literature')}
-                                    >
-                                        Literature
-                                    </TabButton>
+                                    {
+                                        CONTENT_SHORTS.map((short, index) => {
+                                            return (
+                                                <TabButton
+                                                    type='button'
+                                                    key={short.topic}
+                                                    className={selectedIndex === index
+                                                        ? 'homeSection-container-Menu-button-active'
+                                                        : 'homeSection-container-Menu-button'}
+                                                    size='200px'
+                                                    onClick={() => handleClick(index)}
+                                                >
+                                                    {index} {short.title}
+                                                </TabButton>
+                                            )
+                                        })
+                                    }
                                 </>
                             }>
-                                {!selectedTopic ? <p className='homeSection-container-select'>
+                                {selectedIndex === null ? <p className='homeSection-container-select'>
                                     Select a topic just to see what awaits inside. I have been waiting for you to come visit.
                                 </p> : (
-                                    <div key={HOMEPAGE_SHORTS[selectedTopic].title} className='homeSection-container-content'>
+                                    <div key={CONTENT_SHORTS[selectedIndex].title} className='homeSection-container-content'>
                                         <h3>
-                                            <i className={HOMEPAGE_SHORTS[selectedTopic].icon}></i>
-                                            <span>{HOMEPAGE_SHORTS[selectedTopic].title}</span>
+                                            <i className={CONTENT_SHORTS[selectedIndex].icon}></i>
+                                            <span>{CONTENT_SHORTS[selectedIndex].title}</span>
                                         </h3>
-                                        <p className='homeSection-container-content-description'>{HOMEPAGE_SHORTS[selectedTopic].description}</p>
-                                        <p className='homeSection-container-content-summary'>{HOMEPAGE_SHORTS[selectedTopic].summary}</p>
+                                        <p className='homeSection-container-content-description'>{CONTENT_SHORTS[selectedIndex].description}</p>
+                                        <p className='homeSection-container-content-summary'>{CONTENT_SHORTS[selectedIndex].summary}</p>
                                     </div>
                                 )}
                             </Links>
                         </div>
                     </div>
                     <div className='small-output'>
-                        <div className='homeSection-container-content'>
-                            <h3>
-                                <i className={HOMEPAGE_SHORTS['softwaredev'].icon}></i>
-                                <span>{HOMEPAGE_SHORTS['softwaredev'].title}</span>
-                            </h3>
-                            <p className='homeSection-container-content-description'>{HOMEPAGE_SHORTS['softwaredev'].description}</p>
-                            <p className='homeSection-container-content-summary'>{HOMEPAGE_SHORTS['softwaredev'].summary}</p>
-                        </div>
-                        <div className='homeSection-container-content'>
-                            <h3>
-                                <i className={HOMEPAGE_SHORTS['gamedev'].icon}></i>
-                                <span>{HOMEPAGE_SHORTS['gamedev'].title}</span>
-                            </h3>
-                            <p className='homeSection-container-content-description'>{HOMEPAGE_SHORTS['gamedev'].description}</p>
-                            <p className='homeSection-container-content-summary'>{HOMEPAGE_SHORTS['gamedev'].summary}</p>
-                        </div>
-                        <div className='homeSection-container-content'>
-                            <h3>
-                                <i className={HOMEPAGE_SHORTS['art2d'].icon}></i>
-                                <span>{HOMEPAGE_SHORTS['art2d'].title}</span>
-                            </h3>
-                            <p className='homeSection-container-content-description'>{HOMEPAGE_SHORTS['art2d'].description}</p>
-                            <p className='homeSection-container-content-summary'>{HOMEPAGE_SHORTS['art2d'].summary}</p>
-                        </div>
-                        <div className='homeSection-container-content'>
-                            <h3>
-                                <i className={HOMEPAGE_SHORTS['art3d'].icon}></i>
-                                <span>{HOMEPAGE_SHORTS['art3d'].title}</span>
-                            </h3>
-                            <p className='homeSection-container-content-description'>{HOMEPAGE_SHORTS['art3d'].description}</p>
-                            <p className='homeSection-container-content-summary'>{HOMEPAGE_SHORTS['art3d'].summary}</p>
-                        </div>
-                        <div className='homeSection-container-content'>
-                            <h3>
-                                <i className={HOMEPAGE_SHORTS['music'].icon}></i>
-                                <span>{HOMEPAGE_SHORTS['music'].title}</span>
-                            </h3>
-                            <p className='homeSection-container-content-description'>{HOMEPAGE_SHORTS['music'].description}</p>
-                            <p className='homeSection-container-content-summary'>{HOMEPAGE_SHORTS['music'].summary}</p>
-                        </div>
-                        <div className='homeSection-container-content'>
-                            <h3>
-                                <i className={HOMEPAGE_SHORTS['literature'].icon}></i>
-                                <span>{HOMEPAGE_SHORTS['literature'].title}</span>
-                            </h3>
-                            <p className='homeSection-container-content-description'>{HOMEPAGE_SHORTS['literature'].description}</p>
-                            <p className='homeSection-container-content-summary'>{HOMEPAGE_SHORTS['literature'].summary}</p>
-                        </div>
+                        {
+                            CONTENT_SHORTS.map((short, index) => {
+                                return (
+                                    <div key={`title_${index}`} className='homeSection-container-content'>
+                                        <h3>
+                                            <i key={`icon_${index}`} className={short.icon}></i>
+                                            <span key={`title_${index}`}>{short.title}</span>
+                                        </h3>
+                                        <p key={`description_${index}`} className='homeSection-container-content-description'>{short.description}</p>
+                                        <p key={`summary_${index}`} className='homeSection-container-content-summary'>{short.summary}</p>
+                                    </div>
+                                )
+                            })
+                        }
                     </div>
                 </Section>
             </div>

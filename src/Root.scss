@@ -1,0 +1,77 @@
+@import './scss/shared.scss';
+
+.brand-link {
+    &:hover {
+        color: $color-secondary;
+    }
+
+    @media only screen and (max-width:767px) {
+        font-size: $font-lg;
+    }
+}
+
+.kicks {
+    &-image {
+        display: none;
+
+        @media only screen and (min-width:calc(1680px + 4rem)) {
+            display: inline;
+
+            &-left {
+                position: absolute;
+                left: 2rem;
+            }
+
+            &-right {
+                position: absolute;
+                right: 2rem;
+            }
+
+            &-left, &-right {
+                bottom: 12vh;
+                z-index: 15;
+                width: 200px;
+                animation: fade 15s infinite;
+            }
+        }
+    }
+}
+
+@keyframes fade {
+    0% {
+        opacity: .1;
+    }
+    50% {
+        opacity: .9;
+    }
+    100% {
+        opacity: .1;
+    }
+}
+
+.hamburger-menu {
+    width: 40px;
+    height: 40px;
+                
+    @media only screen and (max-width:767px) {
+        width: 30px;
+        height: 30px;
+    }
+
+    .menu {
+        @extend %fullSpace;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        cursor: pointer;
+        transition: .4s;
+
+        &-line {
+            width: 100%;
+            height: 4px;
+            background-color: $color-primary;
+            transform-origin: right;
+            transition: all .4s .4s;
+        }
+    }
+}

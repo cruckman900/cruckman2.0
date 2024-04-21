@@ -3,7 +3,7 @@ import GoogleAnalytics from "./components/GoogleAnalytics/GoogleAnalytics";
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
-import RootLayout from './pages/Root';
+import RootLayout from './Root';
 
 import './App.scss'
 

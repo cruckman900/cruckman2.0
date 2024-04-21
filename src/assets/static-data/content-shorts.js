@@ -1,5 +1,5 @@
-export const HOMEPAGE_SHORTS = {
-    softwaredev: {
+export const CONTENT_SHORTS = [
+    {
         topic: 'softwaredev',
         icon: 'fa-solid fa-code',
         title:'Software Development',
@@ -11,7 +11,7 @@ export const HOMEPAGE_SHORTS = {
                 have a little Android background as well.
             `,
     },
-    gamedev: {
+    {
         topic: 'gamedev',
         icon: 'fa-solid fa-gamepad',
         title:'Game Design / Development',
@@ -23,7 +23,7 @@ export const HOMEPAGE_SHORTS = {
                 developing software so far, other than making this site.
             `,
     },
-    art2d: {
+    {
         topic: 'art2d',
         icon: 'fa-solid fa-palette',
         title:'2D Artwork',
@@ -35,7 +35,7 @@ export const HOMEPAGE_SHORTS = {
                 moment.
             `,
     },
-    art3d: {
+    {
         topic: 'art3d',
         icon: 'fa-solid fa-cubes',
         title:'3D Graphics / Effects',
@@ -47,7 +47,7 @@ export const HOMEPAGE_SHORTS = {
                 learning about nodes.
             `,
     },
-    music: {
+    {
         topic: 'music',
         icon: 'fa-solid fa-guitar',
         title:'Music',
@@ -59,7 +59,7 @@ export const HOMEPAGE_SHORTS = {
                 a bit of folk.
             `,
     },
-    literature: {
+    {
         topic: 'literature',
         icon: 'fa-solid fa-book-open',
         title:'Literature',
@@ -71,4 +71,4 @@ export const HOMEPAGE_SHORTS = {
                 I'll share some.
             `,
     },
-};
+];
