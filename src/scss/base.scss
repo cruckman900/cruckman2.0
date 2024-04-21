@@ -1,25 +1,28 @@
-$font-noto: 'Noto Sans', sans-serif;
-$font-titillium: 'Titillium Web', sans-serif;
+$font-family: (
+    noto: 'Noto Sans' sans-serif,
+    titillium: 'Titillium Web' sans-serif
+);
 
-$font-xl: 24pt;
-$font-lg: 18pt;
-$font-md: 14pt;
-$font-sm: 10pt;
-$font-xs: 8pt;
+$font-size: (
+    xl: 24pt,
+    lg: 18pt,
+    md: 14pt,
+    rg: 12pt,
+    sm: 10pt,
+    xs: 8pt
+);
 
-$color-red: #990000;
-$color-black: #000000;
-$color-dark: #252525;
-$color-darker: #151515;
-$color-light: #757575;
-$color-lighter: #999999;
-$no-color: transparent;
-
-$color-primary: #96880a;
-$color-secondary: #f8c314;
-$color-tertiary: #f7f7b8;
-
-$color-main-bg: linear-gradient(180deg, $color-black, $color-primary 80%, $color-black);
+$colors: (
+    primary: #96880a,
+    secondary: #f8c314,
+    tertiary: #f7f7b8,
+    red: #990000,
+    black: #000000,
+    dark: #252525,
+    darker: #151515,
+    light: #757575,
+    lighter: #999999
+);
 
 $borderRadius: 8px;
 

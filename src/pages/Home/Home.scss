@@ -18,11 +18,11 @@
 
 .homeSection {
     display: inline;
-    color: $color-secondary;
+    color: map-get($colors, secondary);
     margin: 0 1rem;
 
     @media only screen and (max-width:767px) {
-        font-size: $font-sm;
+        font-size: map-get($font-size, sm);
     }
 
     &-container {
@@ -30,7 +30,6 @@
 
         &-select {
             position: relative;
-            // top: 1rem;
             left: 2rem;
             width: 100%;
             font-weight: 600;
@@ -43,52 +42,52 @@
             
             &-button {
                 &-active {
-                    @include colors($color-secondary, $color-dark);
-                    border-color: $color-dark;
+                    @include colors(
+                        map-get($colors, secondary), 
+                        map-get($colors, dark)
+                    );
+                    border-color: map-get($colors, dark);
                 }
             }
         }
     
         &-content {
-            background-color: rgba($color-darker, .6);
+            background-color: rgba(map-get($colors, darker), .6);
             padding: 0 1rem;
-            @include borderTopRadius;
-            @include borderBottomRadius;
             width: 100%;
             margin-left: 1rem;
 
+            @include borderTopRadius;
+            @include borderBottomRadius;
+
             @media only screen and (max-width:767px) {
                 background-color: transparent;
-                font-size: $font-sm;
+                font-size: map-get($font-size, sm);
                 margin-left: 0;
             }
 
             i {
-                color: $color-light;
+                color: map-get($colors, light);
+            }
+
+            &-description, &-summary {
+                font-size: map-get($font-size, md);
+                text-align: justify;
+                
+                @media only screen and (max-width:767px) {
+                    margin-right: 1rem;
+                    font-size: map-get($font-size, sm);
+                }
             }
 
             &-description {
-                font-size: $font-md;
                 text-transform: uppercase;
-                text-align: justify;
-                color: $color-light;
-                
-                @media only screen and (max-width:767px) {
-                    margin-right: 1rem;
-                    font-size: $font-sm;
-                }
+                color: map-get($colors, light);
             }
 
             &-summary {
-                font-size: $font-md;
                 text-transform: lowercase;
-                text-align: justify;
-                color: $color-lighter;
-                
-                @media only screen and (max-width:767px) {
-                    margin-right: 1rem;
-                    font-size: $font-sm;
-                }
+                color: map-get($colors, lighter);
             }
         }
     }

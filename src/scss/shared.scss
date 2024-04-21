@@ -4,6 +4,13 @@
     letter-spacing: 1px;
 }
 
+$color-main-bg: linear-gradient(
+    180deg,map-get($colors, black), 
+    map-get($colors, primary) 
+    80%, 
+    map-get($colors, black)
+);
+
 .placeholder {
     @include flexbox(column);
     width: calc(100vw - 8rem);
@@ -15,31 +22,31 @@ button {
     height: 40px;
     font-weight: 600;
     text-transform: uppercase;
-    border: 1px solid $color-primary;
+    border: 1px solid map-get($colors, primary);
     outline: none;
 
     cursor: pointer;
     transition: all .4s;
 
-    @include colors($color-dark, $color-primary);
+    @include colors(map-get($colors, dark), map-get($colors, primary));
     @include borderTopRadius;
     @include borderBottomRadius;
 
     &:hover {
-        @include colors($color-primary, $color-secondary);
-        border-color: $color-primary;
+        @include colors(map-get($colors, primary), map-get($colors, secondary));
+        border-color: map-get($colors, primary);
     }
 }
     
 a {
-    color: $color-primary;
+    color: map-get($colors, primary);
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 400;
     transition: all .4s;
 
     &:hover {
-        color: $color-secondary;
+        color: map-get($colors, secondary);
     }
 }
 

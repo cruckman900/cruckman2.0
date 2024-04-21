@@ -6,21 +6,26 @@
     padding-top: .2rem;
 
     i {
-      color: $color-primary;
-      font-size: $font-xl;
+      color: map-get($colors, primary);
+      font-size: map-get($font-size, xl);
     }
 }
 
 .titillium {
-    @include fonts($font-titillium, $font-xl, 600, $color-primary);
+    @include fonts(
+        map-get($font-family, titillium), 
+        map-get($font-size, xl), 
+        600, 
+        map-get($colors, primary)
+    );
 }
 .brand-link {
     &:hover {
-        color: $color-secondary;
+        color: map-get($colors, secondary);
     }
 
     @media only screen and (max-width:767px) {
-        font-size: $font-lg;
+        font-size: map-get($font-size, lg);
     }
 }
 
@@ -84,7 +89,7 @@
         &-line {
             width: 100%;
             height: 4px;
-            background-color: $color-primary;
+            background-color: map-get($colors, primary);
             transform-origin: right;
             transition: all .4s .4s;
         }

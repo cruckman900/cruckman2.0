@@ -11,7 +11,12 @@
             z-index: 200;
             width: 50vw;
             height: 100vh;
-            background: linear-gradient(180deg, $color-black, $color-primary 20%, $color-black);
+            background: linear-gradient(
+                180deg, 
+                map-get($colors, black), 
+                map-get($colors, primary) 20%, 
+                map-get($colors, black), 
+            );
             position: fixed;
             top: 3rem;
             left: -50vw;
@@ -20,12 +25,12 @@
             .left-img {
                 width: 50%;
                 position: absolute;
-                box-shadow: 25px 50px 25px rgba($color-black, .6);
+                box-shadow: 25px 50px 25px rgba(map-get($colors, black), .6);
                 opacity: .8;
                 border-radius: 10px;
 
                 @media only screen and (max-width:767px) {
-                    box-shadow: 15px 25px 25px rgba($color-black, .6);
+                    box-shadow: 15px 25px 25px rgba(map-get($colors, black), .6);
                 }
             }     
             
@@ -64,7 +69,12 @@
             z-index: 200;
             width: 50vw;
             height: 100vh;
-            background: linear-gradient(180deg, $color-black, $color-dark 20%, $color-black);
+            background: linear-gradient(
+                180deg, 
+                map-get($colors, black), 
+                map-get($colors, dark) 20%, 
+                map-get($colors, black)
+            );
             position: fixed;
             top: 3rem;
             right: -50vw;
@@ -92,15 +102,15 @@
                 margin: 1rem 0;
                 padding: 0 1rem;
                 text-align: center;
-                font-family: $font-titillium;
-                font-size: $font-xl;
+                font-family: map-get($font-family, titillium);
+                font-size: map-get($font-size, xl);
                 
                 @media only screen and (max-width:767px) {
-                    font-size: $font-sm;
+                    font-size: map-get($font-size, sm);
                 }
                 
                 @media only screen and (max-height:600px) {
-                    font-size: $font-sm;
+                    font-size: map-get($font-size, sm);
                 }
     
                 @include borderTopRadius;
@@ -109,12 +119,12 @@
                 transition: all .4s;
 
                 &:hover {
-                    background-color: $color-primary;
+                    background-color: map-get($colors, primary);
                 }
 
                 &-active {
-                    @include colors($color-secondary, $color-dark);
-                    border-color: $color-dark;
+                    @include colors(map-get($colors, secondary), map-get($colors, dark));
+                    border-color: map-get($colors, dark);
                 }
             }
         }

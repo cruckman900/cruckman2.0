@@ -1,10 +1,13 @@
 @import '../../scss/base.scss';
 
 .defaultPage {
-    border: 1px solid $color-primary;
+    border: 1px solid map-get($colors, primary);
     height: calc(100vh - 7rem);
 
-    @include colors($no-color, $color-tertiary);
+    @include colors(
+        map-get($colors, transparent), 
+        map-get($colors, tertiary)
+    );
     @include borderTopRadius;
     @include borderBottomRadius;
     @include noScroll;
@@ -16,14 +19,26 @@
     padding: 0 1rem;
 
     @include borderTopRadius;
-    @include colors($color-primary, $color-secondary);
-    @include fonts($font-titillium, $font-lg, 600, $color-darker);
+    @include colors(
+        map-get($colors, primary), 
+        map-get($colors, secondary)
+    );
+    @include fonts(
+        map-get($font-family, titillium), 
+        map-get($font-size, lg), 
+        600, 
+        map-get($colors, darker)
+    );
 }
 
 .dpChildren {
     padding: 1rem;
     
-    @include fonts($font-noto, $font-md, 400, $color-tertiary);
+    @include fonts(
+        map-get($font-family, noto), 
+        map-get($font-size, md), 
+        400, 
+        map-get($colors, tertiary));
 }
 
 ::-webkit-scrollbar {

@@ -2,11 +2,11 @@
 
 .footer {
     padding-top: 1rem;
-    font-size: $font-sm;
+    font-size: map-get($font-size, sm);
     text-transform: uppercase;
     text-align: center;
                 
     @media only screen and (max-width:767px) {
-        font-size: $font-xs;
+        font-size: map-get($font-size, sm);
     }
 }

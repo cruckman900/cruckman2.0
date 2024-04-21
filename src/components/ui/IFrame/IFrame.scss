@@ -2,11 +2,14 @@
 
 header {
     @include borderTopRadius;
-    @include colors($color-dark, $color-secondary);
+    @include colors(
+        map-get($colors, dark), 
+        map-get($colors, secondary)
+    );
 
     span {
         float: right;
-        font-size: $font-sm;
+        font-size: map-get($font-size, sm);
         margin: 20px 10px;
 
         @include borderTopRadius;
@@ -18,19 +21,22 @@ iframe {
     min-width: 365px;
     height: calc(100vh - 17rem);
     @include borderBottomRadius;
-    @include colors($color-dark, $color-secondary);
+    @include colors(
+        map-get($colors, dark), 
+        map-get($colors, secondary)
+    );
 }
 
 .iframeWrapper {
     @include borderTopRadius;
     @include borderBottomRadius;
-    border: 1px solid $color-secondary;
+    border: 1px solid map-get($colors, secondary);
     margin-top: 1rem;
     margin-right: 1rem;
 }
 
 .iframeContainer {
-    background-color: $color-black;
+    background-color: map-get($colors, black);
 
     display: inline-block;
     padding-top: 5px;
@@ -40,21 +46,24 @@ iframe {
 }
 
 .btnClose {
-    font-family: $font-titillium;
-    font-size: $font-md;
-    font-weight: 600;
     width: 2rem;
     background-color: transparent;
-    color: $color-primary;
     border: none;
     text-align: center;
 
+    @include fonts(
+        map-get($font-family, titillium),
+        map-get($font-size, md),
+        600,
+        map-get($colors, primary)
+    );
+
     &-red {
-        color: $color-red;
+        color: map-get($colors, red);
         transition: all .4s;
 
         &:hover {
-            color: $color-secondary;
+            color: map-get($colors, secondary);
         }
     }
 
