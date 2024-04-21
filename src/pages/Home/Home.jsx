@@ -6,13 +6,13 @@ import Links from '../../components/ui/Links/Links';
 import TabButton from '../../components/ui/TabButton/TabButton';
 
 import { CONTENT_SHORTS } from '../../assets/static-data/content-shorts';
+
 import './Home.scss';
 
 export default function Home() {
     const [selectedIndex, setSelectedIndex] = useState(null);
 
     function handleClick(index) {
-        console.log(index);
         setSelectedIndex(index);
     }
 
@@ -49,25 +49,29 @@ export default function Home() {
                                                     size='200px'
                                                     onClick={() => handleClick(index)}
                                                 >
-                                                    {index} {short.title}
+                                                    {short.title}
                                                 </TabButton>
-                                            )
+                                            );
                                         })
                                     }
                                 </>
                             }>
-                                {selectedIndex === null ? <p className='homeSection-container-select'>
-                                    Select a topic just to see what awaits inside. I have been waiting for you to come visit.
-                                </p> : (
-                                    <div key={CONTENT_SHORTS[selectedIndex].title} className='homeSection-container-content'>
-                                        <h3>
-                                            <i className={CONTENT_SHORTS[selectedIndex].icon}></i>
-                                            <span>{CONTENT_SHORTS[selectedIndex].title}</span>
-                                        </h3>
-                                        <p className='homeSection-container-content-description'>{CONTENT_SHORTS[selectedIndex].description}</p>
-                                        <p className='homeSection-container-content-summary'>{CONTENT_SHORTS[selectedIndex].summary}</p>
-                                    </div>
-                                )}
+                                {
+                                    selectedIndex === null ? 
+                                        <p className='homeSection-container-select'>
+                                            Select a topic just to see what awaits inside. I have been waiting for you to come visit.
+                                        </p>
+                                    : (
+                                        <div key={CONTENT_SHORTS[selectedIndex].title} className='homeSection-container-content'>
+                                            <h3>
+                                                <i className={CONTENT_SHORTS[selectedIndex].icon}></i>
+                                                <span>{CONTENT_SHORTS[selectedIndex].title}</span>
+                                            </h3>
+                                            <p className='homeSection-container-content-description'>{CONTENT_SHORTS[selectedIndex].description}</p>
+                                            <p className='homeSection-container-content-summary'>{CONTENT_SHORTS[selectedIndex].summary}</p>
+                                        </div>
+                                    )
+                                }
                             </Links>
                         </div>
                     </div>
@@ -83,7 +87,7 @@ export default function Home() {
                                         <p key={`description_${index}`} className='homeSection-container-content-description'>{short.description}</p>
                                         <p key={`summary_${index}`} className='homeSection-container-content-summary'>{short.summary}</p>
                                     </div>
-                                )
+                                );
                             })
                         }
                     </div>
