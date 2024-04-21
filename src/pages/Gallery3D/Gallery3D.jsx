@@ -1,7 +1,10 @@
-import { useState } from 'react';
+import { useState, lazy, Suspense } from 'react';
 
+import DisplayMessage from '../DisplayMessage';
 import DefaultPage from '../../components/DefaultPage/DefaultPage';
-import ModelViewer from '../../components/ModelViewer/ModelViewer';
+// import ModelViewer from '../../components/ModelViewer/ModelViewer';
+
+const ModelViewer = lazy(() => import('../../components/ModelViewer/ModelViewer'));
 
 export default function Gallery3D() {
     const [modelURL, setModelURL] = useState('bow2.glb')
@@ -20,7 +23,11 @@ export default function Gallery3D() {
                         tricks, gather some addons, and start creating stuff! I will be modifying the 3D viewport below (hopefully) at some point to be a little
                         more than a simple tool. I will make it so that you can navigate scenes as if you&apos;re inside a game.
                     </div>
-                    <ModelViewer url={modelURL} />
+                    <Suspense
+                        fallback={<DisplayMessage icon='fa-solid fa-cloud-bolt' title='Status' heading='Loading' message='Your content should be here shortly.' />}
+                    >
+                        <ModelViewer url={modelURL} />
+                    </Suspense>
                     <button onClick={() => handleClick('BD_Stretch_Robot.glb')}>Stretch Robot</button>
                 </div>
             </div>
