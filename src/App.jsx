@@ -35,7 +35,7 @@ function displayMessage(title) {
         title={title} 
         heading='Loading' 
         message='Your content should be here shortly.' 
-        displayFullPage={true} />
+        displayFullPage={false} />
     );
 }
 

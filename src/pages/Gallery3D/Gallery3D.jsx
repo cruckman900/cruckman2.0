@@ -1,8 +1,6 @@
 import { useState, lazy, Suspense } from 'react';
 
-import DisplayMessage from '../DisplayMessage';
 import DefaultPage from '../../components/DefaultPage/DefaultPage';
-// import ModelViewer from '../../components/ModelViewer/ModelViewer';
 
 const ModelViewer = lazy(() => import('../../components/ModelViewer/ModelViewer'));
 
@@ -24,7 +22,7 @@ export default function Gallery3D() {
                         more than a simple tool. I will make it so that you can navigate scenes as if you&apos;re inside a game.
                     </div>
                     <Suspense
-                        fallback={<DisplayMessage icon='fa-solid fa-cloud-bolt' title='Status' heading='Please Wait.' message='Loading the model viewer.' />}
+                        fallback={<div>Loading model viewer...</div>}
                     >
                         <ModelViewer url={modelURL} />
                     </Suspense>
