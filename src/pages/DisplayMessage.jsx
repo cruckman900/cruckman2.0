@@ -4,10 +4,10 @@ import { NavLink } from 'react-router-dom';
 import DefaultPage from "../components/DefaultPage/DefaultPage";
 import Footer from "../components/Footer/Footer";
 
-export default function DisplayMessage({ icon, title, heading, message }) {
+export default function DisplayMessage({ icon, title, heading, message, displayFullPage=false }) {
     return <>
         {
-            title === 'Error' &&
+            displayFullPage &&
                 <Header className='main-header' icon='fa-solid fa-dragon'>
                     <NavLink className='brand-link titillium' to="/" alt="Home">
                         Chris<span className='large-output'>topher</span> Ruckman
@@ -28,7 +28,7 @@ export default function DisplayMessage({ icon, title, heading, message }) {
         </DefaultPage>
 
         {
-            title === 'Error' &&
+            displayFullPage &&
                 <Footer />
         }
     </>

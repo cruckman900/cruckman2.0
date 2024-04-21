@@ -1,14 +1,14 @@
-import { useEffect, lazy, Suspense } from 'react';
-import GoogleAnalytics from "./components/GoogleAnalytics/GoogleAnalytics";
+// import { useEffect } from 'react';
+// import GoogleAnalytics from "./components/GoogleAnalytics/GoogleAnalytics";
+// import RouteChangeTracker from './components/GoogleAnalytics/RouteChangeTracker';
 
+import { lazy, Suspense } from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-
 import RootLayout from './Root';
 
-import './App.scss'
-
 import DisplayMessage from './pages/DisplayMessage';
-// import RouteChangeTracker from './components/GoogleAnalytics/RouteChangeTracker';
+
+import './App.scss'
 
 const Home = lazy(() => import('./pages/Home/Home'));
 const SoftwareDevelopment = lazy(() => import('./pages/SoftwareDevelopment/SoftwareDevelopment'));
@@ -20,107 +20,77 @@ const Literature = lazy(() => import('./pages/Literature/Literature'));
 const ResumeDoc = lazy(() => import('./pages/Resume/Resume'));
 const About = lazy(() => import('./pages/About/About'));
 
-function displayMessage(icon, title, heading, message) {
+function displayMessage(title) {
   return (
-    <DisplayMessage icon={icon} title={title} heading={heading} message={message} />
-  );
+    title === 'Error' ? 
+      <DisplayMessage 
+        icon='fa-solid fa-bug' 
+        title={title} 
+        heading='An error occured' 
+        message='Could not find this page' 
+        displayFullPage={true} />
+    :
+      <DisplayMessage 
+        icon='fa-solid fa-cloud-bolt' 
+        title={title} 
+        heading='Loading' 
+        message='Your content should be here shortly.' 
+        displayFullPage={true} />
+    );
 }
 
 const router = createBrowserRouter([
   { 
     path: '/',
     element: <RootLayout />,
-    errorElement: displayMessage('fa-solid fa-bug', 'Error', 'An error occured', 'Could not find this page'),
+    errorElement: displayMessage('Error'),
     children: [
       {
         path: '/',
-        element: 
-          <Suspense
-            fallback={displayMessage('fa-solid fa-cloud-bolt', 'Status', 'Loading', 'Your content should be here shortly.')}
-          >
-            <Home />
-          </Suspense>
+        element: <Suspense fallback={displayMessage('Status')}><Home /></Suspense>
       },
       {
         path: '/SoftwareDevelopment',
-        element: 
-          <Suspense
-            fallback={displayMessage('fa-solid fa-cloud-bolt', 'Status', 'Loading', 'Your content should be here shortly.')}
-          >
-            <SoftwareDevelopment />
-          </Suspense>
+        element: <Suspense fallback={displayMessage('Status')}><SoftwareDevelopment /></Suspense>
       },
       {
         path: '/GameDesignDevelopment',
-        element: 
-          <Suspense
-            fallback={displayMessage('fa-solid fa-cloud-bolt', 'Status', 'Loading', 'Your content should be here shortly.')}
-          >
-            <GameDesignDevelopment />
-          </Suspense>
+        element: <Suspense fallback={displayMessage('Status')}><GameDesignDevelopment /></Suspense>
       },
       { 
         path: '/Gallery2D', 
         element: 
-          <Suspense
-            fallback={displayMessage('fa-solid fa-cloud-bolt', 'Status', 'Loading', 'Your content should be here shortly.')}
-          >
-            <Gallery2D />
-          </Suspense>
+          <Suspense fallback={displayMessage('Status')}><Gallery2D /></Suspense>
       },
       { 
         path: '/Gallery3D', 
         element: 
-          <Suspense
-            fallback={displayMessage('fa-solid fa-cloud-bolt', 'Status', 'Loading', 'Your content should be here shortly.')}
-          >
-            <Gallery3D />
-          </Suspense>
+          <Suspense fallback={displayMessage('Status')}><Gallery3D /></Suspense>
       },
       { 
         path: '/Music', 
-        element: 
-          <Suspense
-            fallback={displayMessage('fa-solid fa-cloud-bolt', 'Status', 'Loading', 'Your content should be here shortly.')}
-          >
-            <Music />
-          </Suspense>
+        element: <Suspense fallback={displayMessage('Status')}><Music /></Suspense>
       },
       { 
         path: '/Literature', 
-        element: 
-          <Suspense
-            fallback={displayMessage('fa-solid fa-cloud-bolt', 'Status', 'Loading', 'Your content should be here shortly.')}
-          >
-            <Literature />
-          </Suspense>
+        element: <Suspense fallback={displayMessage('Status')}><Literature /></Suspense>
       },
       { 
         path: '/Resume', 
-        element: 
-          <Suspense
-            fallback={displayMessage('fa-solid fa-cloud-bolt', 'Status', 'Loading', 'Your content should be here shortly.')}
-          >
-            <ResumeDoc />
-          </Suspense>
+        element: <Suspense fallback={displayMessage('Status')}><ResumeDoc /></Suspense>
       },
       { 
         path: '/About', 
-        element: 
-          <Suspense
-            fallback={displayMessage('fa-solid fa-cloud-bolt', 'Status', 'Loading', 'Your content should be here shortly.')}
-          >
-            <About />
-          </Suspense>
+        element: <Suspense fallback={displayMessage('Status')}><About /></Suspense>
       },
     ],
   },
 ]);
 
 function App() {
-  useEffect(() => {
-    GoogleAnalytics();
-  }, []);
+  // useEffect(() => {
+  //   GoogleAnalytics();
+  // }, []);
 
   // <RouteChangeTracker />
   return <RouterProvider router={router} />
