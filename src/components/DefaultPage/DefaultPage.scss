@@ -22,6 +22,7 @@
 
 .dpChildren {
     padding: 1rem;
+    
     @include fonts($font-noto, $font-md, 400, $color-tertiary);
 }
 

@@ -1,5 +1,19 @@
 @import './scss/shared.scss';
 
+.main-header {
+    display: flex;
+    flex-direction: column;
+    padding-top: .2rem;
+
+    i {
+      color: $color-primary;
+      font-size: $font-xl;
+    }
+}
+
+.titillium {
+    @include fonts($font-titillium, $font-xl, 600, $color-primary);
+}
 .brand-link {
     &:hover {
         color: $color-secondary;
@@ -59,12 +73,13 @@
     }
 
     .menu {
-        @extend %fullSpace;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
         cursor: pointer;
         transition: .4s;
+        
+        @extend %fullSpace;
 
         &-line {
             width: 100%;

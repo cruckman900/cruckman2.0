@@ -7,6 +7,8 @@ import image1 from '../../assets/images/SpookyCorridor_1920x1080.jpg';
 import image2 from '../../assets/images/BD_Stretch.jpg';
 import image4 from '../../assets/images/code.jpg';
 
+import './NavBar.scss';
+
 export default function NavBar() {
     function handleClick() {
         document.getElementById('check').checked = false;

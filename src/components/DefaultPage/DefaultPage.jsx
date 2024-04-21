@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+
 import Header from '../Header/Header';
 import IFrame from '../ui/IFrame/IFrame';
 
@@ -10,12 +11,12 @@ import image4 from '../../assets/images/code.jpg';
 import './DefaultPage.scss';
 
 export default function DefaultPage({ icon, title, children }) {
+    const [backgroundImage, setBackgroundImage] = useState(null);
+    const [style, setStyle] = useState();
+
     function genRandomInt(max) {
         return Math.floor(Math.random() * (max + 1));
     }
-
-    const [backgroundImage, setBackgroundImage] = useState(null);
-    const [style, setStyle] = useState();
 
     useEffect(() => {
         const images = [image1, image2, image3, image4];
@@ -33,11 +34,8 @@ export default function DefaultPage({ icon, title, children }) {
         <div className='defaultPage' style={style}>
             <Header icon={icon} className='dpHeader'>{title}</Header>
             <section className='homeFlexbox'>
-
                 <div className='dpChildren'>{children}</div>
-
                 <IFrame className='chatterbox' src="https://chatterboxsm.com" width='365px' height='768px'></IFrame>
-            
             </section>
         </div>
     );

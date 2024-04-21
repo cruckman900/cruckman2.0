@@ -12,11 +12,11 @@
     height: 35vh;
     width: 35vh;
     background-color: $color-light;
-    @include noSelect;
+    border: 1px solid $color-secondary;
 
+    @include noSelect;
     @include borderTopRadius;
     @include borderBottomRadius;
-    border: 1px solid $color-secondary;
 
     &-canvas {
         @include borderTopRadius;
@@ -32,13 +32,12 @@
         width: -35vh;
         padding: 1rem;
         background-color: rgba($color-darker, .6);
+        
         @include borderTopRadius;
         @include borderBottomRadius;
     }
 
     &-commands {
-        // position: relative;
-        // top: 5vh;
         line-height: .7rem;
 
         &-heading {
@@ -52,12 +51,12 @@
         &-command {
             display: inline-block;
             width: 60px;
-            font-size: $font-xsm;
+            font-size: $font-xs;
             text-transform: uppercase;
             color: $color-secondary;
         }
         &-action {
-            font-size: $font-xsm;
+            font-size: $font-xs;
             color: $color-lighter;
         }
     }

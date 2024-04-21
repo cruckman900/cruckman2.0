@@ -6,18 +6,18 @@ import Footer from "../components/Footer/Footer";
 
 export default function DisplayMessage({ icon, title, heading, message }) {
     return <>
-        {title === 'Error' &&
-            <Header className='main-header' icon='fa-solid fa-dragon'>
-                <NavLink className='brand-link titillium' to="/" alt="Home">
-                    Chris<span className='large-output'>topher</span> Ruckman
-                </NavLink>
-                <NavBar />
-            </Header>
+        {
+            title === 'Error' &&
+                <Header className='main-header' icon='fa-solid fa-dragon'>
+                    <NavLink className='brand-link titillium' to="/" alt="Home">
+                        Chris<span className='large-output'>topher</span> Ruckman
+                    </NavLink>
+                    <NavBar />
+                </Header>
         }
 
         <DefaultPage
             title={ title }
-            // icon={ title === 'Error' ? 'fa-solid fa-bug' : 'fa-solid fa-cloud-bolt' } 
             icon={ icon } 
             className="home"
         >
@@ -27,8 +27,9 @@ export default function DisplayMessage({ icon, title, heading, message }) {
             </div>
         </DefaultPage>
 
-        {title === 'Error' &&
-            <Footer />
+        {
+            title === 'Error' &&
+                <Footer />
         }
     </>
 }

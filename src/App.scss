@@ -5,18 +5,3 @@
     height: 100vh;
     padding: 0 1rem;
 }
-
-.main-header {
-    display: flex;
-    flex-direction: column;
-    padding-top: .2rem;
-
-    i {
-      color: $color-primary;
-      font-size: $font-xl;
-    }
-}
-
-.titillium {
-    @include fonts($font-titillium, $font-xl, 600, $color-primary);
-}
