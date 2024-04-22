@@ -11,10 +11,6 @@ $color-main-bg: linear-gradient(
     map-get($colors, black)
 );
 
-.placeholder {
-    width: calc(100vw - 4rem);
-}
-
 .homeFlexbox {
     @include flexbox(row);
   

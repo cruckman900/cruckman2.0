@@ -4,7 +4,7 @@ import './Literature.scss';
 export default function Literature() {
     return <>
         <DefaultPage className="home" icon='fa-solid fa-book-open' title='Literature'>
-            <main className="placeholder">
+            <main>
                 Coming soon!
             </main>
         </DefaultPage>

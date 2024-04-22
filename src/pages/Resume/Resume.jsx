@@ -3,7 +3,7 @@ import './Resume.scss';
 
 export default function ResumeDoc() {
     return <>
-        <DefaultPage className="home" icon='fa-solid fa-hat-wizard' title='Resum&eacute;'>
+        <DefaultPage icon='fa-solid fa-hat-wizard' title='Resum&eacute;'>
             <main className="placeholder">
                 Coming soon!
             </main>

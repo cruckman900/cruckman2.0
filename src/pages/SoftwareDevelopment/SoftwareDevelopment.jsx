@@ -4,7 +4,7 @@ import './SoftwareDevelopment.scss';
 export default function SoftwareDevelopment() {
     return <>
         <DefaultPage className="home" icon='fa-solid fa-code' title='Software Development'>
-            <main className="placeholder">
+            <main>
                 Coming soon!
             </main>
         </DefaultPage>
