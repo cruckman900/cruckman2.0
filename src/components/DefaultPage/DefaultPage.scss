@@ -8,6 +8,7 @@
         map-get($colors, transparent), 
         map-get($colors, tertiary)
     );
+    
     @include borderTopRadius;
     @include borderBottomRadius;
     @include noScroll;

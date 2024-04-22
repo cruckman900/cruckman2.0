@@ -39,12 +39,18 @@ button {
     cursor: pointer;
     transition: all .4s;
 
-    @include colors(map-get($colors, dark), map-get($colors, primary));
+    @include colors(
+        map-get($colors, dark), 
+        map-get($colors, primary)
+    );
     @include borderTopRadius;
     @include borderBottomRadius;
 
     &:hover {
-        @include colors(map-get($colors, primary), map-get($colors, secondary));
+        @include colors(
+            map-get($colors, primary), 
+            map-get($colors, secondary)
+        );
         border-color: map-get($colors, primary);
     }
 }

@@ -5,7 +5,13 @@
     z-index: 5;
     margin-left: 1rem;
     font-size: map-get($font-size, sm);
+    color: map-get($colors, primary);
     cursor: pointer;
+    transition: all .4s;
+
+    &:hover {
+        color: map-get($colors, secondary);
+    }
 }
 
 .modelViewer {
