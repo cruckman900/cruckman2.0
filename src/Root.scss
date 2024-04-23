@@ -19,6 +19,7 @@
         map-get($colors, primary)
     );
 }
+
 .brand-link {
     &:hover {
         color: map-get($colors, secondary);
