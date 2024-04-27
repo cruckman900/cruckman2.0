@@ -5,11 +5,11 @@ import './IFrame.scss'
 export default function IFrame({src, ...props}) {
     const [isDisplayNone, setDisplayNone] = useState(true);
     const [iframeWrapperClass, setIFrameClass] = useState();
-    const [style, setStyle] = useState();
+
+    let style = { backgroundColor: 'transparent' };
 
     useEffect(() => {
         if (isDisplayNone) {
-            setStyle({ backgroundColor: 'transparent' });
             setIFrameClass(undefined);
         } else {
             setIFrameClass('iframeWrapper');
@@ -19,26 +19,31 @@ export default function IFrame({src, ...props}) {
     return (
         <div {...props}>
             <div className={ iframeWrapperClass }>
-                <header style={style}>
+                <header className='iframeWrapper-header' style={style}>
                     <Button
+                        id='OpenCloseIframe'
+                        title='OpenCloseIframe'
                         type='button'
-                        className='btnClose'
+                        className='iframeWrapper-header-btnClose'
                         onClick={() => setDisplayNone(!isDisplayNone)}
                     >
                         {
                             !isDisplayNone
-                                ? <i className='btnClose-red fa-solid fa-box'></i>
+                                ? <i className='iframeWrapper-header-btnClose-red fa-solid fa-box'></i>
                                 : <i className='fa-solid fa-box-open'></i>
                         }
                     </Button>
-                    { !isDisplayNone && <span>{src}</span> }
+                    { !isDisplayNone && <span className='iframeWrapper-header-span'>{src}</span> }
                 </header>
 
                 {
                     !isDisplayNone && 
-                        <span className='iframeContainer'>
+                        <span className='iframeWrapper-container'>
                             <div>
-                                <iframe src={src} {...props}>
+                                <iframe
+                                    className='iframeWrapper-container-iframe'
+                                     src={src} {...props}
+                                >
                                     This browser does&apos;t support iframes.
                                 </iframe>
                             </div>

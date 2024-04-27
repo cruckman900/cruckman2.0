@@ -1,78 +1,11 @@
 @import '../../scss/shared.scss';
 
-.homeSection {
-    display: inline;
-    color: map-get($colors, secondary);
-    margin: 0 1rem;
+.home {
+    &-div {
+        padding-bottom: .5rem;
 
-    @media only screen and (max-width:767px) {
-        font-size: map-get($font-size, sm);
-    }
-
-    &-container {
-        @include flexbox(row);
-
-        &-select {
-            position: relative;
-            left: 2rem;
-            width: 100%;
-            font-weight: 600;
-        }
-
-        &-Menu {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            
-            &-button {
-                &-active {
-                    @include colors(
-                        map-get($colors, secondary), 
-                        map-get($colors, dark)
-                    );
-                    border-color: map-get($colors, dark);
-                }
-            }
-        }
-    
-        &-content {
-            background-color: rgba(map-get($colors, darker), .6);
-            padding: 0 1rem;
-            width: 100%;
-            margin-left: 1rem;
-
-            @include borderTopRadius;
-            @include borderBottomRadius;
-
-            @media only screen and (max-width:767px) {
-                background-color: transparent;
-                font-size: map-get($font-size, sm);
-                margin-left: 0;
-            }
-
-            i {
-                color: map-get($colors, light);
-            }
-
-            &-description, &-summary {
-                font-size: map-get($font-size, md);
-                text-align: justify;
-                
-                @media only screen and (max-width:767px) {
-                    margin-right: 1rem;
-                    font-size: map-get($font-size, sm);
-                }
-            }
-
-            &-description {
-                text-transform: uppercase;
-                color: map-get($colors, light);
-            }
-
-            &-summary {
-                text-transform: lowercase;
-                color: map-get($colors, lighter);
-            }
+        &-centered-link {
+            text-align: center;
         }
     }
 }

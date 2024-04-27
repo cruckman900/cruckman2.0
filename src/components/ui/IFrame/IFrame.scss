@@ -1,73 +1,75 @@
 @import '../../../scss/shared.scss';
 
-header {
-    @include borderTopRadius;
-    @include colors(
-        map-get($colors, dark), 
-        map-get($colors, secondary)
-    );
-
-    span {
-        float: right;
-        font-size: map-get($font-size, sm);
-        margin: 20px 10px;
-
-        @include borderTopRadius;
-    }
-}
-
-iframe {
-    border: none;
-    min-width: 365px;
-    height: calc(100vh - 17rem);
-    @include borderBottomRadius;
-    @include colors(
-        map-get($colors, dark), 
-        map-get($colors, secondary)
-    );
-}
-
 .iframeWrapper {
+    margin-top: 1rem;
+    margin-right: 1rem;
+
     @include borderTopRadius;
     @include borderBottomRadius;
     border: 1px solid map-get($colors, secondary);
-    margin-top: 1rem;
-    margin-right: 1rem;
-}
 
-.iframeContainer {
-    background-color: map-get($colors, black);
+    &-header {
+        @include borderTopRadius;
+        @include colors(
+            map-get($colors, dark), 
+            map-get($colors, secondary)
+        );
+    
+        &-span {
+            float: right;
+            font-size: map-get($font-size, sm);
+            margin: 20px 10px;
+    
+            @include borderTopRadius;
+        }
 
-    display: inline-block;
-    padding-top: 5px;
-
-    @include borderTopRadius;
-    @include borderBottomRadius;
-}
-
-.btnClose {
-    width: 2rem;
-    background-color: transparent;
-    border: none;
-    text-align: center;
-
-    @include fonts(
-        map-get($font-family, titillium),
-        map-get($font-size, md),
-        600,
-        map-get($colors, primary)
-    );
-
-    &-red {
-        color: map-get($colors, red);
-        transition: all .4s;
-
-        &:hover {
-            color: map-get($colors, secondary);
+        &-btnClose {
+            width: 2rem;
+            background-color: transparent;
+            border: none;
+            text-align: center;
+        
+            @include fonts(
+                map-get($font-family, titillium),
+                map-get($font-size, md),
+                600,
+                map-get($colors, primary)
+            );
+        
+            &-red {
+                color: map-get($colors, red);
+                transition: all .4s;
+        
+                &:hover {
+                    color: map-get($colors, secondary);
+                }
+            }
+        
+            &:hover, &:active {
+                background-color: transparent;
+            }
         }
     }
 
-    &:hover, &:active {
-        background-color: transparent;
+    &-container {
+        background-color: map-get($colors, black);
+    
+        display: inline-block;
+        padding-top: 5px;
+    
+        @include borderTopRadius;
+        @include borderBottomRadius;
+
+        &-iframe {
+            border: none;
+            min-width: 365px;
+            height: calc(100vh - 17rem);
+        
+            @include borderBottomRadius;
+            @include colors(
+                map-get($colors, dark), 
+                map-get($colors, secondary)
+            );
+        }
     }
 }

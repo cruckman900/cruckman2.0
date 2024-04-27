@@ -15,7 +15,7 @@ export default function NavBar() {
     }
     return (
         <nav className="navbar">
-            <input type="checkbox" id="check" className="checkbox" hidden />
+            <input type="checkbox" id="check" title="check" className="checkbox" hidden />
             <div className="hamburger-menu">
                 <label htmlFor="check" className="menu">
                     <div className="menu-line menu-line-1"></div>
@@ -26,9 +26,9 @@ export default function NavBar() {
 
             <div className="navbar-navigation">
                 <div className="navbar-navigation-left">
-                    <img src={ image1 } className="left-img left-img-1" />
-                    <img src={ image4 } className="left-img left-img-2" />
-                    <img src={ image2 } className="left-img left-img-3" />
+                    <img title="Spooky Corridor" src={ image1 } className="left-img left-img-1" />
+                    <img title="Code" src={ image4 } className="left-img left-img-2" />
+                    <img title="BD Stretch" src={ image2 } className="left-img left-img-3" />
                 </div>
 
                 <div className="navbar-navigation-right">

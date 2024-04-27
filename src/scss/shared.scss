@@ -11,22 +11,6 @@ $color-main-bg: linear-gradient(
     map-get($colors, black)
 );
 
-.homeFlexbox {
-    @include flexbox(row);
-  
-    &-left {
-        padding-right: 1rem;
-
-        &-div {
-            margin-bottom: 1rem;
-        }
-
-        &-link {
-            text-align: center;
-        }
-    }
-}
-
 button {
     margin: 10px;
     width: 115px;

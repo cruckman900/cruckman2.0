@@ -24,17 +24,19 @@ export default function DefaultPage({ icon, title, children }) {
     }, []);
 
     useEffect(() => {
-        setStyle({ background: `
-            linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .6)),
-            url(${backgroundImage}) center no-repeat` 
+        setStyle({
+            background: `
+                linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .6)),
+                url(${backgroundImage}) center no-repeat
+            `
         });
     }, [backgroundImage]);
 
     return (
         <div className='defaultPage' style={style}>
-            <Header icon={icon} className='dpHeader'>{title}</Header>
-            <section className='homeFlexbox'>
-                <div className='dpChildren'>{children}</div>
+            <Header icon={icon} className='defaultPage-header'>{title}</Header>
+            <section className='defaultPage-flexbox'>
+                <div className='defaultPage-flexbox-children'>{children}</div>
                 <IFrame className='chatterbox' src="https://chatterboxsm.com" width='365px' height='768px'></IFrame>
             </section>
         </div>
