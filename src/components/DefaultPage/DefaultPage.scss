@@ -7,8 +7,7 @@
     @include colors(
         map-get($colors, transparent), 
         map-get($colors, tertiary)
-    );
-    
+    );    
     @include borderTopRadius;
     @include borderBottomRadius;
     @include noScroll;
@@ -43,12 +42,12 @@
                 400, 
                 map-get($colors, tertiary));
                 
-                @media only screen and (max-width:767px) {
-                    font-size: map-get($font-size, sm);
-                }
+            @media only screen and (max-width:767px) {
+                font-size: map-get($font-size, sm);
             }
+        }
     }
-    }
+}
 
 ::-webkit-scrollbar {
   display: none;
