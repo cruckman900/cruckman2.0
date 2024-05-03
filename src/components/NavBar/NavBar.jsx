@@ -45,6 +45,14 @@ export default function NavBar() {
                             <li className="nav-list-item">
                                 <NavLink
                                     className={({isActive}) => isActive ? 'nav-list-link-active' : 'nav-list-link'}
+                                    to="/About" alt="About" onClick={handleClick}
+                                >
+                                    About
+                                </NavLink>
+                            </li>
+                            <li className="nav-list-item">
+                                <NavLink
+                                    className={({isActive}) => isActive ? 'nav-list-link-active' : 'nav-list-link'}
                                     to="/SoftwareDevelopment" alt="Software Development" onClick={handleClick}
                                 >
                                     Software Development
@@ -96,14 +104,6 @@ export default function NavBar() {
                                     to="/Resume" alt="Resume" onClick={handleClick}
                                 >
                                     Resum&eacute;
-                                </NavLink>
-                            </li>
-                            <li className="nav-list-item">
-                                <NavLink
-                                    className={({isActive}) => isActive ? 'nav-list-link-active' : 'nav-list-link'}
-                                    to="/About" alt="About" onClick={handleClick}
-                                >
-                                    About
                                 </NavLink>
                             </li>
                         </>

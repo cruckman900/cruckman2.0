@@ -14,12 +14,11 @@ export default function About() {
     function handleClick(index) {
         setSelectedIndex(index);
     }
+
     return <>
         <DefaultPage icon='fa-solid fa-address-card' title='About'>
-            <div>
-                lalala
-            </div>
             <Section title='What&apos;s on my site?' className='aboutSection'>
+                
                 <div className='large-output'>
                     <div className='aboutSection-container'>
                         <Links linksContainer="menu" linksContainerClass="aboutSection-container-Menu" links={
@@ -62,6 +61,7 @@ export default function About() {
                         </Links>
                     </div>
                 </div>
+
                 <div className='small-output'>
                     {
                         CONTENT_SHORTS.map((short, index) => {
@@ -78,6 +78,7 @@ export default function About() {
                         })
                     }
                 </div>
+
             </Section>
         </DefaultPage>
     </>
