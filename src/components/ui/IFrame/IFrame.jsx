@@ -19,7 +19,7 @@ export default function IFrame({src, ...props}) {
     return (
         <div {...props}>
             <div className={ iframeWrapperClass }>
-                <header className='iframeWrapper-header' style={style}>
+                <header className='iframeWrapper-header' style={isDisplayNone ? style : undefined}>
                     <Button
                         id='OpenCloseIframe'
                         title='OpenCloseIframe'
@@ -42,6 +42,7 @@ export default function IFrame({src, ...props}) {
                             <div>
                                 <iframe
                                     className='iframeWrapper-container-iframe'
+                                    frameBorder="0"
                                      src={src} {...props}
                                 >
                                     This browser does&apos;t support iframes.

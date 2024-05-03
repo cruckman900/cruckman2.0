@@ -11,7 +11,7 @@
     &-header {
         @include borderTopRadius;
         @include colors(
-            map-get($colors, dark), 
+            map-get($colors, darker), 
             map-get($colors, secondary)
         );
     
@@ -52,12 +52,11 @@
     }
 
     &-container {
-        background-color: map-get($colors, black);
+        background-color: map-get($colors, darker);
     
         display: inline-block;
         padding-top: 5px;
     
-        @include borderTopRadius;
         @include borderBottomRadius;
 
         &-iframe {
