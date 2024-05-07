@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import Button from '../Button/Button';
 import './IFrame.scss'
 1
-export default function IFrame({src, ...props}) {
+export default function IFrame({ src, ...props }) {
     const [isDisplayNone, setDisplayNone] = useState(true);
     const [iframeWrapperClass, setIFrameClass] = useState();
 
@@ -18,19 +18,20 @@ export default function IFrame({src, ...props}) {
 
     return (
         <div {...props}>
-            <div className={ iframeWrapperClass }>
+            <div className={iframeWrapperClass}>
                 <header className='iframeWrapper-header' style={isDisplayNone ? style : undefined}>
                     <Button
                         id='OpenCloseIframe'
                         title='OpenCloseIframe'
                         type='button'
                         className='iframeWrapper-header-btnClose'
+                        style={{height: '2rem', margin: 0}}
                         onClick={() => setDisplayNone(!isDisplayNone)}
                     >
                         {
                             !isDisplayNone
                                 ? <i className='iframeWrapper-header-btnClose-red fa-solid fa-box'></i>
-                                : <i className='fa-solid fa-box-open'></i>
+                                : <i className='iframeWrapper-header-btnOpen fa-solid fa-box-open'></i>
                         }
                     </Button>
                     { !isDisplayNone && <span className='iframeWrapper-header-span'>{src}</span> }

@@ -37,7 +37,7 @@ export default function DefaultPage({ icon, title, children }) {
             <Header icon={icon} className='defaultPage-header'>{title}</Header>
             <section className='defaultPage-flexbox'>
                 <div className='defaultPage-flexbox-children'>{children}</div>
-                <IFrame className='chatterbox' src="https://chatterboxsm.com" width='365px' height='768px'></IFrame>
+                <IFrame className='chatterbox' src="https://chatterboxsm.com"></IFrame>
             </section>
         </div>
     );

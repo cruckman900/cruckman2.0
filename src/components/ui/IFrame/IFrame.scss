@@ -14,11 +14,11 @@
             map-get($colors, darker), 
             map-get($colors, secondary)
         );
-    
+
         &-span {
             float: right;
             font-size: map-get($font-size, sm);
-            margin: 20px 10px;
+            margin: .25rem 1rem;
     
             @include borderTopRadius;
         }
@@ -49,20 +49,25 @@
                 background-color: transparent;
             }
         }
+
+        &-btnOpen {
+            margin-top: 1rem;
+        }
     }
 
     &-container {
         background-color: map-get($colors, darker);
-    
+        min-width: 365px;
+
         display: inline-block;
         padding-top: 5px;
     
         @include borderBottomRadius;
 
-        &-iframe {
+        iframe {
             border: none;
-            min-width: 365px;
-            height: calc(100vh - 17rem);
+            width: 100%;
+            height: calc(100vh - 14rem);
         
             @include borderBottomRadius;
             @include colors(
