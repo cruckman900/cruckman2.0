@@ -1,6 +1,7 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 import Header from '../Header/Header';
+import Modal from '../ui/Modal/Modal';
 import IFrame from '../ui/IFrame/IFrame';
 
 import image1 from '../../assets/images/SpookyCorridor_1920x1080.jpg';
@@ -10,7 +11,9 @@ import image4 from '../../assets/images/code.jpg';
 
 import './DefaultPage.scss';
 
-export default function DefaultPage({ icon, title, children }) {
+export default function DefaultPage({ icon, title, children, modalButtonText, modalHeader, modalContent }) {
+    const modal = useRef();
+
     const [backgroundImage, setBackgroundImage] = useState(null);
     const [style, setStyle] = useState();
 
@@ -32,13 +35,28 @@ export default function DefaultPage({ icon, title, children }) {
         });
     }, [backgroundImage]);
 
+    useEffect(() => {
+        if (modalContent) {
+            modal.current.open();
+        }
+    }, [modalContent])
+
     return (
-        <div className='defaultPage' style={style}>
-            <Header icon={icon} className='defaultPage-header'>{title}</Header>
-            <section className='defaultPage-flexbox'>
-                <div className='defaultPage-flexbox-children'>{children}</div>
-                <IFrame className='chatterbox' src="https://chatterboxsm.com"></IFrame>
-            </section>
-        </div>
+        <>
+            <Modal
+                ref={modal}
+                header={modalHeader}
+                buttonCaption={modalButtonText}
+            >
+                {modalContent}
+            </Modal>
+            <div className='defaultPage' style={style}>
+                <Header icon={icon} className='defaultPage-header'>{title}</Header>
+                <section className='defaultPage-flexbox'>
+                    <div className='defaultPage-flexbox-children'>{children}</div>
+                    <IFrame className='chatterbox' src="https://chatterboxsm.com"></IFrame>
+                </section>
+            </div>
+        </>
     );
 }
