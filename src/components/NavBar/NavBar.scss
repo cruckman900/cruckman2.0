@@ -105,7 +105,12 @@
                 font-family: map-get($font-family, titillium);
                 font-size: map-get($font-size, xl);
                 
+                @media only screen and (max-width:1086px) {
+                    font-size: map-get($font-size, md);
+                }
+                
                 @media only screen and (max-width:767px) {
+                    padding: .25rem;
                     font-size: map-get($font-size, sm);
                 }
                 
