@@ -11,6 +11,10 @@ $color-main-bg: linear-gradient(
     map-get($colors, black)
 );
 
+img {
+    border: none;
+}
+
 button {
     margin: 10px;
     width: 115px;

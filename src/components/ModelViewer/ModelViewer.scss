@@ -19,6 +19,7 @@
     width: 35vh;
     background-color: map-get($colors, light);
     border: 1px solid map-get($colors, secondary);
+    margin: 1rem 0;
 
     @include noSelect;
     @include borderTopRadius;

@@ -1,1 +1,71 @@
 @import '../../scss/shared.scss';
+
+.section {
+    color: map-get($colors, secondary);
+}
+
+.fafImage {
+    padding: 1rem 0;
+    width: 10vw;
+
+    @media only screen and (max-width:767px) {
+        width: 84vw;
+    }
+}
+
+.works {
+    &-work {
+        @include flexbox(row);
+
+        &-cover {
+            a, img {
+                padding: 0;
+                margin-left: .5rem;
+            }
+        }
+
+        &-description {
+            margin-left: 2rem;
+            background-color: rgba(map-get($colors, darker), .6);
+            padding: 1rem;
+
+            @include borderTopRadius;
+            @include borderBottomRadius;
+    
+            h1, h3 {
+                padding: 0;
+                margin: 0;
+            }
+
+            h1 {
+                color: map-get($colors, secondary);
+            }
+
+            h3 {
+                color: map-get($colors, light);
+            }
+
+            &-body {
+                text-transform: lowercase;
+                color: map-get($colors, lighter);
+                font-size: map-get($font-size, md);
+                text-align: justify;
+
+                @media only screen and (max-width:767px) {
+                    font-size: map-get($font-size, sm);
+                }
+            }
+        }
+
+        &-cover, &-description {
+            @media only screen and (max-width:767px) {
+                display: block;
+                margin: 0;
+            }
+        }
+
+        @media only screen and (max-width:767px) {
+            display: block;
+        }
+}
+}

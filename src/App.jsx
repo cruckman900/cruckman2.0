@@ -8,7 +8,7 @@ import RootLayout from './Root';
 
 import DisplayMessage from './pages/DisplayMessage';
 
-import './App.scss'
+import './App.scss';
 
 const Home = lazy(() => import('./pages/Home/Home'));
 const SoftwareDevelopment = lazy(() => import('./pages/SoftwareDevelopment/SoftwareDevelopment'));
