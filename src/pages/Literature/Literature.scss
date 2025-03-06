@@ -9,7 +9,7 @@
     width: 10vw;
 
     @media only screen and (max-width:767px) {
-        width: 84vw;
+        width: 83vw;
     }
 }
 
@@ -21,6 +21,21 @@
             a, img {
                 padding: 0;
                 margin-left: .5rem;
+                border: solid 1px transparent;
+
+                @include borderTopRadius;
+                @include borderBottomRadius;
+            
+                @media only screen and (max-width:767px) {
+                    display: block;
+                    margin: 0;
+                }
+            }
+
+            img {
+                &:hover {
+                    border: solid 1px map-get($colors, secondary);
+                }
             }
         }
 
@@ -61,6 +76,8 @@
             @media only screen and (max-width:767px) {
                 display: block;
                 margin: 0;
+                padding: 1rem 0 0 0;
+                background: none;
             }
         }
 
