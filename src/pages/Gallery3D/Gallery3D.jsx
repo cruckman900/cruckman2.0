@@ -1,16 +1,10 @@
-import { useState, lazy, Suspense } from 'react';
+import { lazy, Suspense } from 'react';
 
 import DefaultPage from '../../components/DefaultPage/DefaultPage';
 
 const ModelViewer = lazy(() => import('../../components/ModelViewer/ModelViewer'));
 
 export default function Gallery3D() {
-    const [modelURL, setModelURL] = useState('bow2.glb')
-
-    function handleClick(url) {
-        setModelURL(url);
-    }
-
     return (
         <DefaultPage icon={'fa-solid fa-cubes'} title='3D Graphics and Effects'>
             <div>
@@ -24,9 +18,8 @@ export default function Gallery3D() {
                     <Suspense
                         fallback={<div>Loading model viewer...</div>}
                     >
-                        <ModelViewer url={modelURL} />
+                        <ModelViewer />
                     </Suspense>
-                    <button onClick={() => handleClick('BD_Stretch_Robot.glb')}>Stretch Robot</button>
                 </div>
             </div>
         </DefaultPage>

@@ -1,18 +1,14 @@
 /* eslint-disable react/jsx-no-undef */
 /* eslint-disable react/no-unknown-property */
-import { useState, useEffect, Suspense } from 'react';
-import { GLTFLoader } from 'three/examples/jsm/Addons.js';
-import { Canvas, useLoader } from '@react-three/fiber';
-import { OrbitControls, Html } from '@react-three/drei';
+import { useState, useEffect } from 'react';
+import { Canvas } from "@react-three/fiber";
+import { Perf } from "r3f-perf";
+import './ModelViewer.scss';
+import Scene from './Scene';
 
 import './ModelViewer.scss';
 
-function Model({ url }) {
-    const { scene } = useLoader(GLTFLoader, url)
-    return <primitive object={scene} dispose={null} />;
-}
-
-export default function ModelViewer({ url }) {
+export default function ModelViewer() {
     const [showInstructionsToggle, setShowInstructionsToggle] = useState(true);
     const [showInstructions, setShowInstructions] = useState(true);
 
@@ -34,25 +30,18 @@ export default function ModelViewer({ url }) {
 
     return (
         <>
-        <div className='modelViewer'
-            onMouseOver={() => handleMouseEvent(false)}
-            onMouseOut={() => handleMouseEvent(true)}
-            onTouchStart={() => handleMouseEvent(false)}
-            onTouchEnd={() => handleMouseEvent(true)}
-        >
-            <Canvas
-                className='modelViewer-canvas'
-                camera={{fov: 75, near: 0.1, far: 1000, position: [0, 0, 5]}}
+            <div className='modelViewer'
+                onMouseOver={() => handleMouseEvent(false)}
+                onMouseOut={() => handleMouseEvent(true)}
+                onTouchStart={() => handleMouseEvent(false)}
+                onTouchEnd={() => handleMouseEvent(true)}
             >
-                <directionalLight position={[10, 10, 10]} intensity={5} />
-                <directionalLight position={[-10, -10, -10]} intensity={5} />
-                <OrbitControls />
-                <Suspense fallback={<Html>Loading...</Html>}>
-                    <Model url={ url } />
-                </Suspense>
-            </Canvas>
-            {
-                showInstructions &&
+                <Canvas>
+                    <Scene />
+                    <Perf position="bottom-right" />
+                </Canvas>
+                {
+                    showInstructions &&
                     <div className="modelViewer-overlay">
                         <div className='modelViewer-commands'>
                             <div className='modelViewer-commands-heading'>
@@ -70,6 +59,7 @@ export default function ModelViewer({ url }) {
                             <span className='modelViewer-commands-command'>zoom:</span>
                             <span className='modelViewer-commands-action'>middle mouse button/scroll</span>
                         </div>
+                        <br />
                         <div className='modelViewer-commands'>
                             <div className='modelViewer-commands-heading'>
                                 <span className='modelViewer-commands-heading'>Touch</span>
@@ -91,9 +81,9 @@ export default function ModelViewer({ url }) {
                             <span className='modelViewer-commands-action'>two finger - pinch</span>
                         </div>
                     </div>
-            }
-        </div>
-        <div className='toggle' onClick={handleInstructionsClick}>Click to {showInstructionsToggle ? 'hide' : 'show'} Instructions</div>
+                }
+            </div>
+            <div className='toggle' onClick={handleInstructionsClick}>Click to {showInstructionsToggle ? 'hide' : 'show'} Instructions</div>
         </>
     );
 }

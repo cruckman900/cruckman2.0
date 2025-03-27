@@ -13,9 +13,9 @@ export default function Home() {
                     <a href='https://old.cruckman.com' target='_blank'>old cruckman.com website</a>
                 </div>
             </div>
-            <div id='chatterbox-text' className='home-div'>
-                <span><a href='https://chatterboxsm.com' target='_blank'>chatterboxsm</a></span> (the button / panel
-                to the right) is another one of my creations. It&apos;s not fully functional yet, but just like everything else I work on in my
+            <div className='home-div'>
+                <span><a href='https://chatterboxsm.com' target='_blank'>chatterboxsm</a></span><span id='chatterbox-text'> (the button / panel
+                to the right)</span> is another one of my creations. It&apos;s not fully functional yet, but just like everything else I work on in my
                 spare time, it is not abandoned; it&apos;s just waiting for its turn in the rotation.
             </div>
         </DefaultPage>

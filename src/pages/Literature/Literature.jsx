@@ -17,7 +17,7 @@ export default function Literature() {
                             </a>
                         </span>
                         <span className="works-work-description">
-                            <h1>FAILURE AT FIFTY</h1>
+                            <h3>FAILURE AT FIFTY</h3>
                             <h3>How Alcohol and Mental Illness Nearly Destroyed Every Aspect of My Life</h3>
                             <div className="works-work-description-body">
                                 This book is about my life from early childhood all the way through age 50. 
