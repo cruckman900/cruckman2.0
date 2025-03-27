@@ -1,7 +1,7 @@
 import DefaultPage from "../../components/DefaultPage/DefaultPage";
 import Section from '../../components/ui/Section/Section';
 
-import FAFImage from '../../assets/images/failure_at_fifty_kindle_ebook_cover.jpg'
+import FAFImage from "../../assets/images/failure_at_fifty_kindle_ebook_cover.png";
 
 import './Literature.scss';
 
