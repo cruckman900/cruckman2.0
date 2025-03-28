@@ -1,10 +1,12 @@
 /* eslint-disable react/no-unknown-property */
 /* eslint-disable no-unused-vars */
 import React, { useState, useRef, useEffect, useMemo, Suspense } from "react";
-import { OrbitControls, useHelper, Grid } from "@react-three/drei";
-import { useControls, button } from "leva";
+import { OrbitControls, CameraControls, useHelper, Grid } from "@react-three/drei";
+import { useControls, button, buttonGroup } from "leva";
 import * as THREE from "three";
 import Model from "./Model";
+
+import './Scene.scss';
 
 const Scene = () => {
   const [key, setKey] = useState(0);
@@ -13,6 +15,8 @@ const Scene = () => {
   const [isPlaying, setIsPlaying] = useState(false);
 
   const lightRef = useRef();
+  const cameraControlRef = useRef();
+  const { DEG2RAD } = THREE.MathUtils;
 
   const handleReload = () => {
     setKey((prevKey) => prevKey + 1);
@@ -77,6 +81,34 @@ const Scene = () => {
       helpers,
     }
       = useControls("Basic Controls", basicControls);
+
+  const cameraControls = useControls("Camera Controls", {
+    horizontalRotation: buttonGroup({
+      label: "Horiz R",
+      opts: {
+        "45deg": () => cameraControlRef.current.rotate(45 * DEG2RAD, 0, true),
+        "-90deg": () => cameraControlRef.current.rotate(-90 * DEG2RAD, 0, true),
+        "360deg": () => cameraControlRef.current.rotate(360 * DEG2RAD, 0, true),
+      },
+      className: 'leva__button custom-button',
+    }),
+    verticalRotation: buttonGroup({
+      label: "Vertical R",
+      opts: {
+        "20deg": () => cameraControlRef.current.rotate(0, 20 * DEG2RAD, true),
+        "-40deg": () => cameraControlRef.current.rotate(0, -40 * DEG2RAD, true),
+      },
+      className: 'leva-custom-button-group',
+    }),
+    zoomGroup: buttonGroup({
+      label: "Zoom",
+      opts: {
+        "0.25": () => cameraControlRef.current.zoom(0.25, true),
+        "-0.25": () => cameraControlRef.current.zoom(-0.25, true),
+      },
+      className: 'leva-custom-button-group',
+    }),
+  });
 
   const [{ anim }] = useControls(
     "Animations",
@@ -147,8 +179,18 @@ const Scene = () => {
         intensity={dir_light_int}
       />
 
+      <CameraControls ref={cameraControlRef} smoothTime={0.25} />
+
       <OrbitControls />
-      {helpers && <Grid args={[30, 30]} cellSize={0.25} cellColor="#6f6f6f" />}
+      {helpers && <Grid
+        args={[30, 30]}
+        cellSize={0.25}
+        cellColor="#f7f7b8"
+        sectionThickness={1.5}
+        sectionColor="#96880a"
+        fadeDistance={20}
+        fadeStrength={0.5}
+      />}
 
       <ErrorBoundary>
         <Suspense

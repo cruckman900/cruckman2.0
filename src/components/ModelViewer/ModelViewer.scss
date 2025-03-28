@@ -1,5 +1,11 @@
 @import '../../scss/shared.scss';
 
+.canvas {
+    background-color: map-get($colors, darker);
+    @include borderTopRadius;
+    @include borderBottomRadius;
+}
+
 .toggle {
     position: sticky;
     z-index: 5;

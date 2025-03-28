@@ -36,7 +36,7 @@ export default function ModelViewer() {
                 onTouchStart={() => handleMouseEvent(false)}
                 onTouchEnd={() => handleMouseEvent(true)}
             >
-                <Canvas>
+                <Canvas className='canvas'>
                     <Scene />
                     <Perf position="bottom-right" />
                 </Canvas>

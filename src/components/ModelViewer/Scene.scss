@@ -1,0 +1,41 @@
+@import '../../scss/shared.scss';
+
+.leva-c-dosbYs div {
+    color:  map-get($colors, secondary);
+}
+
+.leva-c-hBtFDW {
+    background-color: map-get($colors, black);
+}
+
+.leva-c-dKMqBT {
+    color:  map-get($colors, tertiary);
+}
+
+.leva-c-hwBXYF {
+    @include borderTopRadius;
+    background-color: map-get($colors, primary);
+}
+
+.leva-c-kobjwj {
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0;
+    height: 1rem;
+    cursor: pointer;
+}
+
+.leva-c-knrmXZ {
+    background-color: map-get($colors, tertiary);
+}
+
+.leva-c-gUBGce {
+    background-color: map-get($colors, primary);
+}
+
+.leva-c-ihqPFh:not(:disabled) {
+    background-color: map-get($colors, primary);
+    color: map-get($colors, darker);
+}
