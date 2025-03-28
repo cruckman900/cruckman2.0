@@ -49,19 +49,19 @@ const Scene = () => {
   const basicControls = useMemo(
     () => ({
       amb_light_int: {
-        value: 0.25,
+        value: 1,
         min: 0,
         max: 5,
         step: 0.05,
       },
       dir_light_pos: {
-        value: { x: 0, y: 2, z: 0 },
+        value: { x: 2, y: 2, z: 2 },
         min: -10,
         max: 10,
         step: 0.1,
       },
       dir_light_int: {
-        value: 0.25,
+        value: 2,
         min: 0,
         max: 5,
         step: 0.05,
