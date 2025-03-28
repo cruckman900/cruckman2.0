@@ -1,5 +1,9 @@
 @import '../../scss/shared.scss';
 
+.perf {
+    background-color: map-get($colors, black);
+}
+
 .canvas {
     background-color: map-get($colors, darker);
     @include borderTopRadius;

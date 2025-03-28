@@ -38,7 +38,7 @@ export default function ModelViewer() {
             >
                 <Canvas className='canvas'>
                     <Scene />
-                    <Perf position="bottom-right" />
+                    <Perf className='perf' position="bottom-right" />
                 </Canvas>
                 {
                     showInstructions &&
