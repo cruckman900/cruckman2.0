@@ -2,6 +2,9 @@
 
 .perf {
     background-color: map-get($colors, black);
+    border-top: solid 1px map-get($colors, primary);
+    border-left: solid 1px map-get($colors, primary);
+    border-top-left-radius: $borderRadius;
 }
 
 .canvas {

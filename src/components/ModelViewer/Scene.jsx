@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable react/no-unknown-property */
 /* eslint-disable no-unused-vars */
 import React, { useState, useRef, useEffect, useMemo, Suspense } from "react";
@@ -82,33 +83,38 @@ const Scene = () => {
     }
       = useControls("Basic Controls", basicControls);
 
-  const cameraControls = useControls("Camera Controls", {
-    horizontalRotation: buttonGroup({
-      label: "Horiz R",
-      opts: {
-        "45deg": () => cameraControlRef.current.rotate(45 * DEG2RAD, 0, true),
-        "-90deg": () => cameraControlRef.current.rotate(-90 * DEG2RAD, 0, true),
-        "360deg": () => cameraControlRef.current.rotate(360 * DEG2RAD, 0, true),
-      },
-      className: 'leva__button custom-button',
+  const cameraControls = useMemo(
+    () => ({
+      horizontalRotation: buttonGroup({
+        label: "Horiz R",
+        opts: {
+          "45deg": () => cameraControlRef.current.rotate(45 * DEG2RAD, 0, true),
+          "-90deg": () => cameraControlRef.current.rotate(-90 * DEG2RAD, 0, true),
+          "360deg": () => cameraControlRef.current.rotate(360 * DEG2RAD, 0, true),
+        },
+        className: 'leva__button custom-button',
+      }),
+      verticalRotation: buttonGroup({
+        label: "Vertical R",
+        opts: {
+          "20deg": () => cameraControlRef.current.rotate(0, 20 * DEG2RAD, true),
+          "-40deg": () => cameraControlRef.current.rotate(0, -40 * DEG2RAD, true),
+        },
+        className: 'leva-custom-button-group',
+      }),
+      zoomGroup: buttonGroup({
+        label: "Zoom",
+        opts: {
+          "0.25": () => cameraControlRef.current.zoom(0.25, true),
+          "-0.25": () => cameraControlRef.current.zoom(-0.25, true),
+        },
+        className: 'leva-custom-button-group',
+      }),
     }),
-    verticalRotation: buttonGroup({
-      label: "Vertical R",
-      opts: {
-        "20deg": () => cameraControlRef.current.rotate(0, 20 * DEG2RAD, true),
-        "-40deg": () => cameraControlRef.current.rotate(0, -40 * DEG2RAD, true),
-      },
-      className: 'leva-custom-button-group',
-    }),
-    zoomGroup: buttonGroup({
-      label: "Zoom",
-      opts: {
-        "0.25": () => cameraControlRef.current.zoom(0.25, true),
-        "-0.25": () => cameraControlRef.current.zoom(-0.25, true),
-      },
-      className: 'leva-custom-button-group',
-    }),
-  });
+    []
+  );
+
+  useControls("Camera Controls", cameraControls);
 
   const [{ anim }] = useControls(
     "Animations",
