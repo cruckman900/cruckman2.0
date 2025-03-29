@@ -110,6 +110,9 @@ const Scene = () => {
         },
         className: 'leva-custom-button-group',
       }),
+      lookAt: button(() => {
+        cameraControlRef.current.setLookAt(0, 1, 3, 0, 0, 0, true);
+      }),
     }),
     []
   );
