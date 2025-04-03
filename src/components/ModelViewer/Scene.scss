@@ -35,7 +35,14 @@
     background-color: map-get($colors, primary);
 }
 
-.leva-c-ihqPFh:not(:disabled) {
-    background-color: map-get($colors, primary);
-    color: map-get($colors, darker);
+.leva-c-ihqPFh, .button {
+    &:not(:disabled) {
+        background-color: map-get($colors, primary);
+        color: map-get($colors, darker);
+        width: calc(100% - 1.5rem);
+    }
+    &:hover {
+        background-color: map-get($colors, dark);
+        color: map-get($colors, secondary);
+    }
 }

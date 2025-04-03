@@ -15,6 +15,7 @@ export default function Gallery3D() {
                         tricks, gather some addons, and start creating stuff! I will be modifying the 3D viewport below (hopefully) at some point to be a little
                         more than a simple tool. I will make it so that you can navigate scenes as if you&apos;re inside a game.
                     </div>
+                    <div><a href="../../../public/blenderfiles/BD_Stretch_Robot.blend">BD Stretch Robot blender file</a></div>
                     <Suspense
                         fallback={<div>Loading model viewer...</div>}
                     >
