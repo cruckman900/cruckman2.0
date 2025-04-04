@@ -19,6 +19,10 @@ const Scene = () => {
   const cameraControlRef = useRef();
   const { DEG2RAD } = THREE.MathUtils;
 
+  useEffect(() => {
+    cameraControlRef.current.setLookAt(0, 1, 3, 0, 0, 0, true);
+  }, {});
+
   const handleReload = () => {
     setKey((prevKey) => prevKey + 1);
     setListReloaded(false);
