@@ -1,10 +1,11 @@
 @import '../../scss/shared.scss';
 
 .perf {
+    margin-right: 1rem;
+    margin-bottom: 1rem;
     background-color: map-get($colors, black);
-    border-top: solid 1px map-get($colors, primary);
-    border-left: solid 1px map-get($colors, primary);
-    border-top-left-radius: $borderRadius;
+    border: solid 1px map-get($colors, secondary);
+    border-radius: $borderRadius;
 }
 
 .canvas {
@@ -30,13 +31,12 @@
 .modelViewer {
     position: relative;
     height: calc(100vh - 22rem);
-    width: calc(100% - 10rem);
-    // background-color: map-get($colors, light);
+    width: calc(100% - 1rem);
+    padding: 1;
 
     @media only screen and (max-width:767px) {
-        width: 20rem;
+        width: calc(100vw - 4rem);
         height: 27rem;
-        margin: 1rem;
     }
 
     border: 1px solid map-get($colors, secondary);
@@ -61,7 +61,7 @@
         // background-color: map-get($colors, light);
     
         @media only screen and (max-width:767px) {
-            width: 18rem;
+            width: calc(100vw - 6rem);
             height: 25rem;
         }
             padding: 1rem;

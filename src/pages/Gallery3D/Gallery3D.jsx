@@ -10,16 +10,17 @@ export default function Gallery3D() {
             <div>
                 <div>
                     <div>
-                        I have been playing with Blender almost as long as it has been around, but I never really knew what I was doing with it.
-                        I recently decided to get a few courses and delve deep into understanding how it all works: get some knowledge, tips and
-                        tricks, gather some addons, and start creating stuff! I will be modifying the 3D viewport below (hopefully) at some point to be a little
-                        more than a simple tool. I will make it so that you can navigate scenes as if you&apos;re inside a game.
+                        The 3D content here will, for the most part be made by me. The dog that is loaded when you first arrive
+                        is not my own creation, but is being used as an example of how a model with animations can be loaded with
+                        the animations and have them play. Other files will either be my results from following along with online
+                        courses and tutorials or of my own design. Any models that I have no qualms with sharing that I came up with
+                        myself will be available for download below.
                     </div>
                     <div><a href="../../../blenderfiles/BD_Stretch_Robot.blend">BD Stretch Robot blender file</a></div>
                     <Suspense
                         fallback={<div>Loading model viewer...</div>}
                     >
-                        <ModelViewer />
+                        <ModelViewer style={{ flex: 1 }} />
                     </Suspense>
                 </div>
             </div>

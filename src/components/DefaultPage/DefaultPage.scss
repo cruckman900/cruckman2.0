@@ -1,8 +1,11 @@
 @import '../../scss/base.scss';
 
 .defaultPage {
-    border: 1px solid map-get($colors, primary);
+    display: flex;
+    flex-direction: column;
     height: calc(100vh - 7rem);
+
+    border: 1px solid map-get($colors, primary);
 
     @include colors(
         map-get($colors, transparent), 

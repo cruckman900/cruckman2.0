@@ -1,5 +1,12 @@
 @import '../../scss/shared.scss';
 
+.leva-c-kWgxhW {
+    margin-top: 4rem;
+    margin-right: 0.5rem;
+    z-index: 199;
+    border: solid 1px map-get($colors, secondary);
+}
+
 .leva-c-dosbYs div {
     color:  map-get($colors, secondary);
 }
