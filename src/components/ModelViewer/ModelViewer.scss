@@ -6,6 +6,7 @@
     background-color: map-get($colors, black);
     border: solid 1px map-get($colors, secondary);
     border-radius: $borderRadius;
+    z-index: 199;
 }
 
 .canvas {
