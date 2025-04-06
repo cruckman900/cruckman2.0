@@ -8,11 +8,17 @@ import image2 from '../../assets/images/BD_Stretch.jpg';
 import image4 from '../../assets/images/code.jpg';
 
 import './NavBar.scss';
+import { useEffect } from 'react';
 
 export default function NavBar() {
     function handleClick() {
         document.getElementById('check').checked = false;
     }
+
+    useEffect(() => {
+        document.getElementById('check').checked = true;
+    }, []);
+
     return (
         <nav className="navbar">
             <input type="checkbox" id="check" title="check" className="checkbox" hidden />
