@@ -3,7 +3,7 @@
 // import RouteChangeTracker from './components/GoogleAnalytics/RouteChangeTracker';
 
 import { lazy, Suspense } from 'react';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createHashRouter, RouterProvider } from 'react-router-dom';
 import RootLayout from './Root';
 
 import DisplayMessage from './pages/DisplayMessage';
@@ -39,7 +39,7 @@ function displayMessage(title) {
     );
 }
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   { 
     path: '/',
     element: <RootLayout />,
