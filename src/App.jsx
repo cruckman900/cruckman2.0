@@ -1,14 +1,13 @@
-// import { useEffect } from 'react';
-// import GoogleAnalytics from "./components/GoogleAnalytics/GoogleAnalytics";
-// import RouteChangeTracker from './components/GoogleAnalytics/RouteChangeTracker';
-
 import { lazy, Suspense } from 'react';
 import { createHashRouter, RouterProvider } from 'react-router-dom';
 import RootLayout from './Root';
 
 import DisplayMessage from './pages/DisplayMessage';
 
+import ReactGA from 'react-ga4';
+
 import './App.scss';
+
 
 const Home = lazy(() => import('./pages/Home/Home'));
 const SoftwareDevelopment = lazy(() => import('./pages/SoftwareDevelopment/SoftwareDevelopment'));
@@ -19,6 +18,9 @@ const Music = lazy(() => import('./pages/Music/Music'));
 const Literature = lazy(() => import('./pages/Literature/Literature'));
 const ResumeDoc = lazy(() => import('./pages/Resume/Resume'));
 const About = lazy(() => import('./pages/About/About'));
+
+const TRACKING_ID = "G-54B098JVFT";
+ReactGA.initialize(TRACKING_ID);
 
 function displayMessage(title) {
   return (

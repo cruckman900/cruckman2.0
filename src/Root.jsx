@@ -6,6 +6,7 @@ import image1 from './assets/images/KLTd95pi4.png';
 import image2 from './assets/images/Radiation-Symbol-PNG-Image.png';
 
 import './Root.scss';
+import AnalyticsTracker from './components/GoogleAnalytics/AnalyticsTracker';
 
 function RootLayout() {
     return <>
@@ -19,6 +20,7 @@ function RootLayout() {
         <Outlet />
         <span className="kicks-image"><img className='kicks-image-right' src={image2} alt="Radioactive" /></span>
         <Footer />
+        <AnalyticsTracker />
     </>
 }
 
