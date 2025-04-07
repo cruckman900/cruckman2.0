@@ -10,15 +10,22 @@ import './About.scss';
 
 export default function About() {
     const [selectedIndex, setSelectedIndex] = useState(null);
+    const [fadeClass, setFadeClass] = useState('fade-in');
 
     function handleClick(index) {
+        setFadeClass('fade-out');
+
         setSelectedIndex(index);
+
+        setTimeout(() => {
+            setFadeClass('fade-in');
+        }, 500);
     }
 
     return <>
         <DefaultPage icon='fa-solid fa-address-card' title='About'>
             <Section title='What&apos;s on my site?' className='aboutSection'>
-                
+
                 <div className='large-output'>
                     <div className='aboutSection-container'>
                         <Links linksContainer="menu" linksContainerClass="aboutSection-container-Menu" links={
@@ -42,22 +49,29 @@ export default function About() {
                                 }
                             </>
                         }>
-                            {
-                                selectedIndex === null ? 
-                                    <p className='aboutSection-container-select'>
-                                        Select a topic just to see what awaits inside. I have been waiting for you to come visit.
-                                    </p>
-                                : (
-                                    <div key={CONTENT_SHORTS[selectedIndex].title} className='aboutSection-container-content'>
-                                        <h3>
-                                            <i className={CONTENT_SHORTS[selectedIndex].icon}></i>
-                                            <span>{CONTENT_SHORTS[selectedIndex].title}</span>
-                                        </h3>
-                                        <p className='aboutSection-container-content-description'>{CONTENT_SHORTS[selectedIndex].description}</p>
-                                        <p className='aboutSection-container-content-summary'>{CONTENT_SHORTS[selectedIndex].summary}</p>
-                                    </div>
-                                )
-                            }
+                            <div className='aboutSection-container-content'>
+                                {
+                                    selectedIndex === null ?
+                                        <div className='aboutSection-container-content-none'>
+                                            <h3>So much to talk about!</h3>
+                                            <div className='aboutSection-container-content-none-msg'>
+                                                Select a topic just to see what awaits inside.
+                                                I have been waiting for you to come visit.
+                                                So many projects, its hard to keep up... and look at the time!
+                                            </div>
+                                        </div>
+                                        : (
+                                            <div key={CONTENT_SHORTS[selectedIndex].title} className={`aboutSection-container-content-${fadeClass}`}>
+                                                <h3>
+                                                    <i className={CONTENT_SHORTS[selectedIndex].icon}></i>
+                                                    <span>{CONTENT_SHORTS[selectedIndex].title}</span>
+                                                </h3>
+                                                <p className='aboutSection-container-content-description'>{CONTENT_SHORTS[selectedIndex].description}</p>
+                                                <p className='aboutSection-container-content-summary'>{CONTENT_SHORTS[selectedIndex].summary}</p>
+                                            </div>
+                                        )
+                                }
+                            </div>
                         </Links>
                     </div>
                 </div>

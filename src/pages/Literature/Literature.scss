@@ -17,6 +17,10 @@
     &-work {
         @include flexbox(row);
 
+        background-color: rgba(map-get($colors, darker), .6);
+        border-radius: $borderRadius;
+        padding: 1rem;
+
         &-cover {
             a, img {
                 padding: 0;
@@ -34,15 +38,13 @@
 
             img {
                 &:hover {
-                    border: solid 1px map-get($colors, primary);
+                    border: solid 1px map-get($colors, secondary);
                 }
             }
         }
 
         &-description {
             margin-left: 2rem;
-            background-color: rgba(map-get($colors, darker), .6);
-            padding: 1rem;
 
             @include borderTopRadius;
             @include borderBottomRadius;
