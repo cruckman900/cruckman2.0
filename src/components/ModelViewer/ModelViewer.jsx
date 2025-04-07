@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { Canvas } from "@react-three/fiber";
 import { Perf } from "r3f-perf";
-import './ModelViewer.scss';
+import './ModelViewer.scss?v=1';
 import Scene from './Scene';
 
 import './ModelViewer.scss';

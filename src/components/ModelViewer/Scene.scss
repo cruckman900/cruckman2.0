@@ -1,16 +1,13 @@
 @import '../../scss/shared.scss';
 
-.leva-c-kWgxhW {
+.leva-c-kWgxhW,
+.leva-c-kWgxhW-eXrJvq-fill-false,
+.leva-c-kWgxhW-eXrJvq-flat-false,
+.leva-c-kWgxhW-czBHep-hideTitleBar-false {
     margin-top: 4rem;
     margin-right: 0.5rem;
     z-index: 199;
     border: solid 1px map-get($colors, secondary);
-}
-
-.leva-c-kWgxhW-eXrJvq-flat-false,
-.leva-c-kWgxhW-eXrJvq-flat-false,
-.leva-c-kWgxhW-czBHep-hideTitleBar-false {
-    z-index: 199;
 }
 
 .leva-c-dosbYs div {

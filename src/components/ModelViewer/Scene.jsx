@@ -7,7 +7,7 @@ import { useControls, button, buttonGroup } from "leva";
 import * as THREE from "three";
 import Model from "./Model";
 
-import './Scene.scss';
+import './Scene.scss?v=1';
 
 const Scene = () => {
   const [key, setKey] = useState(0);
