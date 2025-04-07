@@ -1,11 +1,13 @@
 @import '../../scss/shared.scss';
 
 .perf {
-    margin-right: 1rem;
-    margin-bottom: 1rem;
+    position: absolute;
+    bottom: 0;
+    right: 0;
     background-color: map-get($colors, black);
-    border: solid 1px map-get($colors, secondary);
-    border-radius: $borderRadius;
+    border-top: solid 1px map-get($colors, secondary);
+    border-left: solid 1px map-get($colors, secondary);
+    border-top-left-radius: $borderRadius;
     z-index: 199;
 }
 
@@ -16,7 +18,9 @@
 }
 
 .toggle {
-    position: sticky;
+    position: relative;
+    top: -1rem;
+    left: -1rem;
     z-index: 5;
     margin-left: 1rem;
     font-size: map-get($font-size, sm);
