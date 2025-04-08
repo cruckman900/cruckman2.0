@@ -28,7 +28,8 @@ export default function Music() {
 
     const onUrlChange = useCallback(() => {
         setAudioIndex((index) => (index + 1) % songList.length)
-    })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
     const onPlayPause = () => {
         wavesurfer && wavesurfer.playPause();
