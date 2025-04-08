@@ -16,7 +16,7 @@ const Gallery2D = lazy(() => import('./pages/Gallery2D/Gallery2D'));
 const Gallery3D = lazy(() => import('./pages/Gallery3D/Gallery3D'));
 const Music = lazy(() => import('./pages/Music/Music'));
 const Literature = lazy(() => import('./pages/Literature/Literature'));
-const ResumeDoc = lazy(() => import('./pages/Resume/Resume'));
+const Resume = lazy(() => import('./pages/Resume/Resume'));
 const About = lazy(() => import('./pages/About/About'));
 
 const TRACKING_ID = "G-54B098JVFT";
@@ -79,7 +79,7 @@ const router = createHashRouter([
       },
       { 
         path: '/Resume', 
-        element: <Suspense fallback={displayMessage('Status')}><ResumeDoc /></Suspense>
+        element: <Suspense fallback={displayMessage('Status')}><Resume /></Suspense>
       },
       { 
         path: '/About', 

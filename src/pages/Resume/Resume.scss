@@ -1,1 +1,72 @@
 @import '../../scss/shared.scss';
+
+.section {
+    color: map-get($colors, secondary);
+}
+
+.resumePage {
+    @include flexbox(row);
+    
+    background-color: rgba(map-get($colors, darker), .6);
+    border-radius: $borderRadius;
+    padding: 1rem;
+
+    &-left {
+        button {
+            width: 10rem;
+        }
+    }
+
+    &-right {
+        margin-left: 2rem;
+
+        h3 {
+            padding: 0;
+            margin: 0;
+            color: map-get($colors, secondary);
+        }
+    }
+
+    &-left, &-right {
+        @media only screen and (max-width: 767) {
+            display: block;
+            margin: 0;
+        }
+    }
+
+    @media only screen and (max-width:767px) {
+        display: block;
+        margin: 0;
+        padding: 0;
+        background: none;
+
+        &-left {
+            button {
+                position: relative;
+                left: 50%;
+                transform: translate(-50%, 0);
+            }
+        margin-bottom: 1rem;
+        }
+
+        &-right {
+            margin: 0;
+        }
+    }
+}
+
+@media print {
+    body * {
+        visibility: hidden;
+    }
+
+    .printContainer, .printContainer * {
+        visibility: visible;
+    }
+
+    .printContainer {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}

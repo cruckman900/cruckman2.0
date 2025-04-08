@@ -1,0 +1,55 @@
+@import '../../scss/shared.scss';
+
+.resumeBody {
+    width: 50rem;
+
+    * {
+        // border: dotted 1px green;
+        vertical-align: top;
+        color: map-get($colors, black) !important;
+        padding: 0;
+        margin: 0;
+    }
+
+    .h1 {
+        display: block;
+        padding: 0;
+        margin: 0;
+        font-size: map-get($font-size, lg);
+    }
+
+    background-color: map-get($colors, white);
+    color: map-get($colors, darker);
+    padding: 2rem;
+
+    &-header {
+        @include flexbox(column);
+
+        &-sub {
+            @include flexbox(row);
+
+            &-left, &-right {
+                // display: inline-block;
+    
+                h3 {
+                    padding: 0;
+                    margin: 0;
+                    font-size: map-get($font-size, md);
+                }
+
+                div {
+                    font-size: map-get($font-size, sm);
+                }
+            }
+        }
+
+        &-left {
+            width: 35rem;
+            flex-grow: 3;
+        }
+
+        &-right {
+            flex-grow: 1;
+        }
+    }
+}
