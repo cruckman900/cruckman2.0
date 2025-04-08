@@ -90,11 +90,6 @@ const router = createHashRouter([
 ]);
 
 function App() {
-  // useEffect(() => {
-  //   GoogleAnalytics();
-  // }, []);
-
-  // <RouteChangeTracker />
   return <RouterProvider router={router} />
 }
 
