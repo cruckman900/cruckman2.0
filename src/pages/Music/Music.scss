@@ -1,1 +1,69 @@
 @import '../../scss/shared.scss';
+
+.music {
+    background-color: rgba(map-get($colors, darker), .6);
+    border-radius: $borderRadius;
+    padding: 0 1rem;
+
+    @include flexbox(column);
+
+    &-guitar, &-player {
+        margin-top: 1rem;
+        display: inline-block;
+        vertical-align: top;
+   
+        @media only screen and (max-width:767px) {
+            display: block;
+            margin: 0 !important;
+            margin-top: 1rem !important;
+            padding: 0 !important;
+            background: none;
+        }
+    }
+
+    &-guitar {
+        img {
+            width: 10vw;
+
+            border-radius: $borderRadius;
+        
+            @media only screen and (max-width:767px) {
+                width: 83vw;
+            }
+        }
+    }
+
+    &-player {
+        margin-left: 2rem;
+        
+        &-title {
+            color: map-get($colors, secondary);
+            font-weight: 600;
+
+            i {
+                color: map-get($colors, light);
+            }
+        }
+
+        &-controls {
+            position: relative;
+            left: 50%;
+            transform: translate(-50%, 0);
+
+            button {
+                width: 10rem;
+            }
+
+            a {
+                margin-left: 1rem;
+                cursor: pointer;
+            }
+        }
+    }
+   
+    @media only screen and (max-width:767px) {
+        margin: 0 !important;
+        padding: 0 !important;
+        background: none;
+    }
+}
