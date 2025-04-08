@@ -53,7 +53,7 @@ export default function About() {
                                 {
                                     selectedIndex === null ?
                                         <div className='aboutSection-container-content-none'>
-                                            <h3>So much to talk about!</h3>
+                                            <h3><span>So much to talk about!</span></h3>
                                             <div className='aboutSection-container-content-none-msg'>
                                                 Select a topic just to see what awaits inside.
                                                 I have been waiting for you to come visit.

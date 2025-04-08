@@ -16,7 +16,7 @@ export default function Gallery3D() {
                         the animations and have them play. Other files will either be my results from following along with online
                         courses and tutorials or of my own design.
                     </div>
-                    <div>Free Download:&nbsp;<a href="../../../blenderfiles/BD_Stretch_Robot.blend">BD Stretch Robot blender file</a></div>
+                    <div style={{fontWeight: 600}}>Free Download:&nbsp;<a href="../../../blenderfiles/BD_Stretch_Robot.blend">BD Stretch Robot blender file</a></div>
                     <Suspense
                         fallback={<div>Loading model viewer...</div>}
                     >
