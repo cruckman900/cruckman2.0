@@ -8,6 +8,10 @@
     margin-right: 0.5rem;
     z-index: 199 !important;
     border: solid 1px map-get($colors, secondary);
+
+    @media only screen and (max-width:767px) {
+        margin-right: 1rem;
+    }
 }
 
 .leva-c-dosbYs div {
