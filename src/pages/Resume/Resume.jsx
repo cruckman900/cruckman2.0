@@ -17,7 +17,7 @@ function Resume() {
                         <Button onClick={() => window.print()}>Print Resum&eacute;</Button>
                     </div>
                     <div className="resumePage-right">
-                        <h3>I feel empty without a purpose not having a job and a responsibility.</h3>
+                        <h3>I feel empty without a purpose by not having a job and a responsibility.</h3>
                         <div className="printContainer">
                             <ResumeBody id="printable-content" ref={printRef} />
                         </div>

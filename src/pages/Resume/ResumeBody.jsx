@@ -11,7 +11,7 @@ const ResumeBody = forwardRef((_props, ref) => {
         <div className="resumeBody-header-sub">
           <div className='resumeBody-header-sub-left'>
             <div className='h1'>Christopher L Ruckman</div>
-            <div>Full Stack / Cross-Platform Software Engineer</div>
+            <div className='h3'>Full-Stack Software Engineer</div>
             <div>2005 &mdash; Present</div>
           </div>
           <div className='resumeBody-header-sub-right'>
@@ -22,8 +22,7 @@ const ResumeBody = forwardRef((_props, ref) => {
           </div>
         </div>
       </header>
-      <div>Hello Kitty!</div>
-      <div>Hello world!</div>
+      <div>Coming Soon.</div>
     </div>
   );
 });

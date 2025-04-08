@@ -15,7 +15,20 @@
         display: block;
         padding: 0;
         margin: 0;
-        font-size: map-get($font-size, lg);
+
+        @include fonts(
+            map-get($font-family, noto), 
+            map-get($font-size, xl), 
+            600, 
+            map-get($colors, darker)
+        );
+
+        font-style: italic;
+    }
+
+    .h3 {
+        font-size: map-get($font-size, md);
+        font-weight: 600;
     }
 
     background-color: map-get($colors, white);
@@ -25,9 +38,17 @@
     &-header {
         @include flexbox(column);
 
+        @media only screen and (max-width: 767) {
+            display: block;
+        }
+
         &-sub {
             @include flexbox(row);
 
+            @media only screen and (max-width: 767) {
+                display: block;
+            }
+    
             &-left, &-right {
                 // display: inline-block;
     
@@ -51,5 +72,10 @@
         &-right {
             flex-grow: 1;
         }
+    }
+
+    @media only screen and (max-width: 767) {
+        width: 5rem !important;
+        color: green;
     }
 }
