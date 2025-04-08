@@ -27,8 +27,6 @@
         }
     
         &-content {
-            padding: 0 1rem;
-            width: 100%;
             margin-left: 1rem;
             transition: opacity .8s ease-in-out;
 
@@ -69,7 +67,7 @@
                 text-align: justify;
                 
                 @media only screen and (max-width:767px) {
-                    margin-right: 1rem;
+                    // margin-right: 1rem;
                     font-size: map-get($font-size, sm);
                 }
             }

@@ -91,7 +91,7 @@ function Model({ file, onData, ...props }) {
             }
 
             // Perform any setup logic if needed
-            console.log("Primitive successfully loaded:", scene);
+            // console.log("Primitive successfully loaded:", scene);
         } catch (error) {
             console.error("Error handling primitive:", error.message);
         }
@@ -101,7 +101,7 @@ function Model({ file, onData, ...props }) {
             if (group.current) {
                 group.current.geometry?.dispose();
                 group.current.material?.dispose();
-                console.log("Primitive resources disposed.");
+                // console.log("Primitive resources disposed.");
             }
         };
     }, [scene]);

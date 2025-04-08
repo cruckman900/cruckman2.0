@@ -1,7 +1,16 @@
 @import '../../../scss/shared.scss';
 
 .section {
+    position: relative;
     background-color: rgba(map-get($colors, darker), .6);
-    border-radius: $borderRadius;
     padding: 1rem;
+
+    &-title {
+        padding: 0;
+        margin: 0;
+    }
+
+    &-body {
+        color: map-get($colors, lighter);
+    }
 }

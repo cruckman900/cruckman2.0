@@ -20,10 +20,8 @@
 
 .toggle {
     position: relative;
-    top: -1rem;
-    left: -1rem;
     z-index: 5;
-    margin-left: 1rem;
+    text-align: center;
     font-size: map-get($font-size, sm);
     color: map-get($colors, primary);
     cursor: pointer;
@@ -36,7 +34,7 @@
 
 .modelViewer {
     position: relative;
-    height: calc(100vh - 22rem);
+    height: calc(100vh - 23rem);
     width: calc(100% - 1rem);
     padding: 1;
 
@@ -62,7 +60,7 @@
         flex-direction: column;
         position: absolute;
         top: 0;
-        height: calc(100vh - 24rem);
+        height: calc(100vh - 25rem);
         width: calc(100% - 2rem);
         // background-color: map-get($colors, light);
     
