@@ -9,9 +9,6 @@
 
     &-container {
         @include flexbox(row);
-        
-        background-color: rgba(map-get($colors, darker), .6);
-        border-radius: $borderRadius;
 
         &-Menu {
             list-style: none;

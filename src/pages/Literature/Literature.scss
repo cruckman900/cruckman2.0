@@ -13,10 +13,6 @@
     &-work {
         @include flexbox(row);
 
-        background-color: rgba(map-get($colors, darker), .6);
-        border-radius: $borderRadius;
-        padding: 1rem;
-
         &-cover {
             a, img {
                 padding: 0;
@@ -77,5 +73,5 @@
             padding: 0;
             background: none;
         }
-}
+    }
 }

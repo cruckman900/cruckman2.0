@@ -1,10 +1,6 @@
 @import '../../scss/shared.scss';
 
 .music {
-    background-color: rgba(map-get($colors, darker), .6);
-    border-radius: $borderRadius;
-    padding: 0 1rem;
-
     @include flexbox(column);
 
     &-guitar, &-player {
