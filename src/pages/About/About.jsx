@@ -24,7 +24,7 @@ export default function About() {
 
     return <>
         <DefaultPage icon='fa-solid fa-address-card' title='About'>
-            <Section title='What&apos;s on my site?' className='aboutSection'>
+            <Section title='What&apos;s on my site?'>
 
                 <div className='large-output'>
                     <div className='aboutSection-container'>

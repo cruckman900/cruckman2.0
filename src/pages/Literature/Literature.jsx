@@ -8,7 +8,7 @@ import './Literature.scss';
 export default function Literature() {
     return <>
         <DefaultPage className="home" icon='fa-solid fa-book-open' title='Literature'>
-            <Section title='I have recently published my first book!' className="section" >
+            <Section title='I have recently published my first book!'>
                 <div className="works">
                     <div className="works-work">
                         <span className="works-work-cover">

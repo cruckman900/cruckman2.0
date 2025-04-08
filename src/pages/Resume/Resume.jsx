@@ -11,9 +11,9 @@ function Resume() {
 
     return (
         <DefaultPage icon='fa-solid fa-hat-wizard' title='Resum&eacute;'>
-            <Section title='I am currently on Social Security Disability, but...' className="section">
-                <div className="small-output">Resume available on larger screen sizes only.</div>
-                <div className="resumePage large-output">
+            <div className="small-output">Resume available on larger screen sizes only.</div>
+            <Section title='I am currently on Social Security Disability, but...' className="large-output">
+                <div className="resumePage">
                     <div className="resumePage-left">
                         <Button onClick={() => window.print()}>Print Resum&eacute;</Button>
                     </div>

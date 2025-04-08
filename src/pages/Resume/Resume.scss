@@ -1,9 +1,5 @@
 @import '../../scss/shared.scss';
 
-.section {
-    color: map-get($colors, secondary);
-}
-
 .resumePage {
     @include flexbox(row);
     
