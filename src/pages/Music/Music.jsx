@@ -19,6 +19,7 @@ export default function Music() {
 
     const songList = [
         {file: "LonelyIsTheNight", title: "Billy Squire - Lonely Is The Night"},
+        {file: "HellsBells", title: "AC/DC - Hell's Bells"},
     ];
 
     const onReady = (ws) => {
@@ -26,7 +27,19 @@ export default function Music() {
         setIsPlaying(false);
     };
 
-    const onUrlChange = useCallback(() => {
+    const onUrlChangeMinus = useCallback(() => {
+        setAudioIndex((index) => {
+            if (index > 0) {
+                return (index - 1) % songList.length;
+            } else {
+                return songList.length - 1;
+            }
+        }
+    )
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
+
+    const onUrlChangePlus = useCallback(() => {
         setAudioIndex((index) => (index + 1) % songList.length)
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
@@ -56,7 +69,7 @@ export default function Music() {
                         {songList[audioIndex].title}
                     </div>
                     <WavesurferPlayer
-                        height={100}
+                        height={75}
                         width={325}
                         waveColor="#f8c314"
                         progressColor="#96880a"
@@ -66,15 +79,17 @@ export default function Music() {
                         onPause={() => setIsPlaying(false)}
                     />
                     <div className="music-player-controls">
-                        <Button onClick={onUrlChange}>Change Track</Button>
+                        <a>
+                            <i className="fa-solid fa-circle-arrow-left" onClick={onUrlChangeMinus}></i>
+                        </a>
                         <a>
                             <i className="fa-solid fa-backward" onClick={seekToZero}></i>
                         </a>
                         <a>
-                            <i onClick={onPlayPause}
-                                className={isPlaying ? 'fa-solid fa-pause' : 'fa-solid fa-play'}
-                            >
-                            </i>
+                            <i onClick={onPlayPause} className={isPlaying ? 'fa-solid fa-pause' : 'fa-solid fa-play'}></i>
+                        </a>
+                        <a>
+                            <i className="fa-solid fa-circle-arrow-right" onClick={onUrlChangePlus}></i>
                         </a>
                     </div>
                 </div>
