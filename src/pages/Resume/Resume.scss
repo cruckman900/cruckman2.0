@@ -48,17 +48,23 @@
                 left: 50%;
                 transform: translate(-50%, 0);
             }
-        margin-bottom: 1rem;
         }
-
+        
         &-right {
             margin: 0;
-
+            
             &-warn {
                 margin-top: 1rem;
+                margin-bottom: 1rem;
             }
         }
     }
+}
+
+.printContainer {
+    width: 50rem;
+    padding: 0;
+    margin: 0;
 }
 
 @media print {
@@ -73,6 +79,6 @@
     .printContainer {
         position: absolute;
         top: 0;
-        left: 0;
+        left: 0rem;
     }
 }

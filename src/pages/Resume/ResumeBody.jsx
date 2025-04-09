@@ -4,13 +4,12 @@ import './ResumeBody.scss';
 
 // eslint-disable-next-line react/display-name
 const ResumeBody = forwardRef((_props, ref) => {
-  console.log(document.getElementById('printable-content'));
   return (
     <div id="printable-content" ref={ref} className="resumeBody">
       <header className='resumeBody-header'>
+        <div className='h1'>Christopher L Ruckman</div>
         <div className="resumeBody-header-sub">
           <div className='resumeBody-header-sub-left'>
-            <div className='h1'>Christopher L Ruckman</div>
             <div className='h3'>Full-Stack Software Engineer</div>
             <div>2005 &mdash; Present</div>
           </div>
@@ -22,6 +21,7 @@ const ResumeBody = forwardRef((_props, ref) => {
           </div>
         </div>
       </header>
+      <br />
       <div>Coming Soon.</div>
     </div>
   );

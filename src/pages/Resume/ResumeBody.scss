@@ -1,11 +1,10 @@
 @import '../../scss/shared.scss';
 
 .resumeBody {
-    width: 50rem;
+    width: 46rem;
 
     * {
         // border: dotted 1px green;
-        vertical-align: top;
         color: map-get($colors, black) !important;
         padding: 0;
         margin: 0;
@@ -15,6 +14,7 @@
         display: block;
         padding: 0;
         margin: 0;
+        text-align: right;
 
         @include fonts(
             map-get($font-family, noto), 
@@ -33,7 +33,10 @@
 
     background-color: map-get($colors, white);
     color: map-get($colors, darker);
-    padding: 2rem;
+
+    @media only screen {
+        padding: 2rem;
+    }
 
     &-header {
         @include flexbox(column);
@@ -41,8 +44,9 @@
         @media only screen and (max-width: 767) {
             display: block;
         }
-
+        
         &-sub {
+            
             @include flexbox(row);
 
             @media only screen and (max-width: 767) {
@@ -71,11 +75,24 @@
 
         &-right {
             flex-grow: 1;
+            text-align: justify;
         }
     }
 
     @media only screen and (max-width: 767) {
         width: 5rem !important;
         color: green;
+    }
+}
+
+@media print {
+    * {
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    .resumeBody {
+        position: relative;
+        top: -2rem;
     }
 }
