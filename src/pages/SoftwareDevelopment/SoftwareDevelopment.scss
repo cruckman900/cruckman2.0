@@ -1,1 +1,10 @@
 @import '../../scss/shared.scss';
+
+.twoD {
+    div {
+        i {
+            font-size: 150pt;
+            color: map-get($colors, red);
+        }
+    }
+}

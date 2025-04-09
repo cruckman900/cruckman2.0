@@ -1,0 +1,25 @@
+@import './resume-base';
+
+.education {
+    width: 46rem;
+
+    &-line1 {
+        @include flexbox(row);
+
+        div {
+            &-left {
+                flex-grow: 3;
+                text-align: left;
+            }
+
+            &-right {
+                flex-grow: 1;
+                text-align: right;
+            }
+        }
+    }
+    &-line2 {
+        font-style: italic;
+        font-size: map-get($font-size, sm);
+    }
+}

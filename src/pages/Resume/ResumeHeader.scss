@@ -1,0 +1,18 @@
+@import './resume-base.scss';
+
+.header {
+    @include flexbox(column);
+    
+    &-sub {
+        @include flexbox(row);
+        
+        &-left {
+            flex-grow: 3;
+        }
+
+        &-right {
+            flex-grow: 1;
+            text-align: right;
+        }
+    }
+}

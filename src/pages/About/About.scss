@@ -32,7 +32,7 @@
             }
 
             margin-left: 1rem;
-            transition: opacity .8s ease-in-out;
+            transition: opacity .4s ease-in-out;
 
             &-none {
                 color: map-get($colors, secondary);

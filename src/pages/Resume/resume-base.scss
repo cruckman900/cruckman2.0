@@ -1,0 +1,77 @@
+@import '../../scss/shared.scss';
+
+.resumeBase {
+    * {
+        color: map-get($colors, black) !important;
+        padding: 0;
+        margin: 0;
+    }
+}
+
+.main {
+    @include flexbox(row);
+
+    div {
+        &-left {
+            flex-grow: 1;
+            text-align: left;
+        }
+
+        &-right {
+            flex-grow: 3;
+            text-align: right;
+        }
+    }
+}
+    
+.h1 {
+    display: block;
+    padding: 0;
+    margin: 0;
+    text-transform: uppercase;
+
+    @include fonts(
+        map-get($font-family, noto), 
+        map-get($font-size, xl), 
+        600, 
+        map-get($colors, darker)
+    );
+
+    font-style: italic;
+}
+
+.h2 {
+    text-transform: uppercase;
+    font-size: map-get($font-size, md);
+    font-weight: 600;
+}
+
+.h3 {
+    text-transform: uppercase;
+    font-size: map-get($font-size, sm);
+    font-weight: 600;
+
+    &-i {
+        padding: 0;
+        margin: 0;
+        text-transform: uppercase;
+        font-style: italic;
+        font-size: map-get($font-size,md);
+    }
+}
+
+.h4 {
+    text-transform: uppercase;
+    font-size: map-get($font-size, xs);
+    font-weight: 600;
+}
+
+@media print {
+    * {
+        overflow: visible !important;
+    }
+
+    .page-break {
+        page-break-before: auto; 
+    }
+}

@@ -30,10 +30,16 @@
     }
 
     &-player {
+        // position: absolute;
+        // left: 50%;
+        // transform: translate(-50%, 0);
         margin-left: 2rem;
+        background-color: map-get($colors, dark);
+        padding: .25rem;
         
         &-title {
             color: map-get($colors, secondary);
+            font-size: map-get($font-size, sm);
             font-weight: 600;
 
             i {

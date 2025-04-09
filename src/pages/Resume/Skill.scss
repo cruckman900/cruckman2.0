@@ -1,0 +1,9 @@
+@import './resume-base';
+
+.skills {
+    .line2 {
+        text-align: justify;
+        font-style: italic;
+        font-size: map-get($font-size, sm);
+    }
+}

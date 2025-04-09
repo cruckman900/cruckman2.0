@@ -1,0 +1,36 @@
+@import './resume-base';
+
+.workexp {
+    padding-left: 1rem;
+    width: 30em;
+
+    &-line1 {
+        @include flexbox(row);
+
+        &-left {
+            flex-grow: 3;
+            text-align: left;
+        }
+
+        &-right {
+            flex-grow: 1;
+            text-align: right;
+        }
+    }
+
+    &-line2 {
+        font-style: italic;
+        font-size: map-get($font-size, sm);
+
+        ul {
+            margin: 0;
+            padding: 0;
+            padding-left: 2rem !important;
+        }
+
+        li {
+            list-style-type: none;
+            text-align: justify;
+        }
+    }
+}

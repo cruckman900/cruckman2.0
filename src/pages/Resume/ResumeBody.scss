@@ -1,87 +1,50 @@
-@import '../../scss/shared.scss';
+@import './resume-base.scss';
 
 .resumeBody {
     width: 46rem;
 
-    * {
-        // border: dotted 1px green;
-        color: map-get($colors, black) !important;
-        padding: 0;
-        margin: 0;
-    }
-
-    .h1 {
-        display: block;
-        padding: 0;
-        margin: 0;
-        text-align: right;
-
-        @include fonts(
-            map-get($font-family, noto), 
-            map-get($font-size, xl), 
-            600, 
-            map-get($colors, darker)
-        );
-
-        font-style: italic;
-    }
-
-    .h3 {
-        font-size: map-get($font-size, md);
-        font-weight: 600;
-    }
-
     background-color: map-get($colors, white);
     color: map-get($colors, darker);
-
+    
     @media only screen {
         padding: 2rem;
-    }
-
-    &-header {
-        @include flexbox(column);
-
-        @media only screen and (max-width: 767) {
-            display: block;
-        }
-        
-        &-sub {
-            
-            @include flexbox(row);
-
-            @media only screen and (max-width: 767) {
-                display: block;
-            }
-    
-            &-left, &-right {
-                // display: inline-block;
-    
-                h3 {
-                    padding: 0;
-                    margin: 0;
-                    font-size: map-get($font-size, md);
-                }
-
-                div {
-                    font-size: map-get($font-size, sm);
-                }
-            }
-        }
-
-        &-left {
-            width: 35rem;
-            flex-grow: 3;
-        }
-
-        &-right {
-            flex-grow: 1;
-            text-align: justify;
-        }
     }
 
     @media only screen and (max-width: 767) {
         width: 5rem !important;
         color: green;
+    }
+}
+    
+.section-header {
+    &-6rem, &-4rem {
+        padding: 0;
+        margin: 0;
+
+        span {
+            position: relative;
+        }
+    }
+
+    &-6rem {
+        span {
+            left: calc(50% - 7rem);
+            transform: translate(-50%, 0);
+        }
+    }
+
+    &-4rem {
+        span {
+            left: calc(50% - 5rem);
+            transform: translate(-50%, 0);
+        }
+    }
+}
+
+.main {
+    &-left {
+        width: 28rem;
+        padding-right: 1rem !important;
     }
 }
 
