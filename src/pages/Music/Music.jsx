@@ -5,7 +5,6 @@ import DefaultPage from "../../components/DefaultPage/DefaultPage";
 import Section from "../../components/ui/Section/Section";
 
 import './Music.scss';
-import Button from "../../components/ui/Button/Button";
 import GuitarImage from "../../assets/images/MySchecter.png";
 
 export default function Music() {
@@ -18,8 +17,8 @@ export default function Music() {
     const formatTime = (seconds) => [seconds / 60, seconds % 60].map((v) => `0${Math.floor(v)}`.slice(-2)).join(':')
 
     const songList = [
-        {file: "LonelyIsTheNight", title: "Billy Squire - Lonely Is The Night"},
-        {file: "HellsBells", title: "AC/DC - Hell's Bells"},
+        {file: "LonelyIsTheNight", title: "Billy Squire - Lonely Is The Night", img: "billysquire.jpg"},
+        {file: "HellsBells", title: "AC/DC - Hell's Bells", img: "acdc-hellsbells.jpg"},
     ];
 
     const onReady = (ws) => {
@@ -70,7 +69,7 @@ export default function Music() {
                             {songList[audioIndex].title}
                         </div>
                         <WavesurferPlayer
-                            height={75}
+                            height={50}
                             width={325}
                             waveColor="#f8c314"
                             progressColor="#96880a"
@@ -92,6 +91,9 @@ export default function Music() {
                             <a>
                                 <i className="fa-solid fa-circle-arrow-right" onClick={onUrlChangePlus}></i>
                             </a>
+                        </div>
+                        <div className="music-player-cover">
+                            <img src={`../../mp3/${songList[audioIndex].img}`} />
                         </div>
                     </div>
                 </Suspense>
