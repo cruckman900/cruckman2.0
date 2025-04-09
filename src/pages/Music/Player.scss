@@ -2,8 +2,10 @@
 
 .music {
     &-player {
+        border-radius: $borderRadius;
         &-title {
             padding-bottom: .15rem;
+            margin-left: .25rem;
             color: map-get($colors, secondary);
             font-size: map-get($font-size, sm);
             font-weight: 600;
@@ -25,6 +27,7 @@
     
         &-cover {
             img {
+                border-radius: $borderRadius;
                 padding: .25rem;
                 height: 15rem;
                 position: relative;
