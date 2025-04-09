@@ -68,6 +68,9 @@ export default function Music() {
                             <i className="fa-solid fa-music"></i>
                             {songList[audioIndex].title}
                         </div>
+                        <div className="music-player-cover">
+                            <img src={`../../mp3/${songList[audioIndex].img}`} />
+                        </div>
                         <WavesurferPlayer
                             height={50}
                             width={325}
@@ -91,9 +94,6 @@ export default function Music() {
                             <a>
                                 <i className="fa-solid fa-circle-arrow-right" onClick={onUrlChangePlus}></i>
                             </a>
-                        </div>
-                        <div className="music-player-cover">
-                            <img src={`../../mp3/${songList[audioIndex].img}`} />
                         </div>
                     </div>
                 </Suspense>
