@@ -1,7 +1,9 @@
 import { Suspense, useCallback, useState } from "react";
 import WavesurferPlayer from '@wavesurfer/react';
 
-const Player = () => {
+import './Player.scss';
+
+const Player = (props) => {
     const [wavesurfer, setWavesurfer] = useState(null);
     const [isPlaying, setIsPlaying] = useState(false);
     const [audioIndex, setAudioIndex] = useState(0);
@@ -42,10 +44,10 @@ const Player = () => {
     const seekToZero = () => {
         wavesurfer && wavesurfer.seekTo(0);
     };
-    
+
     return (
         <Suspense fallback={<div>Loading...</div>}>
-            <div className="music-player">
+            <div {...props}>
                 <div className="music-player-title">
                     <i className="fa-solid fa-music"></i>
                     {songList[audioIndex].title}

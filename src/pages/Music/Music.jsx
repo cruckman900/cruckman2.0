@@ -1,10 +1,10 @@
 /* eslint-disable no-unused-vars */
 import DefaultPage from "../../components/DefaultPage/DefaultPage";
 import Section from "../../components/ui/Section/Section";
-
-import './Music.scss';
 import GuitarImage from "../../assets/images/MySchecter.png";
 import Player from "./Player";
+
+import './Music.scss';
 
 export default function Music() {
 
@@ -22,7 +22,7 @@ export default function Music() {
                     <img src={GuitarImage} alt="Schecter Hellraiser" />
                 </div>
 
-                <Player />
+                <Player className="music-player" />
             </Section>
         </DefaultPage>
     </>
