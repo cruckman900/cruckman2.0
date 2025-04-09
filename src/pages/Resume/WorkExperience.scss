@@ -8,6 +8,7 @@
         @include flexbox(row);
 
         &-left {
+            padding-left: 1rem;
             flex-grow: 3;
             text-align: left;
         }
@@ -25,7 +26,7 @@
         ul {
             margin: 0;
             padding: 0;
-            padding-left: 2rem !important;
+            padding-left: 1rem !important;
         }
 
         li {
