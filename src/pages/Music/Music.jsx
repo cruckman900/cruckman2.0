@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import { useCallback, useEffect, useState } from "react";
+import { Suspense, useCallback, useEffect, useState } from "react";
 import WavesurferPlayer from '@wavesurfer/react';
 import DefaultPage from "../../components/DefaultPage/DefaultPage";
 import Section from "../../components/ui/Section/Section";
@@ -63,36 +63,38 @@ export default function Music() {
                 <div className="music-guitar">
                     <img src={GuitarImage} alt="Schecter Hellraiser" />
                 </div>
-                <div className="music-player">
-                    <div className="music-player-title">
-                        <i className="fa-solid fa-music"></i>
-                        {songList[audioIndex].title}
+                <Suspense fallback={<div>Loading...</div>}>
+                    <div className="music-player">
+                        <div className="music-player-title">
+                            <i className="fa-solid fa-music"></i>
+                            {songList[audioIndex].title}
+                        </div>
+                        <WavesurferPlayer
+                            height={75}
+                            width={325}
+                            waveColor="#f8c314"
+                            progressColor="#96880a"
+                            url={`../../mp3/${songList[audioIndex].file}.mp3`}
+                            onReady={onReady}
+                            onPlay={() => setIsPlaying(true)}
+                            onPause={() => setIsPlaying(false)}
+                        />
+                        <div className="music-player-controls">
+                            <a>
+                                <i className="fa-solid fa-circle-arrow-left" onClick={onUrlChangeMinus}></i>
+                            </a>
+                            <a>
+                                <i className="fa-solid fa-backward" onClick={seekToZero}></i>
+                            </a>
+                            <a>
+                                <i onClick={onPlayPause} className={isPlaying ? 'fa-solid fa-pause' : 'fa-solid fa-play'}></i>
+                            </a>
+                            <a>
+                                <i className="fa-solid fa-circle-arrow-right" onClick={onUrlChangePlus}></i>
+                            </a>
+                        </div>
                     </div>
-                    <WavesurferPlayer
-                        height={75}
-                        width={325}
-                        waveColor="#f8c314"
-                        progressColor="#96880a"
-                        url={`../../mp3/${songList[audioIndex].file}.mp3`}
-                        onReady={onReady}
-                        onPlay={() => setIsPlaying(true)}
-                        onPause={() => setIsPlaying(false)}
-                    />
-                    <div className="music-player-controls">
-                        <a>
-                            <i className="fa-solid fa-circle-arrow-left" onClick={onUrlChangeMinus}></i>
-                        </a>
-                        <a>
-                            <i className="fa-solid fa-backward" onClick={seekToZero}></i>
-                        </a>
-                        <a>
-                            <i onClick={onPlayPause} className={isPlaying ? 'fa-solid fa-pause' : 'fa-solid fa-play'}></i>
-                        </a>
-                        <a>
-                            <i className="fa-solid fa-circle-arrow-right" onClick={onUrlChangePlus}></i>
-                        </a>
-                    </div>
-                </div>
+                </Suspense>
             </Section>
         </DefaultPage>
     </>
