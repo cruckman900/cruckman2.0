@@ -2,7 +2,7 @@
 import DefaultPage from "../../components/DefaultPage/DefaultPage";
 import Section from "../../components/ui/Section/Section";
 import GuitarImage from "../../assets/images/MySchecter.png";
-import Player from "./Player";
+import Player from "../../components/MP3Player/Player";
 
 import './Music.scss';
 
