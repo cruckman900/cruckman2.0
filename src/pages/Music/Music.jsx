@@ -12,7 +12,7 @@ export default function Music() {
 
     return <>
         <DefaultPage className="home" icon='fa-solid fa-guitar' title='Music'>
-            <Section className="music" title={`${currentYear - 1987} years of messing around, with 0 determination until NOW.`}>
+            <Section title={`${currentYear - 1987} years of messing around, with 0 determination until NOW.`}>
                 <div>
                     I just got a Boss ME90 multiple effects box and a cable to run directly into my laptop.
                     If you go to my old site, there are a few songs that I have on there that sound like I was
