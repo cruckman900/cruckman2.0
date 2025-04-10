@@ -18,16 +18,28 @@
     }
     
     &-guitar {
-        img {
+        a, img {
+            padding: 0;
+            margin-left: .5rem;
             width: 10vw;
+            border: solid 1px transparent;
 
-            border-radius: $borderRadius;
+            @include borderTopRadius;
+            @include borderBottomRadius;
         
             @media only screen and (max-width:767px) {
+                display: block;
+                margin: 0;
                 width: 83vw;
             }
         }
-    }
+
+        img {
+            &:hover {
+                border: solid 1px map-get($colors, secondary);
+            }
+        }
+}
     
     &-player {
         position: relative;
