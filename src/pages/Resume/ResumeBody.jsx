@@ -51,7 +51,7 @@ const ResumeBody = forwardRef((_props, ref) => {
                   an application to communicate with Chromecast devices using the Chromecast SDK.
               `},
               {
-                key: 'eit3',
+                key: 'eit4',
                 value: `
                   Developed portions of E-Commerce applications using MVVM Clean Architecture 
                   pattern for Walmart and Wayfair.
@@ -81,7 +81,7 @@ const ResumeBody = forwardRef((_props, ref) => {
                   Developed and unit-tested Web API 2 modules using C#, Entity Framework, and MS SQL.
               `},
               {
-                key: 'mec3',
+                key: 'mec4',
                 value: `
                   Migrated a pre-existing database with data into a new database with new tables 
                   and columns by creating an MS SQL Stored Procedure to automate the task.

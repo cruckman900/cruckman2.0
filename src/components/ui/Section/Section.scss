@@ -2,7 +2,6 @@
 
 .section {
     position: relative;
-    // background-color: rgba(map-get($colors, darker), .6);
     padding: 1rem;
 
     &-title {
@@ -12,9 +11,5 @@
 
     &-body {
         color: map-get($colors, lighter);
-    }
-
-    @media only screen and (max-width:767px) {
-        background: none;
     }
 }

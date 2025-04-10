@@ -8,6 +8,7 @@ import image1 from '../../assets/images/SpookyCorridor_1920x1080.jpg';
 import image2 from '../../assets/images/BD_Stretch.jpg';
 import image3 from '../../assets/images/City2.jpg';
 import image4 from '../../assets/images/code.jpg';
+import image5 from '../../assets/images/dragon900.png';
 
 import './DefaultPage.scss';
 
@@ -15,6 +16,7 @@ export default function DefaultPage({ icon, title, children, modalButtonText, mo
     const modal = useRef();
 
     const [backgroundImage, setBackgroundImage] = useState(null);
+    const [imgIndex, setImgIndex] = useState(null);
     const [style, setStyle] = useState();
 
     function genRandomInt(max) {
@@ -22,9 +24,10 @@ export default function DefaultPage({ icon, title, children, modalButtonText, mo
     }
 
     useEffect(() => {
-        const images = [image1, image2, image3, image4];
-        setBackgroundImage(images[genRandomInt(3)]);
-    }, []);
+        const images = [image1, image2, image3, image4, image5];
+        setImgIndex(genRandomInt(4));
+        setBackgroundImage(images[imgIndex]);
+    }, [imgIndex]);
 
     useEffect(() => {
         setStyle({
@@ -33,6 +36,18 @@ export default function DefaultPage({ icon, title, children, modalButtonText, mo
                 url(${backgroundImage}) center no-repeat
             `
         });
+
+        if (imgIndex === 4) {
+            setStyle({
+                background: `
+                    linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .6)),
+                    url(${backgroundImage}) right no-repeat
+                `
+            });
+        }
+
+        console.log('style', style);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [backgroundImage]);
 
     useEffect(() => {
