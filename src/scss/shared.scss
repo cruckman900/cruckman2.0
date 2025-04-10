@@ -81,3 +81,20 @@ i {
         display: inline;
     }
 }
+
+.temp {
+    background: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.redalert {
+    div {
+        i {
+            font-size: 150pt;
+            color: map-get($colors, red);
+        }
+    }
+}
