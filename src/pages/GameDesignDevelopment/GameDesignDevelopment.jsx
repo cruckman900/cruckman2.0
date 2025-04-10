@@ -5,7 +5,7 @@ import './GameDesignDevelopment.scss';
 export default function GameDesignDevelopment() {
     return <>
         <DefaultPage className="home" icon='fa-solid fa-gamepad' title='Game Design / Development'>
-            <Section title="Coming soon!">
+            <Section title="Coming soon!" className="temp">
                 <div className="twoD">
                     <div><i className="fa-solid fa-person-digging"></i></div>
                 </div>

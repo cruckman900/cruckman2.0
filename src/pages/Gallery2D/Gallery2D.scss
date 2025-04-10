@@ -1,5 +1,13 @@
 @import '../../scss/shared.scss';
 
+.temp {
+    background: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .twoD {
     div {
         i {

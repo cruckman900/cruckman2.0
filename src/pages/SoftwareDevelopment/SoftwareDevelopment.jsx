@@ -5,7 +5,7 @@ import './SoftwareDevelopment.scss';
 export default function SoftwareDevelopment() {
     return <>
         <DefaultPage className="home" icon='fa-solid fa-code' title='Software Development'>
-            <Section title="Coming soon!">
+            <Section title="Coming soon!" className="temp">
                 <div className="twoD">
                     <div><i className="fa-solid fa-person-digging"></i></div>
                 </div>
