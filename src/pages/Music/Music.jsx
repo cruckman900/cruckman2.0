@@ -1,8 +1,8 @@
 /* eslint-disable no-unused-vars */
 import DefaultPage from "../../components/DefaultPage/DefaultPage";
 import Section from "../../components/ui/Section/Section";
-import GuitarImage from "../../assets/images/MySchecter.png";
 import Player from "../../components/MP3Player/Player";
+import GuitarImage from "../../assets/images/MySchecter.png";
 
 import './Music.scss';
 
@@ -19,7 +19,7 @@ export default function Music() {
                     playing my guitar through mud. I hope to have a lot more songs on here soon!
                 </div>
                 <div className="music-guitar">
-                    <img src={GuitarImage} alt="Schecter Hellraiser" />
+                    <a href="https://www.schecterguitars.com/Hellraiser-C-1-Fr?quantity=1&custitem_color_master_list=211" target="_blank"><img src={GuitarImage} alt="Schecter Hellraiser" /></a>
                 </div>
 
                 <Player className="music-player" />
