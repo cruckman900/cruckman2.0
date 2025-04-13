@@ -7,8 +7,7 @@ export const CONTENT_SHORTS = [
         summary: `
                 graduated from West Virginia Northern Community College in 2005. began working in the
                 field immediately after. went to Wheeling (Jesuit) University and graduated in 2008
-                with a Bachelor's in Computer Science. for the most part, have been full-stack, but 
-                have a little Android background as well.
+                with a Bachelor's in Computer Science.
             `,
     },
     {
@@ -59,16 +58,16 @@ export const CONTENT_SHORTS = [
                 a bit of folk.
             `,
     },
-    {
-        topic: 'literature',
-        icon: 'fa-solid fa-book-open',
-        title:'Literature',
-        description: 'I like to write and do so every so often... used to create a lot of poetry',
-        summary: `
-                I believe I started writing back in 1999 in a hospital. I was writing poetry about love
-                and loss. I probably cranked out 15 poems while I was there. I have 2 binders full now. I
-                don't write poetry much anymore, but I do like to write short stories and game concepts.
-                I'll share some.
-            `,
-    },
+    // {
+    //     topic: 'literature',
+    //     icon: 'fa-solid fa-book-open',
+    //     title:'Literature',
+    //     description: 'I like to write and do so every so often... used to create a lot of poetry',
+    //     summary: `
+    //             I believe I started writing back in 1999 in a hospital. I was writing poetry about love
+    //             and loss. I probably cranked out 15 poems while I was there. I have 2 binders full now. I
+    //             don't write poetry much anymore, but I do like to write short stories and game concepts.
+    //             I'll share some.
+    //         `,
+    // },
 ];
