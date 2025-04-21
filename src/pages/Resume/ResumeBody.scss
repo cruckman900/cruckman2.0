@@ -48,10 +48,15 @@
 }
 
 @media print {
+    *:not(div) {
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
     .resumeBody {
         position: relative;
         top: -2rem;
-        left: 50%;
+        left: calc(50% - .5rem);
         transform: translate(-50%, 0);
     }
 }

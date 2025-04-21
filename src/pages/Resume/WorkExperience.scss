@@ -24,14 +24,19 @@
         font-size: map-get($font-size, sm);
 
         ul {
-            margin: 0;
+            list-style-type: none;
             padding: 0;
             padding-left: 1rem !important;
         }
 
         li {
-            list-style-type: none;
             text-align: justify;
+            margin-left: 0;
+
+            i {
+                padding: 0;
+                margin: 0;
+            }
         }
     }
 }
