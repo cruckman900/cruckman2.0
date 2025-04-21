@@ -44,18 +44,14 @@
 .main {
     &-left {
         width: 28rem;
-        // padding-right: 1rem !important;
     }
 }
 
 @media print {
-    * {
-        padding: 0 !important;
-        margin: 0 !important;
-    }
-
     .resumeBody {
         position: relative;
         top: -2rem;
+        left: 50%;
+        transform: translate(-50%, 0);
     }
 }
