@@ -10,8 +10,8 @@ export default function Home() {
                 <div className='home-div'>
                     I am currently developing this new site because the old one is pretty messy. I am hoping to have it more presentable soon. 
                     Some elements of the site may be hidden on mobile devices. Some sections have no content yet and simply contain a placeholder. I 
-                    chose to keep the menu itmes visible and working so that visitors coming to the site will know what kind of content will be 
-                    available to view at some point. 
+                    chose to keep the menu items visible and working so that visitors coming to the site will know what kind of content will be 
+                    available to view at some point. The plan is to have at least one item available for each section to start.
                     {/* My old site content is here if you want to <a href='https://old.cruckman.com' target='_blank'>take a look</a>. I had
                     fun building it, but it isn&apos;t as carefully put together as this one. I&apos;ve learned quite a bit about modern CSS in the last 
                     few years. */}
