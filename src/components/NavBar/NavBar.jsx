@@ -99,14 +99,14 @@ export default function NavBar() {
                                         Music
                                     </NavLink>
                                 </li>
-                                {/* <li className="nav-list-item">
+                                <li className="nav-list-item">
                                     <NavLink
                                         className={({ isActive }) => isActive ? 'nav-list-link-active' : 'nav-list-link'}
                                         to="/Literature" alt="Literature" onClick={handleClick}
                                     >
                                         Literature
                                     </NavLink>
-                                </li> */}
+                                </li>
                                 <li className="nav-list-item">
                                     <NavLink
                                         className={({ isActive }) => isActive ? 'nav-list-link-active' : 'nav-list-link'}

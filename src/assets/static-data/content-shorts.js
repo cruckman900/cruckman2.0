@@ -58,16 +58,16 @@ export const CONTENT_SHORTS = [
                 a bit of folk.
             `,
     },
-    // {
-    //     topic: 'literature',
-    //     icon: 'fa-solid fa-book-open',
-    //     title:'Literature',
-    //     description: 'I like to write and do so every so often... used to create a lot of poetry',
-    //     summary: `
-    //             I believe I started writing back in 1999 in a hospital. I was writing poetry about love
-    //             and loss. I probably cranked out 15 poems while I was there. I have 2 binders full now. I
-    //             don't write poetry much anymore, but I do like to write short stories and game concepts.
-    //             I'll share some.
-    //         `,
-    // },
+    {
+        topic: 'literature',
+        icon: 'fa-solid fa-book-open',
+        title:'Literature',
+        description: 'I like to write and do so every so often... used to create a lot of poetry',
+        summary: `
+                I believe I started writing back in 1999 in a hospital. I was writing poetry about love
+                and loss. I probably cranked out 15 poems while I was there. I have 2 binders full now. I
+                don't write poetry much anymore, but I do like to write short stories and game concepts.
+                I'll share some.
+            `,
+    },
 ];

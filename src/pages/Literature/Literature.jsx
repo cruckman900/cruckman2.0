@@ -1,15 +1,19 @@
 import DefaultPage from "../../components/DefaultPage/DefaultPage";
 import Section from '../../components/ui/Section/Section';
 
-import FAFImage from "../../assets/images/failure_at_fifty_kindle_ebook_cover.png";
+// import FAFImage from "../../assets/images/failure_at_fifty_kindle_ebook_cover.png";
 
 import './Literature.scss';
 
 export default function Literature() {
     return <>
         <DefaultPage className="home" icon='fa-solid fa-book-open' title='Literature'>
-            <Section title='I have recently published my first book!'>
-                <div className="works">
+            <Section title='Coming soon!' className="temp"> {/* title='I have recently published my first book!' */}
+                <div className="redalert">
+                    <div><i className="fa-solid fa-person-digging"></i></div>
+                </div>
+
+                {/* <div className="works">
                     <div className="works-work">
                         <span className="works-work-cover">
                             <a href="https://www.amazon.com/dp/B0DYBMY155" alt="Order Failure at Fifty: How Alcohol and Mental Illness Nearly Destroyed Every Aspect of My Life on Amazon" target="_blank">
@@ -25,7 +29,7 @@ export default function Literature() {
                             </div>
                         </span>
                     </div>
-                </div>
+                </div> */}
             </Section>
         </DefaultPage>
     </>

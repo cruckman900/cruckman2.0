@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 
 import Header from '../Header/Header';
 import Modal from '../ui/Modal/Modal';
-import IFrame from '../ui/IFrame/IFrame';
+// import IFrame from '../ui/IFrame/IFrame';
 
 import image1 from '../../assets/images/SpookyCorridor_1920x1080.jpg';
 import image2 from '../../assets/images/BD_Stretch.jpg';
@@ -69,7 +69,7 @@ export default function DefaultPage({ icon, title, children, modalButtonText, mo
                 <Header icon={icon} className='defaultPage-header'>{title}</Header>
                 <section className='defaultPage-flexbox'>
                     <div className='defaultPage-flexbox-children'>{children}</div>
-                    <IFrame className='chatterbox' src="https://chatterboxsm.com"></IFrame>
+                    {/* <IFrame className='chatterbox' src="https://chatterboxsm.com"></IFrame> */}
                 </section>
             </div>
         </>
