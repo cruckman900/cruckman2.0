@@ -106,7 +106,7 @@ export default function NavBar() {
                                     >
                                         Literature
                                     </NavLink>
-                                </li>
+                                </li> */}
                                 <li className="nav-list-item">
                                     <NavLink
                                         className={({ isActive }) => isActive ? 'nav-list-link-active' : 'nav-list-link'}
@@ -114,7 +114,7 @@ export default function NavBar() {
                                     >
                                         Resum&eacute;
                                     </NavLink>
-                                </li> */}
+                                </li>
                             </>
                         } />
                     </div>
