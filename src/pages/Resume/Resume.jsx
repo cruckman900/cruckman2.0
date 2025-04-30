@@ -13,7 +13,7 @@ function Resume() {
         <DefaultPage icon='fa-solid fa-hat-wizard' title='Resum&eacute;'>
             <div className="not-available small-output">Resume available on larger screen sizes only.</div>
             <div className="large-output">
-                <Section title='I am currently on Social Security Disability, but...'>
+                <Section title='I am considered totally and permanently disabled and am on Social Security Disability, but...'>
                     <div className="resumePage">
                         <div className="resumePage-left">
                             <Button onClick={() => window.print()}>Print Resum&eacute;</Button>
@@ -21,8 +21,7 @@ function Resume() {
                         <div className="resumePage-right">
                             <h3>
                                 I feel empty without a purpose by not having a job or responsibility.
-                                I have kept busy though, continuously learning new skills in hopes to,
-                                one day, return to work.
+                                I have kept busy though, continuously learning new skills.
                             </h3>
                             <div className="printContainer">
                                 <ResumeBody id="printable-content" ref={printRef} />
