@@ -23,3 +23,8 @@ dist.zip
 *.njsproj
 *.sln
 *.sw?
+
+# Large files
+*.blend
+*.glb
+*.mp3
