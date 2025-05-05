@@ -39,7 +39,7 @@ const Scene = () => {
   const fileControls = useMemo(
     () => ({
       file: {
-        options: ["dog.glb", "bow2.glb", "BD_Stretch_Robot.glb", "MyFirstRealMech.glb"],
+        options: ["dog.glb", "bow2.glb", "BD_Stretch_Robot.glb", "MyFirstRealMech.glb", "MagicScene.glb"],
       },
     }),
     []
