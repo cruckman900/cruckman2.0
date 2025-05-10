@@ -14,7 +14,7 @@ export default function SoftwareDevelopment() {
             <Section title="Course Projects">
                 <div>
                     <div><a href="" alt="BookIT">BookIT</a></div>
-                    <div><b>Technologies Used:</b> Next.JS, TypeScript, MongoDB/Mongoose, Redux, bcrypt, crypto, next-auth, MapQuest</div>
+                    <div><b>Technologies Used:</b> Next.JS, TypeScript, MongoDB/Mongoose, Redux, bcrypt, crypto, next-auth, nodemailer, MapQuest</div>
                     <div><b>GitHub:</b> <a href="https://github.com/cruckman900/BookIT" target="_blank" alt="BookIT on GitHub">Source Code</a></div>
                 </div>
             </Section>
@@ -27,7 +27,7 @@ export default function SoftwareDevelopment() {
                 <br />
                 <div>
                     <div><a href="" alt="ChatterboxSM">ChatterboxSM</a></div>
-                    <div><b>Technologies Used:</b> ReactJS, Node.JS, Express.JS, MySQL</div>
+                    <div><b>Technologies Used:</b> ReactJS, Node.JS, Express.JS, MySQL, nodemailer, Pug</div>
                     <div><b>GitHub:</b>&nbsp;
                         <a href="https://github.com/cruckman900/chatterboxsm.com" target="_blank" alt="cruckman.com on GitHub">Front End</a>&nbsp;&mdash;&nbsp;
                         <a href="https://github.com/cruckman900/chatterboxsm-api" target="_blank" alt="cruckman.com on GitHub">API</a>&nbsp;&mdash;&nbsp;
