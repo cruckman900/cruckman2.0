@@ -14,20 +14,20 @@ export default function SoftwareDevelopment() {
             <Section title="Course Projects">
                 <div>
                     <div><a href="" alt="BookIT">BookIT</a></div>
-                    <div><b>Technologies Used:</b> Next.JS, TypeScript, MongoDB/Mongoose, Redux, bcrypt, crypto, next-auth, nodemailer, MapQuest</div>
+                    <div><b>Technologies Used:</b> Next.JS, TypeScript, Bootstrap, MongoDB/Mongoose, Redux, bcrypt, crypto, next-auth, nodemailer, MapQuest</div>
                     <div><b>GitHub:</b> <a href="https://github.com/cruckman900/BookIT" target="_blank" alt="BookIT on GitHub">Source Code</a></div>
                 </div>
             </Section>
             <Section title="Personal Projects">
                 <div>
                     <div><b>cruckman.com</b></div>
-                    <div><b>Technologies Used:</b> ReactJS, three.js, react-three/drei, react-three/fiber, WaveSurfer</div>
+                    <div><b>Technologies Used:</b> ReactJS, SASS, three.js, react-three/drei, react-three/fiber, WaveSurfer</div>
                     <div><b>GitHub:</b> <a href="https://github.com/cruckman900/cruckman2.0" target="_blank" alt="cruckman.com on GitHub">Source Code</a></div>
                 </div>
                 <br />
                 <div>
                     <div><a href="" alt="ChatterboxSM">ChatterboxSM</a></div>
-                    <div><b>Technologies Used:</b> ReactJS, Node.JS, Express.JS, MySQL, nodemailer, Pug</div>
+                    <div><b>Technologies Used:</b> ReactJS, Module CSS, Node.JS, Express.JS, MySQL, nodemailer, Pug</div>
                     <div><b>GitHub:</b>&nbsp;
                         <a href="https://github.com/cruckman900/chatterboxsm.com" target="_blank" alt="cruckman.com on GitHub">Front End</a>&nbsp;&mdash;&nbsp;
                         <a href="https://github.com/cruckman900/chatterboxsm-api" target="_blank" alt="cruckman.com on GitHub">API</a>&nbsp;&mdash;&nbsp;
@@ -38,7 +38,7 @@ export default function SoftwareDevelopment() {
             <Section title="Collaboration Projects">
                 <div>
                     <div><a href="" alt="InterTrade Solutions">InterTrade Solutions</a></div>
-                    <div><b>Technologies Used:</b> Next.JS, TypeScript, Node.JS, Prisma, MySQL</div>
+                    <div><b>Technologies Used:</b> Next.JS, TypeScript, TailwindCSS, Node.JS, Prisma, MySQL</div>
                     <div><b>GitHub:</b> <a href="https://github.com/AdamantiumCore/intertrade.solutions" target="_blank" alt="InterTrade Solutions on GitHub">Source Code</a></div>
                 </div>
             </Section>
