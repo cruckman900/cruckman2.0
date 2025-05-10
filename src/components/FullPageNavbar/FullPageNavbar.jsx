@@ -29,7 +29,7 @@ const FullPageNavbar = () => {
                     <li className="nav-list-item">
                         <span
                             className={'nav-list-link'}
-                            alt="Development" onClick={() => {menu === null ? setMenu("dev") : setMenu(null)}}
+                            alt="Development" onClick={() => {menu === "dev" ? setMenu(null) : setMenu("dev")}}
                         >
                             Development
                         </span>
@@ -59,7 +59,7 @@ const FullPageNavbar = () => {
                     <li className="nav-list-item">
                         <span
                             className={'nav-list-link'}
-                            alt="Graphics" onClick={() => {menu === null ? setMenu("graphics") : setMenu(null)}}
+                            alt="Graphics" onClick={() => {menu === "graphics" ? setMenu(null) : setMenu("graphics")}}
                         >
                             Graphics
                         </span>
