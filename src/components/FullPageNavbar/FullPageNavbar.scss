@@ -1,0 +1,54 @@
+@import '../../scss/shared.scss';
+
+.fpnavbar {
+    display: none;
+    position: absolute;
+    right: 0;
+
+    .nav-list-item {
+        position: relative;
+        display: inline;
+        list-style-type: none;
+        padding-left: 1.5rem;
+    }
+
+    .nav-list-dditem {
+        position: relative;
+        left: -3rem;
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .nav-list-link {
+        position: relative;
+        transition: all .4s;
+        text-transform: uppercase;
+        color: map-get($colors, primary);
+        cursor: pointer;
+
+        &:hover {
+            color: map-get($colors, secondary);
+        }
+
+        &-active {
+            font-weight: 600;
+            color: map-get($colors, tertiary);
+        }
+    }
+
+    .submenu {
+        position: absolute;
+        right: 0;
+        z-index: 100000;
+        background-color: map-get($colors, darker);
+        border: solid 1px  map-get($colors, secondary);
+        padding:  1rem 2rem;
+        min-width: 5rem;
+    }
+}
+
+@media only screen and (min-width:1280px) {
+    .fpnavbar {
+        display: inline-block;
+    }
+}

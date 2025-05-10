@@ -1,6 +1,7 @@
 @import './scss/shared.scss';
 
 .main-header {
+    position: relative;
     display: flex;
     flex-direction: column;
     padding-top: .2rem;

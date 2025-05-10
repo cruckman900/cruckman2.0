@@ -30,13 +30,6 @@ export default function DefaultPage({ icon, title, children, modalButtonText, mo
     }, [imgIndex]);
 
     useEffect(() => {
-        setStyle({
-            background: `
-                linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .6)),
-                url(${backgroundImage}) center no-repeat
-            `
-        });
-
         if (imgIndex === 4) {
             setStyle({
                 background: `
@@ -44,11 +37,17 @@ export default function DefaultPage({ icon, title, children, modalButtonText, mo
                     url(${backgroundImage}) right no-repeat
                 `
             });
+        } else {
+            setStyle({
+                background: `
+                    linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .6)),
+                    url(${backgroundImage}) center no-repeat
+                `
+            });
         }
 
-        console.log('style', style);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [backgroundImage]);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [backgroundImage, imgIndex]);
 
     useEffect(() => {
         if (modalContent) {

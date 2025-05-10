@@ -42,6 +42,8 @@
 
     &-flexbox {
         @include flexbox(row);
+
+        animation: fadeIn 0.5s ease-in;
     
         &-children {
             @include fonts(
@@ -59,4 +61,13 @@
 
 ::-webkit-scrollbar {
   display: none;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }

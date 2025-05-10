@@ -160,3 +160,9 @@
 .checkbox:checked ~ .hamburger-menu .menu-line-3 {
     transform: rotateZ(40deg);
 }
+
+@media only screen and (min-width:1280px) {
+    .navbar, .hamburger-menu {
+        display: none;
+    }
+}

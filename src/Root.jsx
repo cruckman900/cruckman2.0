@@ -7,6 +7,7 @@ import image2 from './assets/images/Radiation-Symbol-PNG-Image.png';
 
 import './Root.scss';
 import AnalyticsTracker from './components/GoogleAnalytics/AnalyticsTracker';
+import FullPageNavbar from './components/FullPageNavbar/FullPageNavbar';
 
 function RootLayout() {
     return <>
@@ -15,6 +16,7 @@ function RootLayout() {
                 Chris<span className='large-output'>topher Ruckman</span><span className='small-output'>&nbsp;R</span>
             </NavLink>
             <NavBar />
+            <FullPageNavbar />
         </Header>
         <span className="kicks-image"><img className='kicks-image-left' src={image1} alt="Biohazard" /></span>
         <Outlet />
