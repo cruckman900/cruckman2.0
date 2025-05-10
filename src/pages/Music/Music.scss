@@ -32,6 +32,10 @@
                 margin: 0;
                 width: 83vw;
             }
+        
+            @media only screen and (min-width:1280px) {
+                width: 25rem;
+            }
         }
 
         img {
@@ -49,8 +53,7 @@
         width: 20.35rem;
         padding: .25rem;
         background-color: map-get($colors, dark);
-        
-    
+
         @media only screen and (max-width:767px) {
             left: 50%;
             transform: translate((-50%, 0));
