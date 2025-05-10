@@ -14,6 +14,8 @@ import './DefaultPage.scss';
 
 export default function DefaultPage({ icon, title, children, modalButtonText, modalHeader, modalContent }) {
     const modal = useRef();
+    
+    const images = [image1, image2, image3, image4, image5];
 
     const [backgroundImage, setBackgroundImage] = useState(null);
     const [imgIndex, setImgIndex] = useState(null);
@@ -24,9 +26,13 @@ export default function DefaultPage({ icon, title, children, modalButtonText, mo
     }
 
     useEffect(() => {
-        const images = [image1, image2, image3, image4, image5];
         setImgIndex(genRandomInt(4));
+    }, []);
+
+    useEffect(() => {
         setBackgroundImage(images[imgIndex]);
+
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [imgIndex]);
 
     useEffect(() => {
@@ -47,7 +53,7 @@ export default function DefaultPage({ icon, title, children, modalButtonText, mo
         }
 
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [backgroundImage, imgIndex]);
+    }, [backgroundImage]);
 
     useEffect(() => {
         if (modalContent) {
