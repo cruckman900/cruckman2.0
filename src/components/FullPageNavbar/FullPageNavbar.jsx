@@ -1,10 +1,11 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import Links from "../ui/Links/Links";
 import "./FullPageNavbar.scss";
 import { useState } from "react";
 
 const FullPageNavbar = () => {
     const [menu, setMenu] = useState(null);
+    const location = useLocation();
 
     return (
         <div className="fpnavbar">
@@ -28,7 +29,7 @@ const FullPageNavbar = () => {
                     </li>
                     <li className="nav-list-item">
                         <span
-                            className={'nav-list-link'}
+                            className={location.pathname === '/SoftwareDevelopment' || location.pathname === '/GameDesignDevelopment' ? 'nav-list-link-active' : 'nav-list-link'}
                             alt="Development" onClick={() => {menu === "dev" ? setMenu(null) : setMenu("dev")}}
                         >
                             Development
@@ -58,7 +59,7 @@ const FullPageNavbar = () => {
                     </li>
                     <li className="nav-list-item">
                         <span
-                            className={'nav-list-link'}
+                            className={location.pathname === '/Gallery2D' || location.pathname === '/Gallery3D' ? 'nav-list-link-active' : 'nav-list-link'}
                             alt="Graphics" onClick={() => {menu === "graphics" ? setMenu(null) : setMenu("graphics")}}
                         >
                             Graphics

@@ -22,8 +22,8 @@
     .nav-list-link {
         position: relative;
         transition: all .4s;
-        text-transform: uppercase;
         color: map-get($colors, primary);
+        text-transform: uppercase;
         cursor: pointer;
 
         &:hover {
@@ -33,6 +33,8 @@
         &-active {
             font-weight: 600;
             color: map-get($colors, tertiary);
+            text-transform: uppercase;
+            cursor: pointer;
         }
     }
 
