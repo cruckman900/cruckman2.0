@@ -35,7 +35,6 @@
 .modelViewer {
     position: relative;
     height: calc(100vh - 23rem);
-    width: calc(100% - 1rem);
     padding: 1;
 
     @media only screen and (max-width:767px) {
@@ -65,7 +64,7 @@
         // background-color: map-get($colors, light);
     
         @media only screen and (max-width:767px) {
-            width: calc(100vw - 6rem);
+            width: calc(100vw - 7rem);
             height: 25rem;
         }
             padding: 1rem;
