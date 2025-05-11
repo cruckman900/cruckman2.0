@@ -3,20 +3,35 @@ import Section from '../../components/ui/Section/Section';
 
 // import FAFImage from "../../assets/images/failure_at_fifty_kindle_ebook_cover.png";
 
+import { POEMS } from "../../assets/static-data/poems";
+const targetWord = '_';
+
 import './Literature.scss';
 
 export default function Literature() {
     return <>
         <DefaultPage className="home" icon='fa-solid fa-book-open' title='Literature'>
-            <Section title='Coming soon!' className="temp"> {/* title='I have recently published my first book!' */}
-                <div className="redalert">
-                    <div><i className="fa-solid fa-person-digging"></i></div>
-                </div>
-
-                {/* <div className="works">
+            <Section title="Poems">
+                {POEMS.map((poem) => (
+                    <>
+                        <h1>{poem.title}</h1>
+                        <div>
+                            {poem.body.split(' ').map((word, index) => 
+                                word === targetWord ? (
+                                    <br key={index} />
+                                ) : (
+                                    <span key={index}>{word} </span>
+                                )
+                            )}
+                        </div>
+                    </>
+                ))}
+            </Section>
+            {/* <Section title='I have recently published my first book!'>
+                <div className="works">
                     <div className="works-work">
                         <span className="works-work-cover">
-                            <a href="https://www.amazon.com/dp/B0DYBMY155" alt="Order Failure at Fifty: How Alcohol and Mental Illness Nearly Destroyed Every Aspect of My Life on Amazon" target="_blank">
+                            <a href="https://www.amazon.com/dp/B0DYBMY155" alt="Order Failure at Fifty on Amazon" target="_blank">
                                 <img className="fafImage" src={FAFImage} alt="book cover" />
                             </a>
                         </span>
@@ -29,8 +44,8 @@ export default function Literature() {
                             </div>
                         </span>
                     </div>
-                </div> */}
-            </Section>
+                </div>
+            </Section> */}
         </DefaultPage>
     </>
 }
