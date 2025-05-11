@@ -8,7 +8,7 @@ import image1 from '../../assets/images/SpookyCorridor_1920x1080.jpg';
 import image2 from '../../assets/images/BD_Stretch.jpg';
 import image3 from '../../assets/images/City2.jpg';
 import image4 from '../../assets/images/code.jpg';
-import image5 from '../../assets/images/dragon900.png';
+import image5 from '../../assets/images/dragon900.gif';
 
 import './DefaultPage.scss';
 

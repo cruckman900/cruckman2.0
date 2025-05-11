@@ -1,5 +1,6 @@
 import { lazy, Suspense } from 'react';
 import { createHashRouter, RouterProvider } from 'react-router-dom';
+
 import RootLayout from './Root';
 
 import DisplayMessage from './pages/DisplayMessage';
@@ -7,7 +8,6 @@ import DisplayMessage from './pages/DisplayMessage';
 import ReactGA from 'react-ga4';
 
 import './App.scss';
-
 
 const Home = lazy(() => import('./pages/Home/Home'));
 const SoftwareDevelopment = lazy(() => import('./pages/SoftwareDevelopment/SoftwareDevelopment'));
