@@ -21,12 +21,13 @@ export default function DefaultPage({ icon, title, children, modalButtonText, mo
     const [imgIndex, setImgIndex] = useState(null);
     const [style, setStyle] = useState();
 
-    function genRandomInt(max) {
-        return Math.floor(Math.random() * (max + 1));
-    }
+    // function genRandomInt(max) {
+    //     return Math.floor(Math.random() * (max + 1));
+    // }
 
     useEffect(() => {
-        setImgIndex(genRandomInt(4));
+        // setImgIndex(genRandomInt(4));
+        setImgIndex(4);
     }, []);
 
     useEffect(() => {
