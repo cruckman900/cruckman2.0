@@ -3,6 +3,7 @@ import NavBar from "../components/NavBar/NavBar";
 import { NavLink } from 'react-router-dom';
 import DefaultPage from "../components/DefaultPage/DefaultPage";
 import Footer from "../components/Footer/Footer";
+import Section from "../components/ui/Section/Section";
 
 export default function DisplayMessage({ icon, title, heading, message, displayFullPage=false }) {
     return <>
@@ -21,10 +22,9 @@ export default function DisplayMessage({ icon, title, heading, message, displayF
             icon={ icon } 
             className="home"
         >
-            <div className="placeholder">
-                <h1>{ heading }</h1>
-                <p>{ message }</p>
-            </div>
+            <Section title={heading}>
+                <div style={{padding: '1rem'}}>{ message }</div>
+            </Section>
         </DefaultPage>
 
         {
