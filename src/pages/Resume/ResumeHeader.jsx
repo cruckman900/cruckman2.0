@@ -10,7 +10,7 @@ const ResumeHeader = () => {
                     <div>2005 &mdash; Present</div>
                 </div>
                 <div className='header-sub-right'>
-                    <div className='h2'>(740) 827-2743 | cruckman900@gmail.com</div>
+                    <div className='h2'>cruckman900@gmail.com</div>
                     <div>https://cruckman.com</div>
                 </div>
             </div>
